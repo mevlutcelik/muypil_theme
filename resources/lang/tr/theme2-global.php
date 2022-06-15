@@ -17,6 +17,7 @@ return [
     'comments'                          => 'Yorumlar',
     "agencies"                          => "Ajanslar",
     "login"                             => "Giriş Yap",
+    "register"                          => "Hesap Oluştur",
     "header-title-underline"            => "koruyun",
     "header-title"                      => "Google Ads Hesabınızı __word __underline",
     "header-desc"                       => "Muypil<sup class='fs-8 lh-sm'>™</sup> ile reklamlarınızı koruyun. Sahte gösterimleri ve gereksiz tıklamaları hemen durdurun. Reklam bütçenizin en az %20'si boşa gidiyor. Muypil<sup class='fs-8 lh-sm'>™</sup> ile yatırım getirinizi arttırın ve yarışı daima kazanarak ilk sıralara yükselin.",
@@ -105,4 +106,10 @@ return [
     "comment-6-text"                    => "Hâlâ 7 günlük denemedeyim ve hizmetinizi seviyorum. Beni de dahil edin. Baştan sona herkes harikaydı ve program beklentilerimin ötesine geçti. Çok teşekkür ederim.",
     "agencies-content-section-title"    => "Sunduğumuz hizmet, ihtiyaçlarınızı karşılamak için özel olarak tasarlanmıştır.",
     "agencies-content-section-before"   => "Neden Muypil?",
+    "login-title"                       => "Muypil'e Giriş Yapın",
+    "login-desc"                        => "Giriş yapmak için e-posta adresinizi ve şifrenizi girin.",
+    "email"                             => "E-posta",
+    "password"                          => "Şifre",
+    "forgot-password"                   => "Şifreni mi unuttun? Şimdi sıfırla",
+    "dont-account"                      => "Hesabın yok mu?",
 ];

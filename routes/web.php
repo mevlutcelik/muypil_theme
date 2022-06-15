@@ -48,7 +48,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 
     Route::get(LaravelLocalization::transRoute('theme2-global.routes-login'), function()
     {
-        return 'login sayfası';
+        return view('theme2.pages.login.index');
     })->name('login');
 
     Route::get(LaravelLocalization::transRoute('theme2-global.routes-register'), function()

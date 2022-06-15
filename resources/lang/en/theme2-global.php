@@ -15,6 +15,7 @@ return [
     "comments"                          => "Comments",
     "agencies"                          => "Agencies",
     "login"                             => "Login",
+    "register"                          => "Register",
     "blog"                              => "Blog",
     "header-title-underline"            => "Protect",
     "header-title"                      => "__underline your Google Ads Account from __word",
@@ -104,4 +105,10 @@ return [
     "comment-6-text"                    => "I'm still on the 7-day trial and love your service. Count me in. Everyone from start to finish was terrific, and the program went beyond my expectations. Thank you very much.",
     "agencies-content-section-title"    => "The service we offer is specifically designed to meet your needs.",
     "agencies-content-section-before"   => "Why Muypil?",
+    "login-title"                       => "Login to Muypil",
+    "login-desc"                        => "Fill your email and password to sign in.",
+    "email"                             => "Email",
+    "password"                          => "Password",
+    "forgot-password"                   => "Forget your password? Reset now",
+    "dont-account"                      => "Don't have an account?",
 ];
