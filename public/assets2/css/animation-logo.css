@@ -1,0 +1,245 @@
+/* Start Logo Styles */
+.logo-text {
+    font-family: Aquire, system-ui, sans-serif;
+    text-align: center;
+    /*background: -webkit-linear-gradient(left, #ff9800, #4caf50, #ba1d71, #673ab7, #ffffff);
+    background: linear-gradient(left, #ff9800, #4caf50, #ba1d71, #673ab7, #ffffff);*/
+    color: #343f52;
+    background-size: 3200px 200px;
+    -webkit-background-clip: text;
+    -webkit-animation: animate-logo-text;
+    -webkit-animation-delay: initial;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    transition: font-size 500ms ease-in-out;
+    font-size: 28px;
+}
+
+.header-logo-text {
+    margin-left: 3rem;
+    margin-bottom: 0;
+}
+
+@-webkit-keyframes animate-logo-text {
+    0% {
+        background-position: 0 3200px;
+    }
+    100% {
+        background-position: 3200px 0;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@-moz-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+[class*="ring"], .logo-center {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+[class*="blue-ring"] {
+    border: 0.6em solid #343f52 !important;
+    border-top: 1.5em solid #343f52 !important;
+    border-bottom: 1.5em solid #343f52 !important;
+    left: 20px;
+    top: 78px;
+}
+
+.header-logo-center {
+    background-color: #343f52 !important;
+    left: 38px !important;
+    top: 78px;
+}
+
+.footer-logo-text {
+    font-family: Aquire, system-ui, sans-serif;
+    text-align: center;
+    color: #fff;
+    background-size: 3200px 200px;
+    font-size: 25px;
+}
+
+.logo-container {
+    position: absolute;
+    top: -19px;
+    left: calc(50% - 94px);
+}
+
+[class*="logo-ring"] {
+    animation: glow 3s linear infinite;
+    border-radius: 50%;
+    border: 0.6em solid rgba(255, 255, 255, 0.8);
+    border-top: 1.5em solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1.5em solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.3);
+    height: 40px;
+    transition: 1s transform ease-in-out;
+    width: 40px;
+}
+
+[class*="logo-ring"] div {
+    animation: rotate 2s linear infinite;
+    border-radius: 50%;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+[class*="logo-ring"] div:after {
+    animation: squash 2s linear infinite;
+    -moz-transform: scale(3, 1);
+    -ms-transform: scale(3, 1);
+    -webkit-transform: scale(3, 1);
+    transform: scale(3, 1);
+    border-radius: 50%;
+    content: "";
+    left: 50%;
+    height: 3em;
+    margin-left: -1.5em;
+    opacity: 0.8;
+    position: absolute;
+    top: -1.2em;
+    width: 3em;
+}
+
+.logo:hover .blue-ring {
+    border: 0.6em solid #343f52 !important;
+}
+
+.logo-ring1 {
+    transform: rotate(120deg) scale(0.333, 1);
+}
+
+.logo-ring1 div:after {
+    background: #ff9800;
+    box-shadow: 0 0 20px #ff9800;
+}
+
+.logo-light .logo-ring1 div:after {
+    background: #ffe1b0;
+    box-shadow: 0 0 20px #ffe5b7;
+}
+
+.logo:hover .logo-ring1 {
+    border: 0.6em solid rgba(255, 255, 255, 0.8);
+    transform: rotate(0deg) scale(0.33333, 0.33333) perspective(600px) rotateX(60deg);
+}
+
+.logo:hover .logo-ring1 {
+    border: 0.6em solid rgba(255, 255, 255, 0.8);
+    transform: rotate(0deg) scale(0.33333, 0.33333) perspective(600px) rotateX(60deg);
+}
+
+.logo:hover .logo-ring1 div:after {
+    animation: none;
+    top: -1.6em;
+    transform: scale(1, 1);
+}
+
+.logo-ring2 {
+    transform: rotate(240deg) scale(0.333, 1);
+}
+
+.logo-ring2 div:after {
+    background: #2196f3;
+    box-shadow: 0 0 20px #2196f3;
+}
+
+.logo-light .logo-ring2 div:after {
+    background: #b9e0ff;
+    box-shadow: 0 0 20px #b9e0ff;
+}
+
+.logo:hover .logo-ring2 {
+    border: 0.6em solid rgba(255, 255, 255, 0.8);
+    transform: rotate(0deg) scale(0.66667, 0.66667) perspective(600px) rotateX(60deg);
+}
+
+.logo:hover .logo-ring2 div:after {
+    animation: none;
+    top: -1.6em;
+    transform: scale(1, 1);
+}
+
+.logo-ring3 {
+    transform: rotate(360deg) scale(0.333, 1);
+}
+
+.logo-ring3 div:after {
+    background: #f44336;
+    box-shadow: 0 0 20px #f44336;
+}
+
+.logo-light .logo-ring3 div:after {
+    background: #ffb1ab;
+    box-shadow: 0 0 20px #ffb1ab;
+}
+
+.logo:hover .logo-ring3 {
+    border: 0.6em solid rgba(255, 255, 255, 0.8);
+    transform: rotate(0deg) scale(1, 1) perspective(600px) rotateX(60deg);
+}
+
+.logo:hover .logo-ring3 div:after {
+    animation: none;
+    top: -1.6em;
+    transform: scale(1, 1);
+}
+
+.logo-center {
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    height: 3em;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: 1s transform ease-in-out;
+    width: 3em;
+}
+
+.logo:hover .logo-center {
+    transform: translate(0, 0.5em);
+}
+
+/* End Logo Styles */

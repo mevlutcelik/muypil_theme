@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Aquire';
+    src: url('../fonts/aquirebold/AquireBold.eot');
+    src: url('../fonts/aquirebold/AquireBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/aquirebold/AquireBold.woff2') format('woff2'),
+        url('../fonts/aquirebold/AquireBold.woff') format('woff'),
+        url('../fonts/aquirebold/AquireBold.ttf') format('truetype'),
+        url('../fonts/aquirebold/AquireBold.svg#AquireBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
