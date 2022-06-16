@@ -18,7 +18,7 @@
     <link rel="preload" href="{{asset('assets2/css/fonts/urbanist.css')}}" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="{{asset('assets2/css/aquirebold.css')}}" as="style" onload="this.rel='stylesheet'">
 </head>
-
+<script src="{{ asset('assets2/js/jquery/jquery.min.js') }}"></script>
 <body data-bs-spy="scroll">
 <div class="content-wrapper">
     @yield('content')
@@ -28,9 +28,12 @@
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
     </svg>
 </div>
-<script src="{{asset('assets2/js/plugins.js')}}"></script>
-<script src="{{asset('assets2/js/theme.js')
-}}"></script>
+@if(!Route::is('careers'))
+    <script src="{{asset('assets2/js/plugins.js')}}"></script>
+    <script src="{{asset('assets2/js/theme.js')}}"></script>
+@endif
+<script src="{{mix('js/app.js')}}"></script>
+@stack('scripts')
 </body>
 
 </html>

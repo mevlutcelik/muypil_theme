@@ -51,6 +51,16 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         return view('theme2.pages.login.index');
     })->name('login');
 
+    Route::get(LaravelLocalization::transRoute('theme2-global.routes-reset-password'), function()
+    {
+        return view('theme2.pages.reset-password.index');
+    })->name('reset-password');
+
+    Route::get(LaravelLocalization::transRoute('theme2-global.routes-careers'), function()
+    {
+        return view('theme2.pages.careers.index');
+    })->name('careers');
+
     Route::get(LaravelLocalization::transRoute('theme2-global.routes-register'), function()
     {
         return 'register sayfası';

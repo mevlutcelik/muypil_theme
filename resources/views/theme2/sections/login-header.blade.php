@@ -20,19 +20,21 @@
                         <p class="lead mb-6 fs-16 text-start">{{__('theme2-global.login-desc')}}</p>
                         <form class="text-start mb-3">
                             <div class="form-floating mb-4">
-                                <input type="email" class="form-control" placeholder="Email" id="loginEmail">
-                                <label for="loginEmail">{{__('theme2-global.email')}}</label>
+                                <input type="email" class="form-control" placeholder="{{__('theme2-global.email')}}" id="email">
+                                <label for="email">{{__('theme2-global.email')}}</label>
                             </div>
                             <div class="form-floating password-field mb-4">
-                                <input type="password" class="form-control" placeholder="Password" id="loginPassword">
+                                <input type="password" class="form-control" placeholder="{{__('theme2-global.password')}}" id="password">
                                 <span class="password-toggle"><i class="uil uil-eye"></i></span>
-                                <label for="loginPassword">{{__('theme2-global.password')}}</label>
+                                <label for="password">{{__('theme2-global.password')}}</label>
                             </div>
                             <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">{{__('theme2-global.login')}}</a>
                         </form>
                         <!-- /form -->
-                        <p class="mb-1"><a href="#" class="hover">{{__('theme2-global.forgot-password')}}</a></p>
-                        <p class="mb-0">{{__('theme2-global.dont-account')}} <a href="./signup.html" class="hover">{{__('theme2-global.register')}}</a></p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="mb-1"><a href="{{route('reset-password')}}" class="hover">{{__('theme2-global.forgot-password')}}</a></p>
+                            <p class="mb-0"><a href="{{route('register')}}" class="hover">{{__('theme2-global.register')}}</a></p>
+                        </div>
                     </div>
                     <!--/.card-body -->
                 </div>

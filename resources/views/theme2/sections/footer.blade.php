@@ -70,7 +70,7 @@
                     <ul class="list-unstyled text-reset mb-0">
                         <li><a href="{{route('policies')}}#{{__('theme2-global.routes-policies-privacy')}}">{{__('theme2-global.privacy-policy')}}</a></li>
                         <li><a href="{{route('policies')}}#{{__('theme2-global.routes-policies-user')}}">{{__('theme2-global.user-policy')}}</a></li>
-                        <li><a href="{{route('policies')}}">{{__('theme2-global.careers')}}</a></li>
+                        <li><a href="{{route('careers')}}">{{__('theme2-global.careers')}}</a></li>
                     </ul>
                 </div>
                 <!-- /.widget -->
