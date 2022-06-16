@@ -144,7 +144,7 @@
     width: 3em;
 }
 
-.logo:hover .blue-ring {
+.logo:hover .blue-ring, .muypil-logo:hover .blue-ring {
     border: 0.6em solid #343f52 !important;
 }
 
@@ -162,17 +162,12 @@
     box-shadow: 0 0 20px #ffe5b7;
 }
 
-.logo:hover .logo-ring1 {
+.logo:hover .logo-ring1, .muypil-logo:hover .logo-ring1 {
     border: 0.6em solid rgba(255, 255, 255, 0.8);
     transform: rotate(0deg) scale(0.33333, 0.33333) perspective(600px) rotateX(60deg);
 }
 
-.logo:hover .logo-ring1 {
-    border: 0.6em solid rgba(255, 255, 255, 0.8);
-    transform: rotate(0deg) scale(0.33333, 0.33333) perspective(600px) rotateX(60deg);
-}
-
-.logo:hover .logo-ring1 div:after {
+.logo:hover .logo-ring1 div:after, .muypil-logo:hover .logo-ring1 div:after {
     animation: none;
     top: -1.6em;
     transform: scale(1, 1);
@@ -192,12 +187,12 @@
     box-shadow: 0 0 20px #b9e0ff;
 }
 
-.logo:hover .logo-ring2 {
+.logo:hover .logo-ring2, .muypil-logo:hover .logo-ring2 {
     border: 0.6em solid rgba(255, 255, 255, 0.8);
     transform: rotate(0deg) scale(0.66667, 0.66667) perspective(600px) rotateX(60deg);
 }
 
-.logo:hover .logo-ring2 div:after {
+.logo:hover .logo-ring2 div:after, .muypil-logo:hover .logo-ring2 div:after {
     animation: none;
     top: -1.6em;
     transform: scale(1, 1);
@@ -217,12 +212,12 @@
     box-shadow: 0 0 20px #ffb1ab;
 }
 
-.logo:hover .logo-ring3 {
+.logo:hover .logo-ring3, .muypil-logo:hover .logo-ring3 {
     border: 0.6em solid rgba(255, 255, 255, 0.8);
     transform: rotate(0deg) scale(1, 1) perspective(600px) rotateX(60deg);
 }
 
-.logo:hover .logo-ring3 div:after {
+.logo:hover .logo-ring3 div:after, .muypil-logo:hover .logo-ring3 div:after {
     animation: none;
     top: -1.6em;
     transform: scale(1, 1);

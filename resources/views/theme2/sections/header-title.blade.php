@@ -8,7 +8,7 @@ $headerTitle = str_replace("__underline",$spanOrDiv. __('theme2-global.header-ti
 $words = '<div class="mt-3 mb-3"><span class="typer text-white underline-3 style-2 yellow" data-delay="100" data-words="'. (config('app.locale') === "tr" ? $words_tr : $words_en) .'"></span><span class="cursor text-white" data-owner="typer"></span></div>';
 $headerTitle = str_replace("__word", $words ,$headerTitle);
 @endphp
-<section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-300" data-image-src="./assets2/img/photos/bg16.png">
+<section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-300" data-image-src="{{asset('assets2/img/photos/bg16.png')}}">
     <div class="container pt-17 pb-19 pt-md-18 pb-md-17 text-center">
         <div class="row">
             <div class="col-lg-9 col-xl-9 col-xxl-9 mx-auto" data-cues="slideInDown" data-group="page-title">

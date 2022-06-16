@@ -110,7 +110,7 @@
                     <div class="w-100 order-3 order-lg-2 d-lg-flex offcanvas-body">
                         <ul class="navbar-nav me-lg-auto">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="{{route('agencies')}}" >{{__('theme2-global.agencies')}}</a>
+                                <a class="nav-link dropdown-toggle {{Route::is('agencies') ? 'active' : null}}" href="{{route('agencies')}}" >{{__('theme2-global.agencies')}}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ LaravelLocalization::getCurrentLocaleNative() }}</a>

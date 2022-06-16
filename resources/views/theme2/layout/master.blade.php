@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="{{asset('assets2/css/plugins.css')}}">
     <link rel="stylesheet" href="{{asset('assets2/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets2/css/animation-logo.css')}}">
-    <link rel="stylesheet" href="{{asset('assets2/css/colors/violet.css')}}">
+    <link rel="stylesheet" href="@yield('theme-color', asset('assets2/css/colors/violet.css'))">
     <link rel="preload" href="{{asset('assets2/css/fonts/urbanist.css')}}" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="{{asset('assets2/css/aquirebold.css')}}" as="style" onload="this.rel='stylesheet'">
+    <meta name="theme-color" content="@yield('meta-color')">
+    <script src="{{ asset('assets2/js/jquery/jquery.min.js') }}"></script>
+    @stack('styles')
 </head>
-<script src="{{ asset('assets2/js/jquery/jquery.min.js') }}"></script>
-<body data-bs-spy="scroll">
+<body data-bs-spy="scroll" class="@yield('body-class')">
 <div class="content-wrapper">
     @yield('content')
 </div>
