@@ -130,4 +130,6 @@ return [
     "position-digital-marketing-expert" => "Dijital Pazarlama Uzmanı",
     "position-social-media-expert"      => "Sosyal Medya Uzmanı",
     "position-intern"                   => "Stajyer",
+    "7-days-free-return"                => "7 Gün Ücretsiz İade",
+    "quick-installation"                => "Hızlı Kurulum",
 ];

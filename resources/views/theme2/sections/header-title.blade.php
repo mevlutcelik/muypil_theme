@@ -16,7 +16,7 @@ $headerTitle = str_replace("__word", $words ,$headerTitle);
                 <br><p class="lead fs-17 text-white lh-sm mb-6 mx-md-13 mx-lg-10">{!! __('theme2-global.header-desc') !!}</p>
                 <div>
                     <a href="{{route('register')}}" class="btn btn-white rounded mb-4 mb-xxl-4">{{__('theme2-global.header-button')}}</a>
-                    <p class="text-white fs-14"><span><i class="uil uil-check"></i> {{__('theme2-global.quick-installation')}}</span> <span><i class="uil uil-check"></i> 7 Days Free Return</span></p>
+                    <p class="text-white fs-14"><span><i class="uil uil-check"></i> {{__('theme2-global.quick-installation')}}</span> <span><i class="uil uil-check"></i> {{__('theme2-global.7-days-free-return')}}</span></p>
                 </div>
             </div>
             <!-- /column -->
