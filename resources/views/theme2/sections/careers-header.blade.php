@@ -69,7 +69,7 @@
                             <div class="form-floating mb-4">
                                 <input type="file" name="cv" class="form-control"
                                        id="cv" style="padding-bottom: 2rem;padding-left: 1.5rem;"
-                                       accept="application/pdf">
+                                       accept="application/pdf" required>
                             </div>
                             <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">{{__('theme2-global.send')}}</a>
                         </form>
