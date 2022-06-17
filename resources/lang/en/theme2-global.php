@@ -131,6 +131,7 @@ return [
     "position-digital-marketing-expert" => "Digital Marketing Specialist",
     "position-social-media-expert"      => "Social Media Manager",
     "position-intern"                   => "Intern",
+    "send-cv"                           => "Send CV",
     "7-days-free-return"                => "7 Days Free Return",
     "quick-installation"                => "Quick Installation",
 ];

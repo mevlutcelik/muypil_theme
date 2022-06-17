@@ -1,3 +1,10 @@
+@push('styles')
+    <style>
+        input::-webkit-file-upload-button {
+            border-radius: 0.5rem !important;
+        }
+    </style>
+@endpush
 <section class="wrapper bg-navy pt-16"
          style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url({{asset('assets2/img/photos/bg21.png')}});background-repeat: no-repeat;background-size: cover;">
     <div class="container pt-10 pb-17 pt-md-14 text-center">
@@ -19,24 +26,30 @@
                     <div class="card-body p-11 text-center">
                         <h2 class="mb-3 text-start">{{__('theme2-global.careers-title')}}</h2>
                         <p class="lead mb-6 fs-16 text-start">{{__('theme2-global.careers-desc')}}</p>
-                        <form class="text-start mb-3">
+                        <form class="text-start mb-3" enctype="multipart/form-data">
                             <div class="form-floating mb-4">
                                 <input type="text" class="form-control" placeholder="{{__('theme2-global.first-name')}}"
-                                       id="first_name">
+                                       id="first_name" required>
                                 <label for="first_name">{{__('theme2-global.first-name')}}</label>
                             </div>
                             <div class="form-floating mb-4">
                                 <input type="text" class="form-control" placeholder="{{__('theme2-global.last-name')}}"
-                                       id="last_name">
+                                       id="last_name" required>
                                 <label for="last_name">{{__('theme2-global.last-name')}}</label>
                             </div>
                             <div class="form-floating mb-4">
                                 <input type="tel" class="form-control" placeholder="{{__('theme2-global.phone')}}"
-                                       id="phone">
+                                       id="phone" required>
                                 <label for="phone">{{__('theme2-global.phone')}}</label>
                             </div>
+                            <div class="form-floating mb-4">
+                                <input type="email" class="form-control" placeholder="{{__('theme2-global.email')}}"
+                                       id="email" required>
+                                <label for="email">{{__('theme2-global.email')}}</label>
+                            </div>
                             <div class="form-select-wrapper mb-4">
-                                <select class="form-select" aria-label="{{__('theme2-global.select-position')}}">
+                                <select class="form-select" name="select_position"
+                                        aria-label="{{__('theme2-global.select-position')}}">
                                     <option selected>{{__('theme2-global.select-position')}}</option>
                                     <option
                                         value="{{__('theme2-global.position-software')}}">{{__('theme2-global.position-software')}}</option>
@@ -51,6 +64,12 @@
                                     <option
                                         value="{{__('theme2-global.position-intern')}}">{{__('theme2-global.position-intern')}}</option>
                                 </select>
+                            </div>
+                            <label for="cv" class="fs-14 ms-1 mb-2">{{__('theme2-global.send-cv')}}</label>
+                            <div class="form-floating mb-4">
+                                <input type="file" name="cv" class="form-control"
+                                       id="cv" style="padding-bottom: 2rem;padding-left: 1.5rem;"
+                                       accept="application/pdf">
                             </div>
                             <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">{{__('theme2-global.send')}}</a>
                         </form>
