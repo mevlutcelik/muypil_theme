@@ -128,6 +128,8 @@
                                 <th scope="col">{{__('theme2-dashboard-global.languages')}}</th>
                                 <th scope="col">{{__('theme2-dashboard-global.on-line')}}</th>
                                 <th scope="col">{{__('theme2-dashboard-global.product')}}</th>
+                                <th scope="col">{{__('theme2-dashboard-global.product-sub')}}</th>
+                                <th scope="col">{{__('theme2-dashboard-global.vendor')}}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -179,6 +181,8 @@
                                 <td data-label="{{__('theme2-dashboard-global.languages')}}">&nbsp;</td>
                                 <td data-label="{{__('theme2-dashboard-global.on-line')}}">Hayır</td>
                                 <td data-label="{{__('theme2-dashboard-global.product')}}">&nbsp;</td>
+                                <td data-label="{{__('theme2-dashboard-global.product-sub')}}">&nbsp;</td>
+                                <td data-label="{{__('theme2-dashboard-global.vendor')}}">&nbsp;</td>
                             </tr>
                             </tbody>
                         </table>

@@ -4,6 +4,8 @@ return [
     "routes-pricing"                    => "pricing",
     "routes-comments"                   => "comments",
     "routes-agencies"                   => "agencies",
+    "routes-policies-privacy"           => "privacy-policy",
+    "routes-policies-user"              => "user-policy",
     "routes-policies"                   => "policies",
     "routes-careers"                    => "careers",
     "routes-login"                      => "login",

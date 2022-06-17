@@ -72,5 +72,7 @@ return [
     "languages"                         => "Languages",
     "on-line"                           => "On Line",
     "product"                           => "Product",
+    "product-sub"                       => "Product Sub",
+    "vendor"                            => "Vendor",
 ];
 ?>

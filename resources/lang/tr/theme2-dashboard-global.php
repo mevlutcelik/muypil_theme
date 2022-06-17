@@ -73,5 +73,7 @@ return [
     "languages"                         => "Diller",
     "on-line"                           => "İnternet Üzerinden",
     "product"                           => "Ürün",
+    "product-sub"                       => "Ürün Alt",
+    "vendor"                            => "Satıcı",
 ];
 ?>
