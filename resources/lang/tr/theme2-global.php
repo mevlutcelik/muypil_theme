@@ -125,4 +125,9 @@ return [
     "position"                          => "Pozisyon",
     "select-position"                   => "Pozisyon seç",
     "position-software"                 => "Yazılım",
+    "position-sales-representative"     => "Satış Temsilcisi",
+    "position-live-support-specialist"  => "Canlı Destek Uzmanı",
+    "position-digital-marketing-expert" => "Dijital Pazarlama Uzmanı",
+    "position-social-media-expert"      => "Sosyal Medya Uzmanı",
+    "position-intern"                   => "Stajyer",
 ];

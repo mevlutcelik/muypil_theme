@@ -122,6 +122,11 @@ return [
     "last-name"                         => "Last Name",
     "phone"                             => "Phone",
     "position"                          => "Position",
-    "select-position"                   => "Pozisyon seç",
+    "select-position"                   => "Select Position",
     "position-software"                 => "Software",
+    "position-sales-representative"     => "Sales Representative",
+    "position-live-support-specialist"  => "Live Support Specialist",
+    "position-digital-marketing-expert" => "Digital Marketing Specialist",
+    "position-social-media-expert"      => "Social Media Manager",
+    "position-intern"                   => "Intern",
 ];

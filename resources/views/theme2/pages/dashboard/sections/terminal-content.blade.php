@@ -21,7 +21,7 @@
             background: rgba(0, 0, 0, 0.2);
         }
 
-        body {
+        html,body {
             overflow: hidden;
         }
 
