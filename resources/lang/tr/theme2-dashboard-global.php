@@ -75,5 +75,9 @@ return [
     "product"                           => "Ürün",
     "product-sub"                       => "Ürün Alt",
     "vendor"                            => "Satıcı",
+    "vendor-sub"                        => "Satıcı Alt",
+    "web-driver"                        => "Web Sürücüsü",
+    "started_at"                        => "Başlangıç",
+    "finished_at"                       => "Bitiş",
 ];
 ?>

@@ -74,5 +74,9 @@ return [
     "product"                           => "Product",
     "product-sub"                       => "Product Sub",
     "vendor"                            => "Vendor",
+    "vendor-sub"                        => "Vendor Sub",
+    "web-driver"                        => "Web Driver",
+    "started_at"                        => "Started At",
+    "finished_at"                       => "Finished At",
 ];
 ?>

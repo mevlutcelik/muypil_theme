@@ -1,5 +1,19 @@
 @push('styles')
     <style>
+        input[type="date"] {
+            background: #fff;
+            border: rgba(0,0,0,0.1);
+            border-radius: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 15px;
+            margin-left: 0.5rem;
+        }
+        .input-date{
+            margin-bottom: 1rem;
+        }
+        .input-date label{
+            margin-left: 0.5rem;
+        }
         /* width */
         ::-webkit-scrollbar {
             width: 4px;
@@ -80,6 +94,27 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active mx-2 mx-md-4 mx-lg-6 mx-xl-8" id="topbar-statistics">
                         {{--Table Start--}}
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="form-floating mb-4">
+                                <input id="textInputExample" type="text" class="form-control" placeholder="Text Input">
+                                <label for="textInputExample">Text Input</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="input-date">
+                                    <label for="">{{__('theme2-dashboard-global.started_at')}}</label>
+                                    <input type="date" id="datepicker-start" name="trip-start"
+                                           value="2022-07-22"
+                                           min="2018-01-01" max="2018-12-31">
+                                </div>
+                                <div class="input-date">
+                                    <label for="">{{__('theme2-dashboard-global.finished_at')}}</label>
+                                    <input type="date" id="datepicker-start" name="trip-start"
+                                           value="2018-07-22"
+                                           min="2018-01-01" max="2018-12-31">
+                                </div>
+                            </div>
+                            <!-- /.form-floating -->
+                        </div>
                         <table class="muypil-responsive-table" id="myTable">
                             <thead>
                             <tr>
@@ -130,6 +165,8 @@
                                 <th scope="col">{{__('theme2-dashboard-global.product')}}</th>
                                 <th scope="col">{{__('theme2-dashboard-global.product-sub')}}</th>
                                 <th scope="col">{{__('theme2-dashboard-global.vendor')}}</th>
+                                <th scope="col">{{__('theme2-dashboard-global.vendor-sub')}}</th>
+                                <th scope="col">{{__('theme2-dashboard-global.web-driver')}}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -140,8 +177,12 @@
                                 <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
                                 <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri</td>
                                 <td data-label="IP">5.229.30.102</td>
-                                <td data-label="{{__('theme2-dashboard-global.ip-range')}}">5.229.0.0/16<sup class="fs-14 d-inline-flex align-items-center justify-content-center"><span class="badge bg-blue rounded-pill">15.897</span></sup></td>
-                                <td data-label="{{__('theme2-dashboard-global.as-org')}}">Vodafone Telekomunikasyon A.S.</td>
+                                <td data-label="{{__('theme2-dashboard-global.ip-range')}}">5.229.0.0/16<sup
+                                        class="fs-14 d-inline-flex align-items-center justify-content-center"><span
+                                            class="badge bg-blue rounded-pill">15.897</span></sup></td>
+                                <td data-label="{{__('theme2-dashboard-global.as-org')}}">Vodafone Telekomunikasyon
+                                    A.S.
+                                </td>
                                 <td data-label="{{__('theme2-dashboard-global.ip-country')}}">Turkey</td>
                                 <td data-label="{{__('theme2-dashboard-global.ip-city')}}">-</td>
                                 <td data-label="Platform">AndroidOS 10</td>
@@ -152,9 +193,13 @@
                                 <td data-label="{{__('theme2-dashboard-global.click-status')}}">Hayır</td>
                                 <td data-label="{{__('theme2-dashboard-global.scroll-status')}}">Hayır</td>
                                 <td data-label="{{__('theme2-dashboard-global.network')}}">Google Search</td>
-                                <td data-label="Gclid">Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB</td>
+                                <td data-label="Gclid">
+                                    Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
+                                </td>
                                 <td data-label="Redirect URL">-</td>
-                                <td data-label="User Agent">Mozilla/5.0 (Linux; Android 10; M2006C3LG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36</td>
+                                <td data-label="User Agent">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
+                                </td>
                                 <td data-label="Host">176.33.90.255</td>
                                 <td data-label="{{__('theme2-dashboard-global.as-number')}}">34984</td>
                                 <td data-label="{{__('theme2-dashboard-global.ip-region')}}">Gaziantep</td>
@@ -169,7 +214,9 @@
                                 <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
                                 <td data-label="Cookie">Hayır</td>
                                 <td data-label="{{__('theme2-dashboard-global.time-zone')}}">-</td>
-                                <td data-label="Canvas"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgNDcuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDQ3LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkFGQUZBO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwMCw0Ni45TDAsNDcuMVY4LjljMCwwLDIxLjEsMTQuMyw2NS4yLDE0LjFjNDAuNi0wLjIsNzYuNC0yMywxMjgtMjNDMjQzLjMsMCwzMDAsMTYuNCwzMDAsMTYuNFY0Ni45eiIvPgo8L3N2Zz4K" alt="Canvas Print" height="32px"></td>
+                                <td data-label="Canvas"><img
+                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgNDcuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDQ3LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkFGQUZBO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwMCw0Ni45TDAsNDcuMVY4LjljMCwwLDIxLjEsMTQuMyw2NS4yLDE0LjFjNDAuNi0wLjIsNzYuNC0yMywxMjgtMjNDMjQzLjMsMCwzMDAsMTYuNCwzMDAsMTYuNFY0Ni45eiIvPgo8L3N2Zz4K"
+                                        alt="Canvas Print" height="32px"></td>
                                 <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
                                 <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
                                 <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>
@@ -183,6 +230,8 @@
                                 <td data-label="{{__('theme2-dashboard-global.product')}}">&nbsp;</td>
                                 <td data-label="{{__('theme2-dashboard-global.product-sub')}}">&nbsp;</td>
                                 <td data-label="{{__('theme2-dashboard-global.vendor')}}">&nbsp;</td>
+                                <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}">&nbsp;</td>
+                                <td data-label="{{__('theme2-dashboard-global.web-driver')}}">Hayır</td>
                             </tr>
                             </tbody>
                         </table>
@@ -230,7 +279,11 @@
 @push('scripts')
     {{--Todo: Canvasların (Chart.js) script kodlarını buraya koyabiliriz.--}}
     <script>
-        $(document).ready( function () {
+        $(function () {
+            $("#datepicker-start").datepicker();
+            $("#datepicker-finish").datepicker();
+        });
+        $(document).ready(function () {
             $('.muypil-responsive-table').DataTable({
                 language: {
                     lengthMenu: "{{__('theme2-dashboard-global.per-page-records')}}",
@@ -243,6 +296,6 @@
                 },
                 info: false,
             });
-        } );
+        });
     </script>
 @endpush
