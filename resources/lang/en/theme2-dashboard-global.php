@@ -78,5 +78,16 @@ return [
     "web-driver"                        => "Web Driver",
     "started_at"                        => "Started At",
     "finished_at"                       => "Finished At",
+    "all"                               => "All",
+    "yes"                               => "Yes",
+    "no"                                => "No",
+    "google-search"                     => "Google Search",
+    "search-partner"                    => "Search Partner",
+    "display-network"                   => "Display Network",
+    "smart-shopping-campaign"           => "Smart Shopping Campaign",
+    "youtube-videos"                    => "YouTube Videos",
+    "youtube-search"                    => "YouTube Search",
+    "google-video"                      => "Google Video",
+    "filter"                            => "Filter",
 ];
 ?>

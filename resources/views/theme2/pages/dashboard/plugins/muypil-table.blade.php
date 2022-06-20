@@ -1,44 +1,80 @@
 @push('styles')
-    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <style>
-        table.muypil-responsive-table {
-            border: 1px solid rgba(8, 60, 130, .07);
-            border-collapse: collapse;
-            margin: 0;
-            padding: 0;
-            border-radius: 0.5rem;
+        .mx-filter-box{
+            display: -webkit-box !important;
             width: 100%;
-            table-layout: fixed;
-            font-family: 'Urbanist', sans-serif;
-            font-size: 18px;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        .mx-filter-box:active, .mx-filter-box input:active{
+            cursor: grab;
+        }
+        .mx-filter {
+            max-width: 7.5rem;
+        }
+        /* width */
+        .mx-filter-box::-webkit-scrollbar {
+            width: 0;
+        }
+
+        /* Track */
+        .mx-filter-box::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        .mx-filter-box::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+
+        /* Handle on hover */
+        .mx-filter-box::-webkit-scrollbar-thumb:hover {
+            background: transparent;
+        }
+
+        input[type="date"] {
+            background: #fff;
+            border: rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 15px;
+            margin-left: 0.5rem;
+        }
+
+        .input-date {
             margin-bottom: 1rem;
         }
 
-        table.muypil-responsive-table caption {
-            font-size: 1.5em;
-            margin: .5em 0 .75em;
+        .input-date label {
+            margin-left: 0.5rem;
         }
 
-        table.muypil-responsive-table tr {
-            border-radius: 0.5rem;
+        /* width */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        table.muypil-responsive-table td{
             background-color: #fff;
-            border: 1px solid rgba(8, 60, 130, .07);
-            padding: .35em;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
         }
-
-        table.muypil-responsive-table th,
-        table.muypil-responsive-table td {
-            padding: .625em;
-            word-break: break-all;
-        }
-
-        table.muypil-responsive-table th {
-            font-size: .85em;
-            letter-spacing: .1em;
-        }
-
-        @media screen and (min-width: 1px) {
+        @media screen and (max-width: 992px) { /* min-width: 1px */
+            .table-responsive{
+                overflow: hidden;
+            }
             table.muypil-responsive-table {
                 border: 0;
             }
@@ -59,16 +95,23 @@
             }
 
             table tr {
-                border-bottom: 3px solid #ddd;
+                border-radius: 1rem;
+                border: none;
+                border-bottom: 1px solid rgba(164,174,198,.2);
                 display: block;
-                margin-bottom: .625em;
+                margin-bottom: 3rem;
+                word-break: break-all;
+                background-color: #fff;
             }
 
             table.muypil-responsive-table td {
-                border-bottom: 1px solid #ddd;
+                border: none;
+                border-bottom: 1px solid rgba(164,174,198,.2);
                 display: block;
                 font-size: .8em;
                 text-align: right;
+                justify-content: space-between;
+                word-break: break-all;
             }
 
             table.muypil-responsive-table td::before {
@@ -85,105 +128,33 @@
                 border-bottom: 0;
             }
         }
-
-        .dataTables_length {
-            font-size: 14px;
-            margin-bottom: 1.5rem;
-        }
-
-        .dataTables_wrapper .dataTables_length select {
-            padding: 0;
-            height: 2rem;
-            width: 2rem;
-            text-align: center;
-            font-size: .75rem;
-            font-weight: bold;
-            margin: 0 0.25rem;
-            color: #959ca9;
-            background-color: #fff;
-            border: 1px solid rgba(8, 60, 130, .07);
-            border-radius: 0.4rem;
-            box-shadow: 0 0 1.25rem rgba(30, 34, 40, 0.04);
-            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            outline: none;
-            font-family: 'Urbanist', sans-serif;
-        }
-
-        .dataTables_wrapper .dataTables_filter {
-            font-size: 14px;
-        }
-
-        .dataTables_wrapper .dataTables_filter input {
-            background-color: #fff;
-            font-family: 'Urbanist', sans-serif;
-            font-weight: bold;
-            margin-left: 0.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(8, 60, 130, .07);
-            border-radius: 0.4rem;
-            box-shadow: 0 0 1.25rem rgba(30, 34, 40, 0.04);
-            outline: none;
-            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-        }
-
-        table.muypil-responsive-table tbody {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        table.muypil-responsive-table tr {
-            background-color: #fff !important;
-            width: 100%;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        @media all and (min-width: 600px) {
-            table.muypil-responsive-table tr {
-                width: 48%;
-                margin-bottom: 1.5rem;
-            }
-        }
-
-        @media all and (min-width: 992px) {
-            table.muypil-responsive-table tr {
-                width: 30%;
-                margin-bottom: 3rem;
-            }
-        }
-
-        table.dataTable thead th, table.dataTable thead td, table.muypil-responsive-table td {
-            border-bottom: 1px solid rgba(8, 60, 130, .07);
-            background-color: #fff;
-        }
-
-        .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-            background: #fff;
-            height: 2.5rem;
-            width: 2.5rem;
-            border-radius: 0.4rem;
-            padding: 0;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(8, 60, 130, .07);
-        }
-
-        .dataTables_wrapper .dataTables_paginate .paginate_button {
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        table.dataTable.no-footer {
-            border-bottom: 1px solid transparent;
-        }
     </style>
 @endpush
 @push('scripts')
-    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+        const sliderTableBox = document.querySelector('.mx-filter-box');
+        let mouseDownTableBox = false;
+        let startXTableBox, scrollLeftTableBox;
+        let startDraggingTableBox = function (e) {
+            mouseDownTableBox = true;
+            startXTableBox = e.pageX - sliderTableBox.offsetLeft;
+            scrollLeftTableBox = sliderTableBox.scrollLeft;
+        };
+        let stopDraggingTableBox = function (event) {
+            mouseDownTableBox = false;
+        };
+        sliderTableBox.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDownTableBox) {
+                return;
+            }
+            const xTableBox = e.pageX - sliderTableBox.offsetLeft;
+            const scrollTableBox = xTableBox - startXTableBox;
+            sliderTableBox.scrollLeft = scrollLeftTableBox - scrollTableBox;
+        });
+        // Add the event listeners
+        sliderTableBox.addEventListener('mousedown', startDraggingTableBox, false);
+        sliderTableBox.addEventListener('mouseup', stopDraggingTableBox, false);
+        sliderTableBox.addEventListener('mouseleave', stopDraggingTableBox, false);
+    </script>
 @endpush

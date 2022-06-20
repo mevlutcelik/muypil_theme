@@ -1,40 +1,3 @@
-@push('styles')
-    <style>
-        input[type="date"] {
-            background: #fff;
-            border: rgba(0,0,0,0.1);
-            border-radius: 0.5rem;
-            padding: 0.25rem 0.5rem;
-            font-size: 15px;
-            margin-left: 0.5rem;
-        }
-        .input-date{
-            margin-bottom: 1rem;
-        }
-        .input-date label{
-            margin-left: 0.5rem;
-        }
-        /* width */
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.15);
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(0, 0, 0, 0.2);
-        }
-    </style>
-@endpush
 <section class="wrapper bg-aquabg-pale-aqua">
     <div class="py-13 py-md-16">
         <div class="row text-center">
@@ -94,147 +57,386 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active mx-2 mx-md-4 mx-lg-6 mx-xl-8" id="topbar-statistics">
                         {{--Table Start--}}
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="form-floating mb-4">
-                                <input id="textInputExample" type="text" class="form-control" placeholder="Text Input">
-                                <label for="textInputExample">Text Input</label>
-                            </div>
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-between">
+                            <div class="fw-bold d-none d-md-block">{{__('theme2-dashboard-global.filter')}}</div>
                             <div class="d-flex align-items-center">
                                 <div class="input-date">
                                     <label for="">{{__('theme2-dashboard-global.started_at')}}</label>
                                     <input type="date" id="datepicker-start" name="trip-start"
-                                           value="2022-07-22"
-                                           min="2018-01-01" max="2018-12-31">
+                                           value="{{date("Y-m-d")}}"
+                                           min="2015-01-01" max="{{date('Y')}}-12-31">
                                 </div>
                                 <div class="input-date">
                                     <label for="">{{__('theme2-dashboard-global.finished_at')}}</label>
                                     <input type="date" id="datepicker-start" name="trip-start"
-                                           value="2018-07-22"
-                                           min="2018-01-01" max="2018-12-31">
+                                           value="{{date("Y-m-d")}}"
+                                           min="2015-01-01" max="{{date('Y')}}-12-31">
                                 </div>
                             </div>
                             <!-- /.form-floating -->
                         </div>
-                        <table class="muypil-responsive-table" id="myTable">
-                            <thead>
-                            <tr>
-                                <th scope="col">{{__('theme2-dashboard-global.account')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.campaing')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.keyword')}}</th>
-                                <th scope="col">IP</th>
-                                <th scope="col">{{__('theme2-dashboard-global.ip-range')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.as-org')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.ip-country')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.ip-city')}}</th>
-                                <th scope="col">Platform</th>
-                                <th scope="col">{{__('theme2-dashboard-global.browser')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.device')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.clicks-count')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.time-spent')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.click-status')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.scroll-status')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.network')}}</th>
-                                <th scope="col">Gclid</th>
-                                <th scope="col">Redirect URL</th>
-                                <th scope="col">User Agent</th>
-                                <th scope="col">Host</th>
-                                <th scope="col">{{__('theme2-dashboard-global.as-number')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.ip-region')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.ip-posta-code')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.first-click')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.last-click')}}</th>
-                                <th scope="col">Javascript</th>
-                                <th scope="col">{{__('theme2-dashboard-global.software-version')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.color-depth')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.fonts')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.local-storage')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.session-storage')}}</th>
-                                <th scope="col">Cookie</th>
-                                <th scope="col">{{__('theme2-dashboard-global.time-zone')}}</th>
-                                <th scope="col">Canvas</th>
-                                <th scope="col">{{__('theme2-dashboard-global.app-code-name')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.app-name')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.app-version')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.cookie-enabled')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.device-memory')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.do-not-track')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.hardware-concurrency')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.language')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.languages')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.on-line')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.product')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.product-sub')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.vendor')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.vendor-sub')}}</th>
-                                <th scope="col">{{__('theme2-dashboard-global.web-driver')}}</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.--}}
-                            {{--Todo: Foreach ile gelen verileri listele--}}
-                            <tr>
-                                <td data-label="{{__('theme2-dashboard-global.account')}}">359-318-6843</td>
-                                <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
-                                <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri</td>
-                                <td data-label="IP">5.229.30.102</td>
-                                <td data-label="{{__('theme2-dashboard-global.ip-range')}}">5.229.0.0/16<sup
-                                        class="fs-14 d-inline-flex align-items-center justify-content-center"><span
-                                            class="badge bg-blue rounded-pill">15.897</span></sup></td>
-                                <td data-label="{{__('theme2-dashboard-global.as-org')}}">Vodafone Telekomunikasyon
-                                    A.S.
-                                </td>
-                                <td data-label="{{__('theme2-dashboard-global.ip-country')}}">Turkey</td>
-                                <td data-label="{{__('theme2-dashboard-global.ip-city')}}">-</td>
-                                <td data-label="Platform">AndroidOS 10</td>
-                                <td data-label="{{__('theme2-dashboard-global.browser')}}">Chrome 87.0.4280.101</td>
-                                <td data-label="{{__('theme2-dashboard-global.device')}}">Mobil</td>
-                                <td data-label="{{__('theme2-dashboard-global.clicks-count')}}">1</td>
-                                <td data-label="{{__('theme2-dashboard-global.time-spent')}}">-</td>
-                                <td data-label="{{__('theme2-dashboard-global.click-status')}}">Hayır</td>
-                                <td data-label="{{__('theme2-dashboard-global.scroll-status')}}">Hayır</td>
-                                <td data-label="{{__('theme2-dashboard-global.network')}}">Google Search</td>
-                                <td data-label="Gclid">
-                                    Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
-                                </td>
-                                <td data-label="Redirect URL">-</td>
-                                <td data-label="User Agent">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
-                                    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
-                                </td>
-                                <td data-label="Host">176.33.90.255</td>
-                                <td data-label="{{__('theme2-dashboard-global.as-number')}}">34984</td>
-                                <td data-label="{{__('theme2-dashboard-global.ip-region')}}">Gaziantep</td>
-                                <td data-label="{{__('theme2-dashboard-global.ip-postal-code')}}">27090</td>
-                                <td data-label="{{__('theme2-dashboard-global.first-click')}}">2022-06-17 16:08:44</td>
-                                <td data-label="{{__('theme2-dashboard-global.last-click')}}">2022-06-17 16:08:44</td>
-                                <td data-label="Javascript">Bilinmeyen</td>
-                                <td data-label="{{__('theme2-dashboard-global.software-version')}}">-</td>
-                                <td data-label="{{__('theme2-dashboard-global.color-depth')}}">-</td>
-                                <td data-label="{{__('theme2-dashboard-global.fonts')}}">-</td>
-                                <td data-label="{{__('theme2-dashboard-global.local-storage')}}">Hayır</td>
-                                <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
-                                <td data-label="Cookie">Hayır</td>
-                                <td data-label="{{__('theme2-dashboard-global.time-zone')}}">-</td>
-                                <td data-label="Canvas"><img
-                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgNDcuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDQ3LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkFGQUZBO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwMCw0Ni45TDAsNDcuMVY4LjljMCwwLDIxLjEsMTQuMyw2NS4yLDE0LjFjNDAuNi0wLjIsNzYuNC0yMywxMjgtMjNDMjQzLjMsMCwzMDAsMTYuNCwzMDAsMTYuNFY0Ni45eiIvPgo8L3N2Zz4K"
-                                        alt="Canvas Print" height="32px"></td>
-                                <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.cookie-enabled')}}">Hayır</td>
-                                <td data-label="{{__('theme2-dashboard-global.device-memory')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.do-not-track')}}">Hayır</td>
-                                <td data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.language')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.languages')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.on-line')}}">Hayır</td>
-                                <td data-label="{{__('theme2-dashboard-global.product')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.product-sub')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.vendor')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}">&nbsp;</td>
-                                <td data-label="{{__('theme2-dashboard-global.web-driver')}}">Hayır</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div class="mx-filter-box">
+                            <div class="form-floating mb-4 me-2">
+                                <input id="account" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.account')}}">
+                                <label for="account">{{__('theme2-dashboard-global.account')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="campaing" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.campaing')}}">
+                                <label for="campaing">{{__('theme2-dashboard-global.campaing')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="keyword" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.keyword')}}">
+                                <label for="keyword">{{__('theme2-dashboard-global.keyword')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="ip" type="text" class="form-control mx-filter"
+                                       placeholder="IP">
+                                <label for="ip">IP</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="ip-range" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.ip-range')}}">
+                                <label for="ip-range">{{__('theme2-dashboard-global.ip-range')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="cidr" type="text" class="form-control mx-filter"
+                                       placeholder="CIDR">
+                                <label for="cidr">CIDR</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="as-org" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.as-org')}}">
+                                <label for="as-org">{{__('theme2-dashboard-global.as-org')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="ip-country" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.ip-country')}}">
+                                <label for="ip-country">{{__('theme2-dashboard-global.ip-country')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="ip-city" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.ip-city')}}">
+                                <label for="ip-city">{{__('theme2-dashboard-global.ip-city')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="Platform" type="text" class="form-control mx-filter"
+                                       placeholder="Platform">
+                                <label for="Platform">Platform</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="browser" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.browser')}}">
+                                <label for="browser">{{__('theme2-dashboard-global.browser')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="device" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.device')}}">
+                                <label for="device">{{__('theme2-dashboard-global.device')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <div class="fs-11 mb-1">{{__('theme2-dashboard-global.clicks-count')}}</div>
+                                    <div class="d-flex align-items-center">
+                                        <input id="clicks-count-start" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                               placeholder="{{__('theme2-dashboard-global.started_at')}}">
+                                        <input id="clicks-count-finish" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                               placeholder="{{__('theme2-dashboard-global.finished_at')}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <div class="fs-11 mb-1">{{__('theme2-dashboard-global.time-spent')}}</div>
+                                    <div class="d-flex align-items-center">
+                                        <input id="clicks-count-start" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                               placeholder="{{__('theme2-dashboard-global.started_at')}}">
+                                        <input id="clicks-count-finish" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                               placeholder="{{__('theme2-dashboard-global.finished_at')}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-select-wrapper mb-4 me-2">
+                                <select class="form-select" aria-label="{{__('theme2-dashboard-global.click-status')}}">
+                                    <option selected>{{__('theme2-dashboard-global.click-status')}}</option>
+                                    <option value="1">{{__('theme2-dashboard-global.all')}}</option>
+                                    <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.no')}}</option>
+                                </select>
+                            </div>
+                            <div class="form-select-wrapper mb-4 me-2">
+                                <select class="form-select" aria-label="{{__('theme2-dashboard-global.scroll-status')}}">
+                                    <option selected>{{__('theme2-dashboard-global.scroll-status')}}</option>
+                                    <option value="1">{{__('theme2-dashboard-global.all')}}</option>
+                                    <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.no')}}</option>
+                                </select>
+                            </div>
+                            <div class="form-select-wrapper mb-4 me-2">
+                                <select class="form-select" aria-label="{{__('theme2-dashboard-global.network')}}">
+                                    <option selected>{{__('theme2-dashboard-global.network')}}</option>
+                                    <option value="1">{{__('theme2-dashboard-global.all')}}</option>
+                                    <option value="2">{{__('theme2-dashboard-global.google-search')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.search-partner')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.display-network')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.smart-shopping-campaign')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.youtube-videos')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.youtube-search')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.google-video')}}</option>
+                                </select>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="gclid" type="text" class="form-control mx-filter"
+                                       placeholder="Gclid">
+                                <label for="gclid">Gclid</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="redirect-url" type="text" class="form-control mx-filter"
+                                       placeholder="Redirect URL">
+                                <label for="redirect-url">Redirect URL</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="user-agent" type="text" class="form-control mx-filter"
+                                       placeholder="User Agent">
+                                <label for="user-agent">User Agent</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="host" type="text" class="form-control mx-filter"
+                                       placeholder="Host">
+                                <label for="host">Host</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="as-number" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.as-number')}}">
+                                <label for="as-number">{{__('theme2-dashboard-global.as-number')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="ip-region" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.ip-region')}}">
+                                <label for="ip-region">{{__('theme2-dashboard-global.ip-region')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="ip-postal-code" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.ip-postal-code')}}">
+                                <label for="ip-postal-code">{{__('theme2-dashboard-global.ip-postal-code')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="first-click" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.first-click')}}">
+                                <label for="first-click">{{__('theme2-dashboard-global.first-click')}}</label>
+                            </div>
+                            <div class="form-floating mb-4 me-2">
+                                <input id="last-click" type="text" class="form-control mx-filter"
+                                       placeholder="{{__('theme2-dashboard-global.last-click')}}">
+                                <label for="last-click">{{__('theme2-dashboard-global.last-click')}}</label>
+                            </div>
+                            <div class="form-select-wrapper mb-4 me-2">
+                                <select class="form-select" aria-label="Javascript">
+                                    <option selected>Javascript</option>
+                                    <option value="1">{{__('theme2-dashboard-global.all')}}</option>
+                                    <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
+                                    <option value="3">{{__('theme2-dashboard-global.no')}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered muypil-responsive-table">
+                                <thead>
+                                <tr class="bg-soft-sky">
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.account')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.campaing')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.keyword')}}</th>
+                                    <th scope="col">IP</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.ip-range')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.as-org')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.ip-country')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.ip-city')}}</th>
+                                    <th scope="col">Platform</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.browser')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.device')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.clicks-count')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.time-spent')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.click-status')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.scroll-status')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.network')}}</th>
+                                    <th scope="col">Gclid</th>
+                                    <th scope="col">Redirect URL</th>
+                                    <th scope="col">User Agent</th>
+                                    <th scope="col">Host</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.as-number')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.ip-region')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.ip-postal-code')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.first-click')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.last-click')}}</th>
+                                    <th scope="col">Javascript</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.software-version')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.color-depth')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.fonts')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.local-storage')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.session-storage')}}</th>
+                                    <th scope="col">Cookie</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.time-zone')}}</th>
+                                    <th scope="col">Canvas</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.app-code-name')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.app-name')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.app-version')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.cookie-enabled')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.device-memory')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.do-not-track')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.hardware-concurrency')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.language')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.languages')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.on-line')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.product')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.product-sub')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.vendor')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.vendor-sub')}}</th>
+                                    <th scope="col">{{__('theme2-dashboard-global.web-driver')}}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
+                                Todo: Foreach ile gelen verileri listele--}}
+                                <tr>
+                                    <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red">Engelle</a></td>
+                                    <td data-label="{{__('theme2-dashboard-global.account')}}">359-318-6843</td>
+                                    <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
+                                    <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri
+                                    </td>
+                                    <td data-label="IP">5.229.30.102</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-range')}}">
+                                        <div>5.229.0.0/16<sup
+                                                class="fs-14 d-inline-flex align-items-center justify-content-center"><span
+                                                    class="badge bg-blue rounded-pill">15.897</span></sup></div>
+                                    </td>
+                                    <td data-label="{{__('theme2-dashboard-global.as-org')}}">Vodafone Telekomunikasyon
+                                        A.S.
+                                    </td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-country')}}">Turkey</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-city')}}">&nbsp;</td>
+                                    <td data-label="Platform">AndroidOS 10</td>
+                                    <td data-label="{{__('theme2-dashboard-global.browser')}}">Chrome 87.0.4280.101</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device')}}">Mobil</td>
+                                    <td data-label="{{__('theme2-dashboard-global.clicks-count')}}">1</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-spent')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.click-status')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.scroll-status')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.network')}}">Google Search</td>
+                                    <td data-label="Gclid">
+                                        Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
+                                    </td>
+                                    <td data-label="Redirect URL">&nbsp;</td>
+                                    <td data-label="User Agent">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
+                                    </td>
+                                    <td data-label="Host">176.33.90.255</td>
+                                    <td data-label="{{__('theme2-dashboard-global.as-number')}}">34984</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-region')}}">Gaziantep</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-postal-code')}}">27090</td>
+                                    <td data-label="{{__('theme2-dashboard-global.first-click')}}">2022-06-17 16:08:44
+                                    </td>
+                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}">2022-06-17 16:08:44
+                                    </td>
+                                    <td data-label="Javascript">Bilinmeyen</td>
+                                    <td data-label="{{__('theme2-dashboard-global.software-version')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.color-depth')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.fonts')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.local-storage')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
+                                    <td data-label="Cookie">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-zone')}}">&nbsp;</td>
+                                    <td data-label="Canvas"><img
+                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgNDcuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDQ3LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkFGQUZBO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwMCw0Ni45TDAsNDcuMVY4LjljMCwwLDIxLjEsMTQuMyw2NS4yLDE0LjFjNDAuNi0wLjIsNzYuNC0yMywxMjgtMjNDMjQzLjMsMCwzMDAsMTYuNCwzMDAsMTYuNFY0Ni45eiIvPgo8L3N2Zz4K"
+                                            alt="Canvas Print" height="32px"></td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.cookie-enabled')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device-memory')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.do-not-track')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.language')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.languages')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.on-line')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product-sub')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.web-driver')}}">Hayır</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red">Engelle</a></td>
+                                    <td data-label="{{__('theme2-dashboard-global.account')}}">359-318-6843</td>
+                                    <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
+                                    <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri
+                                    </td>
+                                    <td data-label="IP">5.229.30.102</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-range')}}">
+                                        <div>5.229.0.0/16<sup
+                                                class="fs-14 d-inline-flex align-items-center justify-content-center"><span
+                                                    class="badge bg-blue rounded-pill">15.897</span></sup></div>
+                                    </td>
+                                    <td data-label="{{__('theme2-dashboard-global.as-org')}}">Vodafone Telekomunikasyon
+                                        A.S.
+                                    </td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-country')}}">Turkey</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-city')}}">&nbsp;</td>
+                                    <td data-label="Platform">AndroidOS 10</td>
+                                    <td data-label="{{__('theme2-dashboard-global.browser')}}">Chrome 87.0.4280.101</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device')}}">Mobil</td>
+                                    <td data-label="{{__('theme2-dashboard-global.clicks-count')}}">1</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-spent')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.click-status')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.scroll-status')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.network')}}">Google Search</td>
+                                    <td data-label="Gclid">
+                                        Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
+                                    </td>
+                                    <td data-label="Redirect URL">&nbsp;</td>
+                                    <td data-label="User Agent">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
+                                    </td>
+                                    <td data-label="Host">176.33.90.255</td>
+                                    <td data-label="{{__('theme2-dashboard-global.as-number')}}">34984</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-region')}}">Gaziantep</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-postal-code')}}">27090</td>
+                                    <td data-label="{{__('theme2-dashboard-global.first-click')}}">2022-06-17 16:08:44
+                                    </td>
+                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}">2022-06-17 16:08:44
+                                    </td>
+                                    <td data-label="Javascript">Bilinmeyen</td>
+                                    <td data-label="{{__('theme2-dashboard-global.software-version')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.color-depth')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.fonts')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.local-storage')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
+                                    <td data-label="Cookie">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-zone')}}">&nbsp;</td>
+                                    <td data-label="Canvas"><img
+                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgNDcuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDQ3LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkFGQUZBO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwMCw0Ni45TDAsNDcuMVY4LjljMCwwLDIxLjEsMTQuMyw2NS4yLDE0LjFjNDAuNi0wLjIsNzYuNC0yMywxMjgtMjNDMjQzLjMsMCwzMDAsMTYuNCwzMDAsMTYuNFY0Ni45eiIvPgo8L3N2Zz4K"
+                                            alt="Canvas Print" height="32px"></td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.cookie-enabled')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device-memory')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.do-not-track')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.language')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.languages')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.on-line')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product-sub')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.web-driver')}}">Hayır</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         {{--Table Finish--}}
                     </div>
                     <!--/.tab-pane -->
@@ -277,13 +479,10 @@
 </section>
 <!-- /section -->
 @push('scripts')
+    <script src="{{asset('assets2/js/perfect-scrollbar.min.js')}}"></script>
     {{--Todo: Canvasların (Chart.js) script kodlarını buraya koyabiliriz.--}}
     <script>
-        $(function () {
-            $("#datepicker-start").datepicker();
-            $("#datepicker-finish").datepicker();
-        });
-        $(document).ready(function () {
+        /*$(document).ready(function () {
             $('.muypil-responsive-table').DataTable({
                 language: {
                     lengthMenu: "{{__('theme2-dashboard-global.per-page-records')}}",
@@ -296,6 +495,6 @@
                 },
                 info: false,
             });
-        });
+        });*/
     </script>
 @endpush

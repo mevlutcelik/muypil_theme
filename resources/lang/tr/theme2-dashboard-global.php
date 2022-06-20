@@ -79,5 +79,16 @@ return [
     "web-driver"                        => "Web Sürücüsü",
     "started_at"                        => "Başlangıç",
     "finished_at"                       => "Bitiş",
+    "all"                               => "Hepsi",
+    "yes"                               => "Evet",
+    "no"                                => "Hayır",
+    "google-search"                     => "Google Arama",
+    "search-partner"                    => "Arama Ortağı",
+    "display-network"                   => "Görüntülü Reklam Ağı",
+    "smart-shopping-campaign"           => "Akıllı Alışveriş Kampanyası",
+    "youtube-videos"                    => "YouTube Videoları",
+    "youtube-search"                    => "YouTube Arama",
+    "google-video"                      => "Google Videosu",
+    "filter"                            => "Filtrele",
 ];
 ?>
