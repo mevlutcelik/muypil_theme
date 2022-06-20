@@ -41,10 +41,12 @@
             font-size: 16px;
             margin-bottom: 0 !important;
             margin-right: 0.5rem !important;
+            background: rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.7);
         }
 
         .muypil-top-bar .nav-link:hover, .muypil-top-bar .nav-link:focus {
-            color: #343f52;
+            color: #fab758;
         }
 
         .muypil-top-bar .nav-link:active {
@@ -52,7 +54,8 @@
         }
 
         .muypil-top-bar .nav-link.active {
-            color: #3f78e0;
+            color: #fff;
+            background: #814d03;
         }
 
         .muypil-top-bar .nav-link i {

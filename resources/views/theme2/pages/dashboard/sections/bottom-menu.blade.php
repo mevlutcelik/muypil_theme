@@ -11,6 +11,7 @@
             height: 3.25rem;
             background: #fff;
             box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 12px -2px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            z-index: 6;
         }
         .mobile-app-bar a{
             width: calc(100vw / 5);

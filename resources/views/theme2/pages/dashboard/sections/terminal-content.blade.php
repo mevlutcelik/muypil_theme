@@ -121,10 +121,10 @@
         }
 
         .muypil-terminal {
-            background-color: #fafafa;
+            background-color: rgba(0,0,0,0.6);
             width: 100%;
             position: relative;
-            color: #000;
+            color: #fff;
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
@@ -139,7 +139,7 @@
         .muypil-terminal-header {
             position: sticky;
             top: 0;
-            background-color: #fff;
+            background-color: #000;
             font-family: 'Fira Code', monospace;
             font-size: 14px;
             font-weight: bold;
@@ -214,15 +214,11 @@
         }
 
         .text-leaf {
-            color: #3a7c5a !important;
+            color: #c2efd8 !important;
         }
 
-        .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:active {
-            color: #343f52 !important;
-        }
-
-        .navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item {
-            color: #343f52 !important;
+        .text-red{
+            color: #ffccd0!important;
         }
 
         .dropdown-menu.show {

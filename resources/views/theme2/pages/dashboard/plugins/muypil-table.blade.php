@@ -1,17 +1,66 @@
 @push('styles')
     <style>
-        .mx-filter-box{
+        .mx-filter-box {
             display: -webkit-box !important;
             width: 100%;
             overflow-y: hidden;
             overflow-x: auto;
         }
-        .mx-filter-box:active, .mx-filter-box input:active{
+
+        .table th{
+            min-width: 10rem;
+        }
+
+        .mx-table-input {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            color: #fff;
+            height: 64px;
+            transition: all 0.3s;
+        }
+
+        .mx-table-input:focus {
+            color: #fff;
+            background: transparent;
+        }
+
+        .mx-table-input:focus ~ label {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .mx-table-input ~ label {
+            color: #fff;
+        }
+
+        .table > :not(caption) > * > *, .form-floating {
+            padding: 0;
+        }
+
+        .form-floating > label {
+            padding-top: 14px;
+        }
+
+        ::-webkit-input-placeholder { /* Edge */
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        ::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .mx-filter-box:active, .mx-filter-box input:active {
             cursor: grab;
         }
+
         .mx-filter {
             max-width: 7.5rem;
         }
+
         /* width */
         .mx-filter-box::-webkit-scrollbar {
             width: 0;
@@ -33,12 +82,14 @@
         }
 
         input[type="date"] {
-            background: #fff;
             border: rgba(0, 0, 0, 0.1);
             border-radius: 0.5rem;
             padding: 0.25rem 0.5rem;
             font-size: 15px;
             margin-left: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            color-scheme: dark;
         }
 
         .input-date {
@@ -68,13 +119,17 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(0, 0, 0, 0.2);
         }
-        table.muypil-responsive-table td{
-            background-color: #fff;
+
+        table.muypil-responsive-table td {
+            background-color: transparent;
         }
-        @media screen and (max-width: 992px) { /* min-width: 1px */
-            .table-responsive{
+
+        /*@media screen and (max-width: 992px) {
+            !* min-width: 1px *!
+            .table-responsive {
                 overflow: hidden;
             }
+
             table.muypil-responsive-table {
                 border: 0;
             }
@@ -97,7 +152,7 @@
             table tr {
                 border-radius: 1rem;
                 border: none;
-                border-bottom: 1px solid rgba(164,174,198,.2);
+                border-bottom: 1px solid rgba(164, 174, 198, .2);
                 display: block;
                 margin-bottom: 3rem;
                 word-break: break-all;
@@ -106,7 +161,7 @@
 
             table.muypil-responsive-table td {
                 border: none;
-                border-bottom: 1px solid rgba(164,174,198,.2);
+                border-bottom: 1px solid rgba(164, 174, 198, .2);
                 display: block;
                 font-size: .8em;
                 text-align: right;
@@ -115,10 +170,10 @@
             }
 
             table.muypil-responsive-table td::before {
-                /*
+                !*
                 * aria-label has no advantage, it won't be read inside a table
                 content: attr(aria-label);
-                */
+                *!
                 content: attr(data-label);
                 float: left;
                 font-weight: bold;
@@ -127,7 +182,7 @@
             table.muypil-responsive-table td:last-child {
                 border-bottom: 0;
             }
-        }
+        }*/
     </style>
 @endpush
 @push('scripts')

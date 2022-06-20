@@ -1,4 +1,4 @@
-<section class="wrapper bg-aquabg-pale-aqua">
+<section class="wrapper">
     <div class="py-13 py-md-16">
         <div class="row text-center">
             <div class="col-xl-10 mx-auto">
@@ -58,16 +58,21 @@
                     <div class="tab-pane fade show active mx-2 mx-md-4 mx-lg-6 mx-xl-8" id="topbar-statistics">
                         {{--Table Start--}}
                         <div class="d-flex align-items-center justify-content-center justify-content-md-between">
-                            <div class="fw-bold d-none d-md-block">{{__('theme2-dashboard-global.filter')}}</div>
+                            {{--Todo: Dil dosyasından "filter"i kaldır. Yerine "Filtreleri göster/gizle" ekle--}}
+                            <div class="fw-bold d-none d-md-block"
+                                 style="margin-bottom: 1rem;color: rgba(255,255,255,0.6);">Filtrele
+                            </div>
                             <div class="d-flex align-items-center">
                                 <div class="input-date">
-                                    <label for="">{{__('theme2-dashboard-global.started_at')}}</label>
+                                    <label class="text-white-50"
+                                           for="">{{__('theme2-dashboard-global.started_at')}}</label>
                                     <input type="date" id="datepicker-start" name="trip-start"
                                            value="{{date("Y-m-d")}}"
                                            min="2015-01-01" max="{{date('Y')}}-12-31">
                                 </div>
                                 <div class="input-date">
-                                    <label for="">{{__('theme2-dashboard-global.finished_at')}}</label>
+                                    <label class="text-white-50"
+                                           for="">{{__('theme2-dashboard-global.finished_at')}}</label>
                                     <input type="date" id="datepicker-start" name="trip-start"
                                            value="{{date("Y-m-d")}}"
                                            min="2015-01-01" max="{{date('Y')}}-12-31">
@@ -75,12 +80,8 @@
                             </div>
                             <!-- /.form-floating -->
                         </div>
-                        <div class="mx-filter-box">
-                            <div class="form-floating mb-4 me-2">
-                                <input id="account" type="text" class="form-control mx-filter"
-                                       placeholder="{{__('theme2-dashboard-global.account')}}">
-                                <label for="account">{{__('theme2-dashboard-global.account')}}</label>
-                            </div>
+                        {{--<div class="mx-filter-box">
+
                             <div class="form-floating mb-4 me-2">
                                 <input id="campaing" type="text" class="form-control mx-filter"
                                        placeholder="{{__('theme2-dashboard-global.campaing')}}">
@@ -140,9 +141,13 @@
                                 <div class="d-flex flex-column justify-content-center">
                                     <div class="fs-11 mb-1">{{__('theme2-dashboard-global.clicks-count')}}</div>
                                     <div class="d-flex align-items-center">
-                                        <input id="clicks-count-start" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                        <input id="clicks-count-start" type="text"
+                                               style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;"
+                                               class="form-control mx-filter"
                                                placeholder="{{__('theme2-dashboard-global.started_at')}}">
-                                        <input id="clicks-count-finish" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                        <input id="clicks-count-finish" type="text"
+                                               style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;"
+                                               class="form-control mx-filter"
                                                placeholder="{{__('theme2-dashboard-global.finished_at')}}">
                                     </div>
                                 </div>
@@ -151,9 +156,13 @@
                                 <div class="d-flex flex-column justify-content-center">
                                     <div class="fs-11 mb-1">{{__('theme2-dashboard-global.time-spent')}}</div>
                                     <div class="d-flex align-items-center">
-                                        <input id="clicks-count-start" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                        <input id="clicks-count-start" type="text"
+                                               style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;"
+                                               class="form-control"
                                                placeholder="{{__('theme2-dashboard-global.started_at')}}">
-                                        <input id="clicks-count-finish" type="text" style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;" class="form-control mx-filter"
+                                        <input id="clicks-count-finish" type="text"
+                                               style="max-width: 3.5rem;height: 1.75rem;font-size: 11px;padding: 0 0.375rem;margin-top: -0.5rem;"
+                                               class="form-control"
                                                placeholder="{{__('theme2-dashboard-global.finished_at')}}">
                                     </div>
                                 </div>
@@ -167,7 +176,8 @@
                                 </select>
                             </div>
                             <div class="form-select-wrapper mb-4 me-2">
-                                <select class="form-select" aria-label="{{__('theme2-dashboard-global.scroll-status')}}">
+                                <select class="form-select"
+                                        aria-label="{{__('theme2-dashboard-global.scroll-status')}}">
                                     <option selected>{{__('theme2-dashboard-global.scroll-status')}}</option>
                                     <option value="1">{{__('theme2-dashboard-global.all')}}</option>
                                     <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
@@ -240,38 +250,211 @@
                                     <option value="3">{{__('theme2-dashboard-global.no')}}</option>
                                 </select>
                             </div>
-                        </div>
+                        </div>--}}
                         <div class="table-responsive">
-                            <table class="table table-bordered muypil-responsive-table">
+                            <table class="table table-bordered muypil-responsive-table"
+                                   style="border: 1px solid rgba(255,255,255,0.05)">
                                 <thead>
-                                <tr class="bg-soft-sky">
+                                <tr style="background: rgba(255,255,255,0.15);color: #fff;">
                                     <th scope="col">&nbsp;</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.account')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.campaing')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.keyword')}}</th>
-                                    <th scope="col">IP</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.ip-range')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.as-org')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.ip-country')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.ip-city')}}</th>
-                                    <th scope="col">Platform</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.browser')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.device')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.clicks-count')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.time-spent')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.click-status')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.scroll-status')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.network')}}</th>
-                                    <th scope="col">Gclid</th>
-                                    <th scope="col">Redirect URL</th>
-                                    <th scope="col">User Agent</th>
-                                    <th scope="col">Host</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.as-number')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.ip-region')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.ip-postal-code')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.first-click')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.last-click')}}</th>
-                                    <th scope="col">Javascript</th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="account" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.account')}}">
+                                            <label
+                                                for="account">{{__('theme2-dashboard-global.account')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="campaing" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.campaing')}}">
+                                            <label
+                                                for="campaing">{{__('theme2-dashboard-global.campaing')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="keyword" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.keyword')}}">
+                                            <label
+                                                for="keyword">{{__('theme2-dashboard-global.keyword')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="ip" type="text" class="form-control mx-table-input"
+                                                   placeholder="IP">
+                                            <label
+                                                for="ip">IP</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="ip-range" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.ip-range')}}">
+                                            <label
+                                                for="ip-range">{{__('theme2-dashboard-global.ip-range')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="as-org" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.as-org')}}">
+                                            <label
+                                                for="as-org">{{__('theme2-dashboard-global.as-org')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="ip-country" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.ip-country')}}">
+                                            <label
+                                                for="ip-country">{{__('theme2-dashboard-global.ip-country')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="ip-city" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.ip-city')}}">
+                                            <label
+                                                for="ip-city">{{__('theme2-dashboard-global.ip-city')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="platform" type="text" class="form-control mx-table-input"
+                                                   placeholder="Platform">
+                                            <label
+                                                for="platform">Platform</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="browser" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.browser')}}">
+                                            <label
+                                                for="browser">{{__('theme2-dashboard-global.browser')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="device" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.device')}}">
+                                            <label
+                                                for="device">{{__('theme2-dashboard-global.device')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col" style="font-size: 14px;padding: 0.6rem 1rem;">
+                                        {{__('theme2-dashboard-global.clicks-count')}}
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="time-spent" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.time-spent')}}">
+                                            <label
+                                                for="time-spent">{{__('theme2-dashboard-global.time-spent')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="click-status" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.click-status')}}">
+                                            <label
+                                                for="click-status">{{__('theme2-dashboard-global.click-status')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="scroll-status" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.scroll-status')}}">
+                                            <label
+                                                for="scroll-status">{{__('theme2-dashboard-global.scroll-status')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="network" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.network')}}">
+                                            <label
+                                                for="network">{{__('theme2-dashboard-global.network')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="gclid" type="text" class="form-control mx-table-input"
+                                                   placeholder="Gclid">
+                                            <label
+                                                for="gclid">Gclid</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="redirect-url" type="text" class="form-control mx-table-input"
+                                                   placeholder="Redirect URL">
+                                            <label
+                                                for="redirect-url">Redirect URL</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="user-agent" type="text" class="form-control mx-table-input"
+                                                   placeholder="User Agent">
+                                            <label
+                                                for="user-agent">User Agent</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="host" type="text" class="form-control mx-table-input"
+                                                   placeholder="Host">
+                                            <label
+                                                for="host">Host</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="as-number" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.as-number')}}">
+                                            <label
+                                                for="as-number">{{__('theme2-dashboard-global.as-number')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="ip-region" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.ip-region')}}">
+                                            <label
+                                                for="ip-region">{{__('theme2-dashboard-global.ip-region')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="ip-postal-code" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.ip-postal-code')}}">
+                                            <label
+                                                for="ip-postal-code">{{__('theme2-dashboard-global.ip-postal-code')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="first-click" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.first-click')}}">
+                                            <label
+                                                for="first-click">{{__('theme2-dashboard-global.first-click')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="form-floating">
+                                            <input id="last-click" type="text" class="form-control mx-table-input"
+                                                   placeholder="{{__('theme2-dashboard-global.last-click')}}">
+                                            <label
+                                                for="last-click">{{__('theme2-dashboard-global.last-click')}}</label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+
+                                    </th>
                                     <th scope="col">{{__('theme2-dashboard-global.software-version')}}</th>
                                     <th scope="col">{{__('theme2-dashboard-global.color-depth')}}</th>
                                     <th scope="col">{{__('theme2-dashboard-global.fonts')}}</th>
@@ -479,7 +662,6 @@
 </section>
 <!-- /section -->
 @push('scripts')
-    <script src="{{asset('assets2/js/perfect-scrollbar.min.js')}}"></script>
     {{--Todo: Canvasların (Chart.js) script kodlarını buraya koyabiliriz.--}}
     <script>
         /*$(document).ready(function () {

@@ -21,7 +21,7 @@
     <script src="{{ asset('assets2/js/jquery/jquery.min.js') }}"></script>
     @stack('styles')
 </head>
-<body data-bs-spy="scroll" class="@yield('body-class')">
+<body data-bs-spy="scroll" style="@yield('body-style')">
 <div class="content-wrapper">
     @yield('content')
 </div>

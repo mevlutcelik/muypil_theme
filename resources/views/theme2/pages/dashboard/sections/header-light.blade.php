@@ -4,7 +4,12 @@
         .st1{fill:#FABC04;}
         .st2{fill:#34A852;}
         .st3{fill:#E1C025;}
-
+        /*.dropdown-menu{
+            background-color: #121212;
+        }
+        .navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item{
+            color: rgba(255,255,255,0.8);
+        }*/
         #accounts .google-ads-icon {
             width: 1.75rem;
             height: 1.75rem;
@@ -16,10 +21,10 @@
         }
     </style>
 @endpush
-<header class="wrapper bg-soft-primary">
-    <nav class="navbar navbar-expand-lg center-logo d-flex align-items-center justify-content-center position-absolute navbar-light">
+<header class="wrapper">
+    <nav class="navbar navbar-expand-lg center-logo d-flex align-items-center justify-content-center position-absolute navbar-dark">
         <div class="justify-content-center align-items-center justify-content-center w-100">
-            <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none bg-navy shadow-lg" style="height: 3rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+            <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none shadow-lg" style="height: 3rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
                 <div class="navbar-brand">
                     <div class="logo logo-light ps-4 pe-2" style="margin-left: 1rem;">
                         <a href="{{route('dashboard.home')}}" class="d-flex justify-content-between" style="font-size: 2px;position: relative;">
@@ -92,25 +97,30 @@
             </div>
             <!-- /.d-flex -->
             <div class="navbar-collapse-wrapper d-flex flex-row align-items-center w-100">
-                <div class="navbar-collapse offcanvas bg-pale-aqua offcanvas-nav offcanvas-start">
+                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                     <div class="offcanvas-header mx-lg-auto order-0 order-lg-1 d-lg-flex px-lg-15">
                         {{--<a href="./index.html" class="transition-none d-none d-lg-flex"><img class="logo-dark" src="{{asset('assets2/img/logo-dark.png')}}" srcset="{{asset('assets2/img/logo-dark@2x.png 2x')}}" alt="" />
                             <img class="logo-light" src="{{asset('assets2/img/logo-light.png')}}" srcset="{{asset('assets2/img/logo-light@2x.png 2x')}}" alt="" /></a>--}}
-                        <a class="muypil-logo" href="{{route('dashboard.home')}}" style="font-size: 2px;position: relative;">
-                            <h1 class="logo-text header-logo-text">MUYPIL</h1>
-                            <section class="logo-container">
-                                <div class="logo-center header-logo-center"></div>
-                                <article class="blue-ring logo-ring1">
-                                    <div></div>
-                                </article>
-                                <article class="blue-ring logo-ring2">
-                                    <div></div>
-                                </article>
-                                <article class="blue-ring logo-ring3">
-                                    <div></div>
-                                </article>
-                            </section>
-                        </a>
+
+                        <div class="logo logo-light">
+                            <a href="{{route('dashboard.home')}}" class="d-flex justify-content-between" style="font-size: 2px;position: relative;">
+                                <section class="logo-container" style="top: 17px;left: -16px">
+                                    <div class="logo-center" style="left: 17px;"></div>
+                                    <div>
+                                        <article class="logo-ring1">
+                                            <div></div>
+                                        </article>
+                                        <article class="logo-ring2">
+                                            <div></div>
+                                        </article>
+                                        <article class="logo-ring3">
+                                            <div></div>
+                                        </article>
+                                    </div>
+                                </section>
+                                <h1 class="footer-logo-text" style="margin-left: 2rem;margin-bottom: 0;margin-right: -1rem;">MUYPIL</h1>
+                            </a>
+                        </div>
                         {{--<button type="button" class="btn-close btn-close-black d-lg-none" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>--}}
                     </div>
@@ -220,11 +230,11 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link"
-                                   href="#">{{__('theme2-dashboard-global.settings')}}</a>
+                                   href="#">{{__('theme2-dashboard-global.packets')}}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link"
-                                   href="#">{{__('theme2-dashboard-global.packets')}}</a>
+                                   href="#">{{__('theme2-dashboard-global.settings')}}</a>
                             </li>
                             <li class="nav-item d-flex align-items-center">
                                 <a class="nav-link"

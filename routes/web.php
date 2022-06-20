@@ -62,5 +62,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
         Route::get('trackers', function () {
             return view('theme2.pages.dashboard.trackers.index');
         })->name('trackers');
+        Route::get('packets', function () {
+            return view('theme2.pages.dashboard.packets.index');
+        })->name('packets');
     });
 });
