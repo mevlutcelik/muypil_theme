@@ -88,7 +88,7 @@ return [
     "youtube-videos"                    => "YouTube Videos",
     "youtube-search"                    => "YouTube Search",
     "google-video"                      => "Google Video",
-    "filter"                            => "Filter",
+    "filter-message"                    => "Click on the column headers to filter the table.",
     "block"                             => "Block IP",
     "action"                            => "Action",
 ];

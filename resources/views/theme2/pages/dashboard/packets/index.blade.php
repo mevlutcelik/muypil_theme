@@ -1,7 +1,7 @@
 @extends('theme2.layout.master')
 
 @section('title', 'Muypil - '. __('theme2-dashboard-global.packets') .' - ' . 'Ad Soyad') {{--TODO: Ad Soyad yazan kısım kullanıcının adı ve soyadı olarak güncellenecek--}}
-@section('meta-color', '#343f52') {{--Browser theme color--}}
+@section('meta-color', '#121212') {{--Browser theme color--}}
 
 {{--Muypil theme color. Default: asset('assets2/css/colors/violet.css') Eğer boş değer gönderilirse tema mavi olur.--}}
 @section('theme-color', '')

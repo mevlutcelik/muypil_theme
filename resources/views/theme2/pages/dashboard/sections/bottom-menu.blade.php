@@ -9,7 +9,7 @@
             align-items: center;
             justify-content: center;
             height: 3.25rem;
-            background: rgba(255,255,255,0.15);
+            background: #121212;
             box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 12px -2px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
             z-index: 6;
         }
@@ -33,7 +33,7 @@
             padding-top: 5px;
         }
         .mobile-app-bar a:hover:not(.active){
-            background-color: #121212;
+            background-color: #333333;
         }
         .mobile-app-bar a i{
             font-size: 24px;

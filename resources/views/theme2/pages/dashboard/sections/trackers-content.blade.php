@@ -58,9 +58,8 @@
                     <div class="tab-pane fade show active mx-2 mx-md-4 mx-lg-6 mx-xl-8" id="topbar-statistics">
                         {{--Table Start--}}
                         <div class="d-flex align-items-center justify-content-center justify-content-md-between">
-                            {{--Todo: Dil dosyasından "filter"i kaldır. Yerine "Filtreleri göster/gizle" ekle--}}
                             <div class="fw-bold d-none d-md-block"
-                                 style="margin-bottom: 1rem;color: rgba(255,255,255,0.6);">Filtrele
+                                 style="margin-bottom: 1rem;color: rgba(255,255,255,0.6);">{{__('theme2-dashboard-global.filter-message')}}
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="input-date">

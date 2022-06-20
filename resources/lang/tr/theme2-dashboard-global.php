@@ -89,7 +89,7 @@ return [
     "youtube-videos"                    => "YouTube Videoları",
     "youtube-search"                    => "YouTube Arama",
     "google-video"                      => "Google Videosu",
-    "filter"                            => "Filtrele",
+    "filter-message"                    => "Tabloyu filtrelemek için kolon başlıklarına tıklayın.",
     "block"                             => "Engelle",
     "action"                            => "Aksiyon",
 

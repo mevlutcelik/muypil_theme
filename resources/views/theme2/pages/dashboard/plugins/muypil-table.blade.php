@@ -27,11 +27,6 @@
         .table-responsive:active{
             cursor: grabbing;
         }
-        @media all and (min-width: 992px) {
-            .table-responsive:active{
-                transform: scale(0.95);
-            }
-        }
         .mx-filter-box {
             display: -webkit-box !important;
             width: 100%;
@@ -69,7 +64,7 @@
 
         .table td {
             background-color: transparent;
-            text-align: center;
+            text-align: start;
             min-width: 10rem;
             max-width: 10rem;
             overflow: hidden;
@@ -77,7 +72,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             line-height: 56px;
-            padding: 0 0.5rem;
+            padding: 0 1rem !important;
             font-size: 14px;
             color: #fff;
         }
