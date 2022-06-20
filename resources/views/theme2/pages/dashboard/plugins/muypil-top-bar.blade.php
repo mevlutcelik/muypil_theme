@@ -55,7 +55,7 @@
 
         .muypil-top-bar .nav-link.active {
             color: #fff;
-            background: #814d03;
+            background: rgba(0,0,0,0.5);
         }
 
         .muypil-top-bar .nav-link i {

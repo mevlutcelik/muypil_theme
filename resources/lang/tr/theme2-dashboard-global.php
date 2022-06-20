@@ -90,5 +90,8 @@ return [
     "youtube-search"                    => "YouTube Arama",
     "google-video"                      => "Google Videosu",
     "filter"                            => "Filtrele",
+    "block"                             => "Engelle",
+    "action"                            => "Aksiyon",
+
 ];
 ?>

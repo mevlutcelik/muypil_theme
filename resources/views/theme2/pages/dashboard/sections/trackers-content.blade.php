@@ -7,7 +7,7 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-xl-10 mx-auto d-flex align-items-center flex-column">
+            <div class="col-xl-10 mx-auto d-flex align-items-start flex-column">
                 <ul class="nav nav-tabs muypil-top-bar nav-pills px-2 px-md-4 px-lg-6 p-xxl-8">
                     <li class="nav-item">
                         <a class="nav-link active" data-bs-toggle="tab" href="#topbar-statistics">
@@ -256,7 +256,7 @@
                                    style="border: 1px solid rgba(255,255,255,0.05)">
                                 <thead>
                                 <tr style="background: rgba(255,255,255,0.15);color: #fff;">
-                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.action')}}</th>
                                     <th scope="col">
                                         <div class="form-floating">
                                             <input id="account" type="text" class="form-control mx-table-input"
@@ -345,39 +345,45 @@
                                                 for="device">{{__('theme2-dashboard-global.device')}}</label>
                                         </div>
                                     </th>
-                                    <th scope="col" style="font-size: 14px;padding: 0.6rem 1rem;">
+                                    <th scope="col" class="no-filter">
                                         {{__('theme2-dashboard-global.clicks-count')}}
                                     </th>
+                                    <th scope="col" class="no-filter">
+                                        {{__('theme2-dashboard-global.time-spent')}}
+                                    </th>
                                     <th scope="col">
-                                        <div class="form-floating">
-                                            <input id="time-spent" type="text" class="form-control mx-table-input"
-                                                   placeholder="{{__('theme2-dashboard-global.time-spent')}}">
-                                            <label
-                                                for="time-spent">{{__('theme2-dashboard-global.time-spent')}}</label>
+                                        <div class="form-select-wrapper">
+                                            <select class="form-select" aria-label="{{__('theme2-dashboard-global.click-status')}}">
+                                                <option selected>{{__('theme2-dashboard-global.click-status')}}</option>
+                                                <option value="1">{{__('theme2-dashboard-global.all')}}</option>
+                                                <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.no')}}</option>
+                                            </select>
                                         </div>
                                     </th>
                                     <th scope="col">
-                                        <div class="form-floating">
-                                            <input id="click-status" type="text" class="form-control mx-table-input"
-                                                   placeholder="{{__('theme2-dashboard-global.click-status')}}">
-                                            <label
-                                                for="click-status">{{__('theme2-dashboard-global.click-status')}}</label>
+                                        <div class="form-select-wrapper">
+                                            <select class="form-select" aria-label="{{__('theme2-dashboard-global.scroll-status')}}">
+                                                <option selected>{{__('theme2-dashboard-global.scroll-status')}}</option>
+                                                <option value="1">{{__('theme2-dashboard-global.all')}}</option>
+                                                <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.no')}}</option>
+                                            </select>
                                         </div>
                                     </th>
                                     <th scope="col">
-                                        <div class="form-floating">
-                                            <input id="scroll-status" type="text" class="form-control mx-table-input"
-                                                   placeholder="{{__('theme2-dashboard-global.scroll-status')}}">
-                                            <label
-                                                for="scroll-status">{{__('theme2-dashboard-global.scroll-status')}}</label>
-                                        </div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="form-floating">
-                                            <input id="network" type="text" class="form-control mx-table-input"
-                                                   placeholder="{{__('theme2-dashboard-global.network')}}">
-                                            <label
-                                                for="network">{{__('theme2-dashboard-global.network')}}</label>
+                                        <div class="form-select-wrapper">
+                                            <select class="form-select" aria-label="{{__('theme2-dashboard-global.network')}}">
+                                                <option selected>{{__('theme2-dashboard-global.network')}}</option>
+                                                <option value="1">{{__('theme2-dashboard-global.all')}}</option>
+                                                <option value="2">{{__('theme2-dashboard-global.google-search')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.search-partner')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.display-network')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.smart-shopping-campaign')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.youtube-videos')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.youtube-search')}}</option>
+                                                <option value="3">{{__('theme2-dashboard-global.google-video')}}</option>
+                                            </select>
                                         </div>
                                     </th>
                                     <th scope="col">
@@ -453,38 +459,43 @@
                                         </div>
                                     </th>
                                     <th scope="col">
-
+                                        <div class="form-floating">
+                                            <input id="javascript" type="text" class="form-control mx-table-input"
+                                                   placeholder="Javascript">
+                                            <label
+                                                for="javascript">Javascript</label>
+                                        </div>
                                     </th>
-                                    <th scope="col">{{__('theme2-dashboard-global.software-version')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.color-depth')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.fonts')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.local-storage')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.session-storage')}}</th>
-                                    <th scope="col">Cookie</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.time-zone')}}</th>
-                                    <th scope="col">Canvas</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.app-code-name')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.app-name')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.app-version')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.cookie-enabled')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.device-memory')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.do-not-track')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.hardware-concurrency')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.language')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.languages')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.on-line')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.product')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.product-sub')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.vendor')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.vendor-sub')}}</th>
-                                    <th scope="col">{{__('theme2-dashboard-global.web-driver')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.software-version')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.color-depth')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.fonts')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.local-storage')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.session-storage')}}</th>
+                                    <th scope="col" class="no-filter">Cookie</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.time-zone')}}</th>
+                                    <th scope="col" class="no-filter">Canvas</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.app-code-name')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.app-name')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.app-version')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.cookie-enabled')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.device-memory')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.do-not-track')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.hardware-concurrency')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.language')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.languages')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.on-line')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.product')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.product-sub')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.vendor')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.vendor-sub')}}</th>
+                                    <th scope="col" class="no-filter">{{__('theme2-dashboard-global.web-driver')}}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
                                 Todo: Foreach ile gelen verileri listele--}}
                                 <tr>
-                                    <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red">Engelle</a></td>
+                                    <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a></td>
                                     <td data-label="{{__('theme2-dashboard-global.account')}}">359-318-6843</td>
                                     <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
                                     <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri
@@ -531,9 +542,6 @@
                                     <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
                                     <td data-label="Cookie">Hayır</td>
                                     <td data-label="{{__('theme2-dashboard-global.time-zone')}}">&nbsp;</td>
-                                    <td data-label="Canvas"><img
-                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgNDcuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDQ3LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkFGQUZBO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwMCw0Ni45TDAsNDcuMVY4LjljMCwwLDIxLjEsMTQuMyw2NS4yLDE0LjFjNDAuNi0wLjIsNzYuNC0yMywxMjgtMjNDMjQzLjMsMCwzMDAsMTYuNCwzMDAsMTYuNFY0Ni45eiIvPgo8L3N2Zz4K"
-                                            alt="Canvas Print" height="32px"></td>
                                     <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
                                     <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
                                     <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>
@@ -551,7 +559,7 @@
                                     <td data-label="{{__('theme2-dashboard-global.web-driver')}}">Hayır</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red">Engelle</a></td>
+                                    <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a></td>
                                     <td data-label="{{__('theme2-dashboard-global.account')}}">359-318-6843</td>
                                     <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
                                     <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri
@@ -598,9 +606,6 @@
                                     <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
                                     <td data-label="Cookie">Hayır</td>
                                     <td data-label="{{__('theme2-dashboard-global.time-zone')}}">&nbsp;</td>
-                                    <td data-label="Canvas"><img
-                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgNDcuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDQ3LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkFGQUZBO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwMCw0Ni45TDAsNDcuMVY4LjljMCwwLDIxLjEsMTQuMyw2NS4yLDE0LjFjNDAuNi0wLjIsNzYuNC0yMywxMjgtMjNDMjQzLjMsMCwzMDAsMTYuNCwzMDAsMTYuNFY0Ni45eiIvPgo8L3N2Zz4K"
-                                            alt="Canvas Print" height="32px"></td>
                                     <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
                                     <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
                                     <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>

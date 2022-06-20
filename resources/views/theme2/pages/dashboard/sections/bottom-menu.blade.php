@@ -9,14 +9,14 @@
             align-items: center;
             justify-content: center;
             height: 3.25rem;
-            background: #fff;
+            background: rgba(255,255,255,0.15);
             box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 12px -2px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
             z-index: 6;
         }
         .mobile-app-bar a{
             width: calc(100vw / 5);
             height: 3rem;
-            color: #343f52;
+            color: rgba(255,255,255,0.4);
             display: flex;
             flex-direction: column;
             font-size: 12px;
@@ -27,13 +27,13 @@
             transition: all 0.3s;
         }
         .mobile-app-bar a.active{
-            color: #3f78e0;
-            border-top: 3px solid #3f78e0;
+            color: #fff;
+            border-top: 3px solid #fff;
             margin-top: -5px;
             padding-top: 5px;
         }
         .mobile-app-bar a:hover:not(.active){
-            background-color: #f5f5f5;
+            background-color: #121212;
         }
         .mobile-app-bar a i{
             font-size: 24px;

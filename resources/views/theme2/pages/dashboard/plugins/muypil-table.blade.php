@@ -1,5 +1,37 @@
 @push('styles')
     <style>
+        .table-responsive{
+            cursor: grab;
+            transition: transform 0.3s;
+        }
+        /* width */
+        .table-responsive::-webkit-scrollbar {
+            width: 2px;
+            height: 2px;
+        }
+
+        /* Track */
+        .table-responsive::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        .table-responsive::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* Handle on hover */
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .table-responsive:active{
+            cursor: grabbing;
+        }
+        @media all and (min-width: 992px) {
+            .table-responsive:active{
+                transform: scale(0.95);
+            }
+        }
         .mx-filter-box {
             display: -webkit-box !important;
             width: 100%;
@@ -7,8 +39,53 @@
             overflow-x: auto;
         }
 
-        .table th{
+        .table th {
             min-width: 10rem;
+        }
+
+        .table select {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            color: #fff;
+            height: 52px;
+            transition: all 0.3s;
+            appearance: auto !important;
+        }
+
+        .table .block-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: #f1caca;
+        }
+
+        .table select option {
+            background: #121212;
+        }
+
+        .table th.no-filter {
+            font-size: 14px;
+            padding: 0.6rem 1rem;
+        }
+
+        .table td {
+            background-color: transparent;
+            text-align: center;
+            min-width: 10rem;
+            max-width: 10rem;
+            overflow: hidden;
+            width: 10rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 56px;
+            padding: 0 0.5rem;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .table .badge {
+            background: rgba(255, 255, 255, 0.3) !important;
+            border-radius: 4px !important;
+            margin-left: 0.25rem;
         }
 
         .mx-table-input {
@@ -51,34 +128,6 @@
 
         ::placeholder {
             color: rgba(0, 0, 0, 0.4);
-        }
-
-        .mx-filter-box:active, .mx-filter-box input:active {
-            cursor: grab;
-        }
-
-        .mx-filter {
-            max-width: 7.5rem;
-        }
-
-        /* width */
-        .mx-filter-box::-webkit-scrollbar {
-            width: 0;
-        }
-
-        /* Track */
-        .mx-filter-box::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        /* Handle */
-        .mx-filter-box::-webkit-scrollbar-thumb {
-            background: transparent;
-        }
-
-        /* Handle on hover */
-        .mx-filter-box::-webkit-scrollbar-thumb:hover {
-            background: transparent;
         }
 
         input[type="date"] {
@@ -187,7 +236,7 @@
 @endpush
 @push('scripts')
     <script>
-        const sliderTableBox = document.querySelector('.mx-filter-box');
+        const sliderTableBox = document.querySelector('.table-responsive');
         let mouseDownTableBox = false;
         let startXTableBox, scrollLeftTableBox;
         let startDraggingTableBox = function (e) {

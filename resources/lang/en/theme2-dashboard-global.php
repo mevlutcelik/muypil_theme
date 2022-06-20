@@ -89,5 +89,7 @@ return [
     "youtube-search"                    => "YouTube Search",
     "google-video"                      => "Google Video",
     "filter"                            => "Filter",
+    "block"                             => "Block IP",
+    "action"                            => "Action",
 ];
 ?>

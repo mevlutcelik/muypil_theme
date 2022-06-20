@@ -124,7 +124,7 @@
                         {{--<button type="button" class="btn-close btn-close-black d-lg-none" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>--}}
                     </div>
-                    <div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
+                    <div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body" style="margin-left: 35px;">
                         <ul class="navbar-nav ms-lg-auto">
                             {{--TODO: navbardaki linklere href="{{route('NAME')}}" eklenecek--}}
                             <li class="nav-item dropdown dropdown-mega">
