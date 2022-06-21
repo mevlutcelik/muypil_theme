@@ -229,8 +229,8 @@
                                    href="{{route('dashboard.trackers')}}">{{__('theme2-dashboard-global.analytics')}}</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link"
-                                   href="#">{{__('theme2-dashboard-global.packets')}}</a>
+                                <a class="nav-link {{Route::is('dashboard.packets') ? 'active' : null}}"
+                                   href="{{route('dashboard.packets')}}">{{__('theme2-dashboard-global.packets')}}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link"
