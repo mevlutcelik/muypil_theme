@@ -246,6 +246,7 @@
                         </tr>
                         </tbody>
                     </table>
+                    <div class="d-flex align-items-center justify-content-end fs-26">{{__('theme2-dashboard-global.total')}}: <span class="ms-2 text-white">₺400</span></div>
                 </div>
                 <!--/.card-body -->
             </div>
