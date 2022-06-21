@@ -21,7 +21,7 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        html,body {
+        html, body {
             overflow: hidden;
         }
 
@@ -121,7 +121,7 @@
         }
 
         .muypil-terminal {
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
             width: 100%;
             position: relative;
             color: #fff;
@@ -136,14 +136,14 @@
             padding-top: 1rem;
         }
 
-        .alert-icon i{
+        .alert-icon i {
             position: relative;
             padding: 0;
             margin-right: 0.5rem;
         }
 
-        .alert-info{
-            background-color: rgba(255,255,255,0.15);
+        .alert-info {
+            background-color: rgba(255, 255, 255, 0.15);
             color: #eef6f9;
             font-size: 13px;
             display: flex;
@@ -151,11 +151,11 @@
             padding: 0.25rem 0.75rem;
         }
 
-        .alert-info a{
+        .alert-info a {
             color: #ffd9a3 !important;
         }
 
-        .muypil-terminal.is-alert .muypil-terminal-content{
+        .muypil-terminal.is-alert .muypil-terminal-content {
             height: calc((var(--vh, 1vh) * 100) - 300px);
             max-height: calc((var(--vh, 1vh) * 100) - 300px);
         }
@@ -241,8 +241,8 @@
             color: #c2efd8 !important;
         }
 
-        .text-red{
-            color: #ffccd0!important;
+        .text-red {
+            color: #ffccd0 !important;
         }
 
         .dropdown-menu.show {
@@ -262,9 +262,11 @@
     </style>
 @endpush
 <section class="wrapper pt-14 pt-md-16 px-3 px-md-6 px-lg-12 px-xl-18">
+    {{--Alert Start--}}
     <div class="alert alert-info alert-icon" role="alert">
         <i class="uil uil-exclamation-circle"></i> <span>A simple info alert with <a href="#" class="alert-link hover">an example link</a>.</span>
     </div>
+    {{--Alert Finish--}}
     <div class="card shadow-lg muypil-terminal is-alert"> {{--TODO: Eğer alert yoksa "is-alert" classını kaldıralım--}}
         <div class="muypil-terminal-header">
             <div class="circles">
