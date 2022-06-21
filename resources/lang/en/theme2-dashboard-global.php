@@ -102,5 +102,7 @@ return [
     "type"                              => "Type",
     "total"                             => "Total",
     "discount"                          => "Discount",
+    "copy-column"                       => "Double click to copy.",
+    "detail"                            => "Detail",
 ];
 ?>

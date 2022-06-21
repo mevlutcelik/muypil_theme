@@ -34,11 +34,11 @@
             overflow-x: auto;
         }
 
-        .table th {
+        .muypil-responsive-table.table th {
             min-width: 10rem;
         }
 
-        .table select {
+        .muypil-responsive-table.table select {
             background: transparent;
             box-shadow: none;
             border: none;
@@ -48,27 +48,28 @@
             appearance: auto !important;
         }
 
-        .table .block-btn {
+        .muypil-responsive-table.table .block-btn {
             background: rgba(255, 255, 255, 0.15);
             color: #f1caca;
         }
 
-        .table select option {
+        .muypil-responsive-table.table select option {
             background: #121212;
         }
 
-        .table th.no-filter {
+        .muypil-responsive-table.table th.no-filter {
             font-size: 14px;
             padding: 0.6rem 1rem;
         }
 
-        .table td {
+        .muypil-responsive-table.table td {
             background-color: transparent;
             text-align: start;
-            min-width: 10rem;
-            max-width: 10rem;
+            user-select: none;
+            /*min-width: 10rem;*/
+            /*max-width: 10rem;*/
             overflow: hidden;
-            width: 10rem;
+            /*width: 10rem;*/
             text-overflow: ellipsis;
             white-space: nowrap;
             line-height: 56px;
@@ -77,7 +78,7 @@
             color: #fff;
         }
 
-        .table .badge {
+        .muypil-responsive-table.table .badge {
             background: rgba(255, 255, 255, 0.3) !important;
             border-radius: 4px !important;
             margin-left: 0.25rem;
@@ -105,7 +106,7 @@
             color: #fff;
         }
 
-        .table > :not(caption) > * > *, .form-floating {
+        .muypil-responsive-table.table > :not(caption) > * > *, .form-floating {
             padding: 0;
         }
 
@@ -167,22 +168,32 @@
         table.muypil-responsive-table td {
             background-color: transparent;
         }
-
-        /*@media screen and (max-width: 992px) {
-            !* min-width: 1px *!
-            .table-responsive {
-                overflow: hidden;
+        .d-initial{
+            display: revert !important;
+        }
+        @media all and (min-width: 768px) {
+            .d-md-initial{
+                display: revert !important;
             }
+            .d-md-none{
+                display: none !important;
+            }
+        }
+        .modal-body{
+            padding: 2rem 1rem;
+        }
+        @media screen and (max-width: 992px) {
+            /* min-width: 1px */
 
-            table.muypil-responsive-table {
+            table.muypil-responsive-table-mobile {
                 border: 0;
             }
 
-            table.muypil-responsive-table caption {
+            table.muypil-responsive-table-mobile caption {
                 font-size: 1.3em;
             }
 
-            table.muypil-responsive-table thead {
+            table.muypil-responsive-table-mobile thead {
                 border: none;
                 clip: rect(0 0 0 0);
                 height: 1px;
@@ -193,40 +204,41 @@
                 width: 1px;
             }
 
-            table tr {
-                border-radius: 1rem;
+            table.muypil-responsive-table-mobile tr {
                 border: none;
                 border-bottom: 1px solid rgba(164, 174, 198, .2);
-                display: block;
                 margin-bottom: 3rem;
                 word-break: break-all;
-                background-color: #fff;
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
             }
 
-            table.muypil-responsive-table td {
+            table.muypil-responsive-table-mobile td {
                 border: none;
                 border-bottom: 1px solid rgba(164, 174, 198, .2);
-                display: block;
+                display: flex !important;
                 font-size: .8em;
                 text-align: right;
                 justify-content: space-between;
+                align-items: center;
                 word-break: break-all;
             }
 
-            table.muypil-responsive-table td::before {
-                !*
+            table.muypil-responsive-table-mobile td::before {
+                /*
                 * aria-label has no advantage, it won't be read inside a table
                 content: attr(aria-label);
-                *!
+                */
                 content: attr(data-label);
                 float: left;
                 font-weight: bold;
             }
 
-            table.muypil-responsive-table td:last-child {
+            table.muypil-responsive-table-mobile td:last-child {
                 border-bottom: 0;
             }
-        }*/
+        }
     </style>
 @endpush
 @push('scripts')

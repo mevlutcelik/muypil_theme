@@ -54,8 +54,8 @@ return [
     "as-number"                         => "S.S. No",
     "ip-region"                         => "Bölge",
     "ip-postal-code"                    => "Posta Kodu",
-    "first-click"                       => "İlk Tıklama",
-    "last-click"                        => "Son Tıklama",
+    "first-click"                       => "İlk Tıklama Saati",
+    "last-click"                        => "Son Tıklama Saati",
     "software-version"                  => "Yazılım Versiyonu",
     "color-depth"                       => "Renk Derinliği",
     "fonts"                             => "Yazı Tipleri",
@@ -103,5 +103,7 @@ return [
     "type"                              => "Tip",
     "total"                             => "Toplam",
     "discount"                          => "İndirim",
+    "copy-column"                       => "Kopyalamak için çift tıklayın.",
+    "detail"                            => "Detay",
 ];
 ?>
