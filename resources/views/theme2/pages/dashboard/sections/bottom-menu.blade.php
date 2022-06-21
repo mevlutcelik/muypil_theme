@@ -53,7 +53,7 @@
         <i class="uil uil-box"></i>
         <span>{{__('theme2-dashboard-global.packets')}}</span>
     </a>
-    <a href="#">
+    <a href="{{route('dashboard.settings')}} {{Route::is('dashboard.settings') ? 'class=active' : null}}">
         <i class="uil uil-setting"></i>
         <span>{{__('theme2-dashboard-global.settings')}}</span>
     </a>

@@ -1,9 +1,10 @@
 @push('styles')
     <style>
-        .table-responsive{
+        .table-responsive {
             cursor: grab;
             transition: transform 0.3s;
         }
+
         /* width */
         .table-responsive::-webkit-scrollbar {
             width: 2px;
@@ -17,16 +18,18 @@
 
         /* Handle */
         .table-responsive::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         /* Handle on hover */
         .table-responsive::-webkit-scrollbar-thumb:hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
         }
-        .table-responsive:active{
+
+        .table-responsive:active {
             cursor: grabbing;
         }
+
         .mx-filter-box {
             display: -webkit-box !important;
             width: 100%;
@@ -35,7 +38,13 @@
         }
 
         .muypil-responsive-table.table th {
-            min-width: 10rem;
+            user-select: none;
+        }
+
+        @media all and (min-width: 768px) {
+            .muypil-responsive-table.table th {
+                min-width: 10rem;
+            }
         }
 
         .muypil-responsive-table.table select {
@@ -137,7 +146,7 @@
             color-scheme: dark;
         }
 
-        input[type="date"]:focus{
+        input[type="date"]:focus {
             background: rgba(255, 255, 255, 0.15);
             color: #fff;
         }
@@ -170,33 +179,37 @@
             background: rgba(0, 0, 0, 0.2);
         }
 
-        table.muypil-responsive-table tr:not(.muypil-table-header){
+        /*table.muypil-responsive-table tr:not(.muypil-table-header) {
             pointer-events: none !important;
-        }
+        }*/
 
         table.muypil-responsive-table td {
             background-color: transparent;
         }
-        .d-initial{
+
+        .d-initial {
             display: revert !important;
         }
+
         @media all and (min-width: 768px) {
-            .d-md-initial{
+            .d-md-initial {
                 display: revert !important;
             }
-            .d-md-none{
+
+            .d-md-none {
                 display: none !important;
             }
         }
-        .modal-body{
+
+        .modal-body {
             padding: 2rem 1rem;
         }
+
         @media screen and (max-width: 992px) {
             /* min-width: 1px */
-
-            table.muypil-responsive-table tr:not(.muypil-table-header){
+            /*table.muypil-responsive-table tr:not(.muypil-table-header) {
                 pointer-events: initial !important;
-            }
+            }*/
 
             table.muypil-responsive-table-mobile {
                 border: 0;
@@ -251,6 +264,10 @@
             table.muypil-responsive-table-mobile td:last-child {
                 border-bottom: 0;
             }
+        }
+        .swal2-popup.swal2-toast{
+            font-size: 0.875rem;
+            padding: 0.5rem;
         }
     </style>
 @endpush
