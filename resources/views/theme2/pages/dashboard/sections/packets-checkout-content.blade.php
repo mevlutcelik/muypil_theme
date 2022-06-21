@@ -137,6 +137,7 @@
             max-width: initial;
             min-width: initial;
             width: initial;
+            color: #fff;
         }
     </style>
 @endpush
