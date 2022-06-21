@@ -104,6 +104,7 @@ return [
     "discount"                          => "Discount",
     "copy-column"                       => "Double click to copy.",
     "detail"                            => "Detail",
-    "logout"                            => "Çıkış Yap",
+    "logout"                            => "Logout",
+    "detection-rules"                   => "Detection Rules",
 ];
 ?>
