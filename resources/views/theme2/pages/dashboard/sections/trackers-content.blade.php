@@ -495,131 +495,127 @@
                                 Todo: Foreach ile gelen verileri listele--}}
                                 <tr>
                                     <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a></td>
-                                    <td data-label="{{__('theme2-dashboard-global.account')}}">359-318-6843</td>
-                                    <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
-                                    <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri
-                                    </td>
-                                    <td data-label="IP">5.229.30.102</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-range')}}">
+                                    <td data-label="{{__('theme2-dashboard-global.account')}}" title="359-318-6843">359-318-6843</td>
+                                    <td data-label="{{__('theme2-dashboard-global.campaing')}}" title="47-Kızıltepe-12">47-Kızıltepe-12</td>
+                                    <td data-label="{{__('theme2-dashboard-global.keyword')}}" title="beyaz eşya servisleri">beyaz eşya servisleri</td>
+                                    <td data-label="IP" title="5.229.30.102">5.229.30.102</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-range')}}" title="5.229.0.0/16 - 15.897">
                                         <div>5.229.0.0/16<sup
                                                 class="fs-14 d-inline-flex align-items-center justify-content-center"><span
                                                     class="badge bg-blue rounded-pill">15.897</span></sup></div>
                                     </td>
-                                    <td data-label="{{__('theme2-dashboard-global.as-org')}}">Vodafone Telekomunikasyon
-                                        A.S.
-                                    </td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-country')}}">Turkey</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-city')}}">&nbsp;</td>
-                                    <td data-label="Platform">AndroidOS 10</td>
-                                    <td data-label="{{__('theme2-dashboard-global.browser')}}">Chrome 87.0.4280.101</td>
-                                    <td data-label="{{__('theme2-dashboard-global.device')}}">Mobil</td>
-                                    <td data-label="{{__('theme2-dashboard-global.clicks-count')}}">1</td>
-                                    <td data-label="{{__('theme2-dashboard-global.time-spent')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.click-status')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.scroll-status')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.network')}}">Google Search</td>
-                                    <td data-label="Gclid">
+                                    <td data-label="{{__('theme2-dashboard-global.as-org')}}" title="Vodafone Telekomunikasyon A.S.">Vodafone Telekomunikasyon A.S.</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-country')}}" title="Turkey">Turkey</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-city')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="Platform" title="AndroidOS 10">AndroidOS 10</td>
+                                    <td data-label="{{__('theme2-dashboard-global.browser')}}" title="Chrome 87.0.4280.101">Chrome 87.0.4280.101</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device')}}" title="Mobil">Mobil</td>
+                                    <td data-label="{{__('theme2-dashboard-global.clicks-count')}}" title="1">1</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-spent')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.click-status')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.scroll-status')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.network')}}" title="Google Search">Google Search</td>
+                                    <td data-label="Gclid" title="Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB">
                                         Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
                                     </td>
-                                    <td data-label="Redirect URL">&nbsp;</td>
-                                    <td data-label="User Agent">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                    <td data-label="Redirect URL" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="User Agent" title="Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
                                         AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
                                     </td>
-                                    <td data-label="Host">176.33.90.255</td>
-                                    <td data-label="{{__('theme2-dashboard-global.as-number')}}">34984</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-region')}}">Gaziantep</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-postal-code')}}">27090</td>
-                                    <td data-label="{{__('theme2-dashboard-global.first-click')}}">2022-06-17 16:08:44
+                                    <td data-label="Host" title="176.33.90.255">176.33.90.255</td>
+                                    <td data-label="{{__('theme2-dashboard-global.as-number')}}" title="34984">34984</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-region')}}" title="Gaziantep">Gaziantep</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-postal-code')}}" title="27090">27090</td>
+                                    <td data-label="{{__('theme2-dashboard-global.first-click')}}" title="2022-06-17 16:08:44">2022-06-17 16:08:44
                                     </td>
-                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}">2022-06-17 16:08:44
+                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}" title="2022-06-17 16:08:44">2022-06-17 16:08:44
                                     </td>
-                                    <td data-label="Javascript">Bilinmeyen</td>
-                                    <td data-label="{{__('theme2-dashboard-global.software-version')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.color-depth')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.fonts')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.local-storage')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
+                                    <td data-label="Javascript" title="Bilinmeyen">Bilinmeyen</td>
+                                    <td data-label="{{__('theme2-dashboard-global.software-version')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.color-depth')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.fonts')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.local-storage')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.session-storage')}}" title="Hayır">Hayır</td>
                                     <td data-label="Cookie">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.time-zone')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.cookie-enabled')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.device-memory')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.do-not-track')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.language')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.languages')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.on-line')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.product')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.product-sub')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.vendor')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.web-driver')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-zone')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-code-name')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-name')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-version')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.cookie-enabled')}}" title="&nbsp;">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device-memory')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.do-not-track')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.language')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.languages')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.on-line')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product-sub')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.web-driver')}}" title="Hayır">Hayır</td>
                                 </tr>
                                 <tr>
                                     <td data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a></td>
-                                    <td data-label="{{__('theme2-dashboard-global.account')}}">359-318-6843</td>
-                                    <td data-label="{{__('theme2-dashboard-global.campaing')}}">47-Kızıltepe-12</td>
-                                    <td data-label="{{__('theme2-dashboard-global.keyword')}}">beyaz eşya servisleri
-                                    </td>
-                                    <td data-label="IP">5.229.30.102</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-range')}}">
+                                    <td data-label="{{__('theme2-dashboard-global.account')}}" title="359-318-6843">359-318-6843</td>
+                                    <td data-label="{{__('theme2-dashboard-global.campaing')}}" title="47-Kızıltepe-12">47-Kızıltepe-12</td>
+                                    <td data-label="{{__('theme2-dashboard-global.keyword')}}" title="beyaz eşya servisleri">beyaz eşya servisleri</td>
+                                    <td data-label="IP" title="5.229.30.102">5.229.30.102</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-range')}}" title="5.229.0.0/16 - 15.897">
                                         <div>5.229.0.0/16<sup
                                                 class="fs-14 d-inline-flex align-items-center justify-content-center"><span
                                                     class="badge bg-blue rounded-pill">15.897</span></sup></div>
                                     </td>
-                                    <td data-label="{{__('theme2-dashboard-global.as-org')}}">Vodafone Telekomunikasyon
-                                        A.S.
-                                    </td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-country')}}">Turkey</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-city')}}">&nbsp;</td>
-                                    <td data-label="Platform">AndroidOS 10</td>
-                                    <td data-label="{{__('theme2-dashboard-global.browser')}}">Chrome 87.0.4280.101</td>
-                                    <td data-label="{{__('theme2-dashboard-global.device')}}">Mobil</td>
-                                    <td data-label="{{__('theme2-dashboard-global.clicks-count')}}">1</td>
-                                    <td data-label="{{__('theme2-dashboard-global.time-spent')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.click-status')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.scroll-status')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.network')}}">Google Search</td>
-                                    <td data-label="Gclid">
+                                    <td data-label="{{__('theme2-dashboard-global.as-org')}}" title="Vodafone Telekomunikasyon A.S.">Vodafone Telekomunikasyon A.S.</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-country')}}" title="Turkey">Turkey</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-city')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="Platform" title="AndroidOS 10">AndroidOS 10</td>
+                                    <td data-label="{{__('theme2-dashboard-global.browser')}}" title="Chrome 87.0.4280.101">Chrome 87.0.4280.101</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device')}}" title="Mobil">Mobil</td>
+                                    <td data-label="{{__('theme2-dashboard-global.clicks-count')}}" title="1">1</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-spent')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.click-status')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.scroll-status')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.network')}}" title="Google Search">Google Search</td>
+                                    <td data-label="Gclid" title="Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB">
                                         Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
                                     </td>
-                                    <td data-label="Redirect URL">&nbsp;</td>
-                                    <td data-label="User Agent">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                    <td data-label="Redirect URL" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="User Agent" title="Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
                                         AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
                                     </td>
-                                    <td data-label="Host">176.33.90.255</td>
-                                    <td data-label="{{__('theme2-dashboard-global.as-number')}}">34984</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-region')}}">Gaziantep</td>
-                                    <td data-label="{{__('theme2-dashboard-global.ip-postal-code')}}">27090</td>
-                                    <td data-label="{{__('theme2-dashboard-global.first-click')}}">2022-06-17 16:08:44
+                                    <td data-label="Host" title="176.33.90.255">176.33.90.255</td>
+                                    <td data-label="{{__('theme2-dashboard-global.as-number')}}" title="34984">34984</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-region')}}" title="Gaziantep">Gaziantep</td>
+                                    <td data-label="{{__('theme2-dashboard-global.ip-postal-code')}}" title="27090">27090</td>
+                                    <td data-label="{{__('theme2-dashboard-global.first-click')}}" title="2022-06-17 16:08:44">2022-06-17 16:08:44
                                     </td>
-                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}">2022-06-17 16:08:44
+                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}" title="2022-06-17 16:08:44">2022-06-17 16:08:44
                                     </td>
-                                    <td data-label="Javascript">Bilinmeyen</td>
-                                    <td data-label="{{__('theme2-dashboard-global.software-version')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.color-depth')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.fonts')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.local-storage')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.session-storage')}}">Hayır</td>
+                                    <td data-label="Javascript" title="Bilinmeyen">Bilinmeyen</td>
+                                    <td data-label="{{__('theme2-dashboard-global.software-version')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.color-depth')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.fonts')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.local-storage')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.session-storage')}}" title="Hayır">Hayır</td>
                                     <td data-label="Cookie">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.time-zone')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.app-code-name')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.app-name')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.app-version')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.cookie-enabled')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.device-memory')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.do-not-track')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.language')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.languages')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.on-line')}}">Hayır</td>
-                                    <td data-label="{{__('theme2-dashboard-global.product')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.product-sub')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.vendor')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}">&nbsp;</td>
-                                    <td data-label="{{__('theme2-dashboard-global.web-driver')}}">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.time-zone')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-code-name')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-name')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.app-version')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.cookie-enabled')}}" title="&nbsp;">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.device-memory')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.do-not-track')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.language')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.languages')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.on-line')}}" title="Hayır">Hayır</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.product-sub')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.vendor-sub')}}" title="&nbsp;">&nbsp;</td>
+                                    <td data-label="{{__('theme2-dashboard-global.web-driver')}}" title="Hayır">Hayır</td>
                                 </tr>
                                 </tbody>
                             </table>
