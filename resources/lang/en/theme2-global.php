@@ -37,6 +37,8 @@ return [
     "cheaper"                           => "20% more cheaper",
     "monthly"                           => "Monthly",
     "yearly"                            => "Yearly",
+    "month"                             => "month",
+    "year"                              => "year",
     "plans-title"                       => "You can increase your advertising performance up to x3 times by choosing the package that suits you.",
     "plan-line-1"                       => "Number of clicks",
     "plan-line-2"                       => "Automatic <strong>IP Blocking</strong>",

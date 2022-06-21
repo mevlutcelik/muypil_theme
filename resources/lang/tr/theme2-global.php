@@ -36,6 +36,8 @@ return [
     "cheaper"                           => "%20 daha ucuz",
     "monthly"                           => "Aylık",
     "yearly"                            => "Yıllık",
+    "month"                             => "ay",
+    "year"                              => "yıl",
     "plans-title"                       => "Size Uygun Olan Paketi Seçerek Reklam Performansınızı x3 Katına Kadar Arttırabilirsiniz.",
     "plan-line-1"                       => "Tıklama sayısı",
     "plan-line-2"                       => "Otomatik <strong>IP Engelleme</strong>",

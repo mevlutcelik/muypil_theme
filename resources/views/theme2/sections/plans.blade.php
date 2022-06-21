@@ -32,8 +32,8 @@
                             <img src="{{asset('assets2/img/icons/lineal/shopping-basket.svg')}}" class="icon-svg icon-svg-md text-primary mb-3" alt="">
                             <h4 class="card-title">Starter</h4>
                             <div class="prices text-dark">
-                                <div class="price price-show"><span class="price-currency">₺</span><span class="price-value">400</span> <span class="price-duration">ay</span></div>
-                                <div class="price price-hide"><span class="price-currency">₺</span><span class="price-value"><span> 3.840</span><sup class="text-muted" style="text-decoration: line-through">4.800</sup></span> <span class="price-duration">yıl</span></div>
+                                <div class="price price-show"><span class="price-currency">₺</span><span class="price-value">400</span> <span class="price-duration">{{__('theme2-global.month')}}</span></div>
+                                <div class="price price-hide"><span class="price-currency">₺</span><span class="price-value"><span> 3.840</span><sup class="text-muted" style="text-decoration: line-through">4.800</sup></span> <span class="price-duration">{{__('theme2-global.year')}}</span></div>
                             </div>
                             <!--/.prices -->
                             <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
@@ -62,8 +62,8 @@
                             <img src="{{asset('assets2/img/icons/lineal/home.svg')}}" class="icon-svg icon-svg-md text-primary mb-3" alt="">
                             <h4 class="card-title">Plus</h4>
                             <div class="prices text-dark">
-                                <div class="price price-show"><span class="price-currency">₺</span><span class="price-value">800</span> <span class="price-duration">ay</span></div>
-                                <div class="price price-hide"><span class="price-currency">₺</span><span class="price-value"><span> 7.680</span><sup class="text-muted" style="text-decoration: line-through">9.600</sup></span> <span class="price-duration">yıl</span></div>
+                                <div class="price price-show"><span class="price-currency">₺</span><span class="price-value">800</span> <span class="price-duration">{{__('theme2-global.month')}}</span></div>
+                                <div class="price price-hide"><span class="price-currency">₺</span><span class="price-value"><span> 7.680</span><sup class="text-muted" style="text-decoration: line-through">9.600</sup></span> <span class="price-duration">{{__('theme2-global.year')}}</span></div>
                             </div>
                             <!--/.prices -->
                             <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
@@ -92,8 +92,8 @@
                             <img src="{{asset('assets2/img/icons/lineal/briefcase-2.svg')}}" class="icon-svg icon-svg-md text-primary mb-3" alt="">
                             <h4 class="card-title">Gold</h4>
                             <div class="prices text-dark">
-                                <div class="price price-show"><span class="price-currency">₺</span><span class="price-value">1.600</span> <span class="price-duration">ay</span></div>
-                                <div class="price price-hide"><span class="price-currency">₺</span><span class="price-value"><span> 15.360</span><sup class="text-muted" style="text-decoration: line-through">19.200</sup></span> <span class="price-duration">yıl</span></div>
+                                <div class="price price-show"><span class="price-currency">₺</span><span class="price-value">1.600</span> <span class="price-duration">{{__('theme2-global.month')}}</span></div>
+                                <div class="price price-hide"><span class="price-currency">₺</span><span class="price-value"><span> 15.360</span><sup class="text-muted" style="text-decoration: line-through">19.200</sup></span> <span class="price-duration">{{__('theme2-global.year')}}</span></div>
                             </div>
                             <!--/.prices -->
                             <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
