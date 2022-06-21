@@ -18,7 +18,7 @@
     </style>
 @endpush
 
-@section('body-style', 'background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('.asset("assets2/img/photos/bg16.png").')')
+@section('body-style', 'background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('.asset("assets2/img/photos/bg16.png").');background-size:cover;')
 
 @section('content')
 
