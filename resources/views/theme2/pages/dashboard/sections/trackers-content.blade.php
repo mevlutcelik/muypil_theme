@@ -523,29 +523,46 @@
 <!-- /section -->
 @push('scripts')
     {{--Todo: Canvasların (Chart.js) script kodlarını buraya koyabiliriz.--}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         let allRows = document.querySelectorAll('tr:not(.muypil-table-header)');
         allRows.forEach(function (row){
+            window.addEventListener('resize', function(event){
+                if(window.innerWidth >= 768){
+                    row.removeAttribute('data-bs-target');
+                }
+            });
+            if(screen.width >= 768){
+                row.removeAttribute('data-bs-target');
+            }
             let columns = row.querySelectorAll('td');
             columns.forEach(function(column){
+                column.addEventListener('click', function (){
+                    console.clear();
+                });
                 column.addEventListener('dblclick', function(){
-                    console.log(this);
+                    navigator.clipboard.writeText(this.innerHTML).then(function() {
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
+
+                        Toast.fire({
+                            icon: 'success',
+                            title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                        })
+                    }, function(err) {
+                       /*is->Err*/
+                    });
                 });
             });
         });
-        /*$(document).ready(function () {
-            $('.muypil-responsive-table').DataTable({
-                language: {
-                    lengthMenu: "{{__('theme2-dashboard-global.per-page-records')}}",
-                    zeroRecords: "{{__('theme2-dashboard-global.search-not-records')}}",
-                    search: "{{__('theme2-dashboard-global.search-in-table')}}",
-                    paginate: {
-                        previous: "{{__('theme2-dashboard-global.previous')}}",
-                        next: "{{__('theme2-dashboard-global.next')}}",
-                    }
-                },
-                info: false,
-            });
-        });*/
     </script>
 @endpush

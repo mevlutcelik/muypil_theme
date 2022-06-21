@@ -106,5 +106,8 @@ return [
     "detail"                            => "Detail",
     "logout"                            => "Logout",
     "detection-rules"                   => "Detection Rules",
+    "block-rules"                       => "Block Rules",
+    "block-rules-list"                  => "Block Rules List",
+    "copied-successfuly"                => "Copied successfuly",
 ];
 ?>

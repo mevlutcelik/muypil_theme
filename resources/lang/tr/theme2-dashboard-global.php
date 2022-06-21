@@ -106,5 +106,9 @@ return [
     "copy-column"                       => "Kopyalamak için çift tıklayın.",
     "detail"                            => "Detay",
     "logout"                            => "Çıkış Yap",
+    "detection-rules"                   => "Algılama Kuralları",
+    "block-rules"                       => "IP Engelleme Sistemi",
+    "block-rules-list"                  => "IP, IP Aralığı veya Cidr Engelleme Kuralları",
+    "copied-successfuly"                => "Başarıyla kopyalandı",
 ];
 ?>
