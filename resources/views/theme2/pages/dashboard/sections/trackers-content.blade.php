@@ -517,17 +517,6 @@
 <!-- /section -->
 @push('scripts')
     {{--Todo: Canvasların (Chart.js) script kodlarını buraya koyabiliriz.--}}
-    <script type="module">
-        import Swal from 'sweetalert2/dist/sweetalert2.js'
-        import 'sweetalert2/src/sweetalert2.scss'
-        Swal.fire({
-            title: 'Error!',
-            text: 'Do you want to continue',
-            icon: 'error',
-            confirmButtonText: 'Cool'
-        })
-
-    </script>
     <script>
         let allRows = document.querySelectorAll('tr:not(.muypil-table-header)');
         allRows.forEach(function (row){
