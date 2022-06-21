@@ -91,5 +91,16 @@ return [
     "filter-message"                    => "Click on the column headers to filter the table.",
     "block"                             => "Block IP",
     "action"                            => "Action",
+    "payment-details"                   => "Payment Details",
+    "card-owner"                        => "Card Owner",
+    "card-number"                       => "Card Number",
+    "pay"                               => "Pay",
+    "cancel"                            => "Cancel",
+    "order-summary"                     => "Order Summary",
+    "packet-name"                       => "Packet Name",
+    "packet-price"                      => "Packet Price",
+    "type"                              => "Type",
+    "total"                             => "Total",
+    "discount"                          => "Discount",
 ];
 ?>

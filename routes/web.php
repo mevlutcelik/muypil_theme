@@ -24,7 +24,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
     Route::view(LaravelLocalization::transRoute('theme2-global.routes-agencies'), 'theme2.pages.agencies.index')->name('agencies');
     Route::view(LaravelLocalization::transRoute('theme2-global.routes-login'), 'theme2.pages.login.index')->name('login');
     Route::view(LaravelLocalization::transRoute('theme2-global.routes-reset-password'), 'theme2.pages.reset-password.index')->name('reset-password');
-    Route::view(LaravelLocalization::transRoute('theme2-global.routes-register'), 'theme2.pages.careers.index')->name('careers');
+    Route::view(LaravelLocalization::transRoute('theme2-global.routes-careers'), 'theme2.pages.careers.index')->name('careers');
 
     Route::get(LaravelLocalization::transRoute('theme2-global.routes-register'), function () {
         return 'register sayfası';

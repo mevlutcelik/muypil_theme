@@ -92,6 +92,16 @@ return [
     "filter-message"                    => "Tabloyu filtrelemek için kolon başlıklarına tıklayın.",
     "block"                             => "Engelle",
     "action"                            => "Aksiyon",
-
+    "payment-details"                   => "Ödeme Ayrıntları",
+    "card-owner"                        => "Kart Sahibi",
+    "card-number"                       => "Kart Numarası",
+    "pay"                               => "Öde",
+    "cancel"                            => "İptal",
+    "order-summary"                     => "Sipariş Özeti",
+    "packet-name"                       => "Paket Adı",
+    "packet-price"                      => "Paket Fiyatı",
+    "type"                              => "Tip",
+    "total"                             => "Toplam",
+    "discount"                          => "İndirim",
 ];
 ?>
