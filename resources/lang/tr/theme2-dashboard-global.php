@@ -109,6 +109,7 @@ return [
     "detection-rules"                   => "Algılama Kuralları",
     "block-rules"                       => "IP Engelleme Sistemi",
     "block-rules-list"                  => "IP, IP Aralığı veya Cidr Engelleme Kuralları",
+    "add-rule"                          => "Kural Ekle",
     "copied-successfuly"                => "Başarıyla kopyalandı",
 ];
 ?>

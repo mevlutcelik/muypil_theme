@@ -108,6 +108,7 @@ return [
     "detection-rules"                   => "Detection Rules",
     "block-rules"                       => "Block Rules",
     "block-rules-list"                  => "Block Rules List",
+    "add-rule"                          => "Add Rule",
     "copied-successfuly"                => "Copied successfuly",
 ];
 ?>

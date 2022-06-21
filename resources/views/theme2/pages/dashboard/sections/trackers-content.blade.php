@@ -541,6 +541,7 @@
                     console.clear();
                 });
                 column.addEventListener('dblclick', function(){
+                    console.log(2222);
                     navigator.clipboard.writeText(this.innerHTML).then(function() {
                         const Toast = Swal.mixin({
                             toast: true,
