@@ -137,6 +137,11 @@
             color-scheme: dark;
         }
 
+        input[type="date"]:focus{
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+        }
+
         .input-date {
             margin-bottom: 1rem;
         }
@@ -165,6 +170,10 @@
             background: rgba(0, 0, 0, 0.2);
         }
 
+        table.muypil-responsive-table tr:not(.muypil-table-header){
+            pointer-events: none !important;
+        }
+
         table.muypil-responsive-table td {
             background-color: transparent;
         }
@@ -184,6 +193,10 @@
         }
         @media screen and (max-width: 992px) {
             /* min-width: 1px */
+
+            table.muypil-responsive-table tr:not(.muypil-table-header){
+                pointer-events: initial !important;
+            }
 
             table.muypil-responsive-table-mobile {
                 border: 0;
