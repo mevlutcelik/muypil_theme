@@ -8,17 +8,17 @@
 
         /* Track */
         ::-webkit-scrollbar-track {
-            background: #fff;
+            background: transparent;
         }
 
         /* Handle */
         ::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         html,body {
