@@ -62,20 +62,28 @@
                                  style="margin-bottom: 1rem;color: rgba(255,255,255,0.6);">{{__('theme2-dashboard-global.filter-message')}}
                             </div>
                             <div class="d-flex align-items-center">
-                                <div class="input-date">
+                                <div class="form-floating mb-4 me-3">
+                                    <input id="datepicker-start" name="datepicker-start" type="date" value="{{date('Y')}}-{{date('m')}}-01" min="2018-01-01" max="{{date("Y-m-d")}}" class="form-control">
+                                    <label style="color: #fff;" for="datepicker-start">{{__('theme2-dashboard-global.started_at')}}</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input id="datepicker-finish" name="datepicker-finish" type="date" value="{{date("Y-m-d")}}" min="2018-01-01" max="{{date("Y-m-d")}}" class="form-control">
+                                    <label style="color: #fff;" for="datepicker-finish">{{__('theme2-dashboard-global.finished_at')}}</label>
+                                </div>
+                                {{--<div class="input-date">
                                     <label class="text-white-50"
                                            for="">{{__('theme2-dashboard-global.started_at')}}</label>
-                                    <input type="date" id="datepicker-start" name="trip-start"
+                                    <input type="date" id="datepicker-start" name="datepicker-start"
                                            value="{{date("Y-m-d")}}"
-                                           min="2015-01-01" max="{{date('Y')}}-12-31">
-                                </div>
-                                <div class="input-date">
+                                           min="2015-01-01" max="{{date('Y-m-d')}}">
+                                </div>--}}
+                                {{--<div class="input-date">
                                     <label class="text-white-50"
                                            for="">{{__('theme2-dashboard-global.finished_at')}}</label>
                                     <input type="date" id="datepicker-start" name="trip-start"
                                            value="{{date("Y-m-d")}}"
                                            min="2015-01-01" max="{{date('Y')}}-12-31">
-                                </div>
+                                </div>--}}
                             </div>
                             <!-- /.form-floating -->
                         </div>
@@ -316,13 +324,12 @@
                                     <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.vendor')}}</th>
                                     <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.vendor-sub')}}</th>
                                     <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.web-driver')}}</th>
-                                    <th scope="col" class="no-filter d-initial d-md-none">{{__('theme2-dashboard-global.action')}}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
                                 Todo: Foreach ile gelen verileri listele--}}
-                                <tr>
+                                <tr data-bs-toggle="modal" data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
                                     <td class="d-none d-md-initial" data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a></td>
                                     <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.account')}}" title="{{__('theme2-dashboard-global.copy-column')}}">359-318-6843</td>
                                     <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.campaing')}}" title="{{__('theme2-dashboard-global.copy-column')}}">47-Kızıltepe-12</td>
@@ -382,7 +389,6 @@
                                     <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.vendor')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
                                     <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.vendor-sub')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
                                     <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.web-driver')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                    <td class="d-initial d-md-none" data-label="{{__('theme2-dashboard-global.action')}}" title="&nbsp;"><a data-bs-toggle="modal" data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}} style="color:#cadaf1;" href="#" class="btn btn-sm btn-soft-orange block-btn">{{__('theme2-dashboard-global.detail')}}</a></td>
                                 </tr>
                                 </tbody>
                             </table>
