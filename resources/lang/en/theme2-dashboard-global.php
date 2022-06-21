@@ -104,5 +104,6 @@ return [
     "discount"                          => "Discount",
     "copy-column"                       => "Double click to copy.",
     "detail"                            => "Detail",
+    "logout"                            => "Çıkış Yap",
 ];
 ?>

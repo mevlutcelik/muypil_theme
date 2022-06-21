@@ -105,5 +105,6 @@ return [
     "discount"                          => "İndirim",
     "copy-column"                       => "Kopyalamak için çift tıklayın.",
     "detail"                            => "Detay",
+    "logout"                            => "Çıkış Yap",
 ];
 ?>

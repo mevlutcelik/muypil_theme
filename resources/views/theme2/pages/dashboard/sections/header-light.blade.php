@@ -78,7 +78,7 @@
                                         </g>
 </svg>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu mt-n3">
                                 <li class="nav-item"><a class="dropdown-item"
                                                         href="#">{{__('theme2-dashboard-global.all-account')}}</a>
                                 </li>
@@ -136,7 +136,7 @@
                                 <a class="nav-link dropdown-toggle {{Route::is('dashboard.administration') ? 'active' : null}}"
                                    href="#"
                                    data-bs-toggle="dropdown">{{__('theme2-dashboard-global.administration')}}</a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu mt-n3">
                                     <li class="nav-item">
                                         <a class="dropdown-item"
                                            href="#">{{__('theme2-dashboard-global.all-packets')}}</a>
@@ -160,7 +160,7 @@
                                 <a class="nav-link dropdown-toggle {{Route::is('dashboard.membership') ? 'active' : null}}"
                                    href="#"
                                    data-bs-toggle="dropdown">{{__('theme2-dashboard-global.membership')}}</a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu mt-n3">
                                     <li class="nav-item"><a class="dropdown-item"
                                                             href="#">{{__('theme2-dashboard-global.users')}}</a>
                                     </li>
@@ -210,7 +210,7 @@
                                         </g>
 </svg>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu mt-n3">
                                     <li class="nav-item"><a class="dropdown-item"
                                                             href="#">{{__('theme2-dashboard-global.all-account')}}</a>
                                     </li>
@@ -236,9 +236,10 @@
                                 <a class="nav-link"
                                    href="#">{{__('theme2-dashboard-global.settings')}}</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link"
-                                   href="#">{{__('theme2-dashboard-global.my-profile')}}</a>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{__('theme2-dashboard-global.my-profile')}}</a>
+                                <ul class="dropdown-menu mt-n3">
+                                    <li class="nav-item"><a class="dropdown-item" href="#">{{__('theme2-dashboard-global.logout')}}</a></li>
+                                </ul>
                             </li>
                         </ul>
                         <!-- /.navbar-nav -->
