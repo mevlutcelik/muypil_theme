@@ -773,7 +773,7 @@
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <label class="mx-1 fs-14">ads clicks within</label>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="text" class="form-control"
+                                           type="number" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -886,7 +886,7 @@
                         <span class="me-2 ms-2 fs-14">{{config('app.locale') === 'tr' ? 'Sitede' : 'Block'}}</span>
                         @if(config('app.locale') === 'tr')
                             <input id="textInputExample" onkeypress="return isNumberKey(event)" placeholder="Süre"
-                                   type="text" class="form-control"
+                                   type="number" inputmode="number" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="4">
                         @else
                             <select class="form-select" aria-label="IP"
@@ -1118,7 +1118,7 @@
                             <option value="3">IP Aralığı</option>
                         </select>
                         <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                               type="text" class="form-control"
+                               type="number" inputmode="number" class="form-control"
                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         <select class="form-select" aria-label="Gün"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -1129,7 +1129,7 @@
                         <label class="mx-1 fs-14">içinde</label>
                         <div class="d-flex align-items-center">
                             <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                   type="text" class="form-control"
+                                   type="number" inputmode="number" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         </div>
                         <label class="mx-1 fs-14">defa tıklayabilir.</label>
@@ -1146,7 +1146,7 @@
                     <div class="line-box check-rules-line">
                         <label class="mx-1 fs-14">Allow up to</label>
                         <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                               type="text" class="form-control"
+                               type="number" inputmode="number" class="form-control"
                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         <label class="mx-1 fs-14">ads clicks within</label>
                         <input id="textInputExample" value="1" type="text" class="form-control"
@@ -1181,7 +1181,7 @@
             <div class="row p-0 p-md-2">
                 <div class="line-box check-rules-line">
                 <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                           type="text" class="form-control"
+                           type="number" inputmode="number" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                            <select class="form-select" aria-label="Gün"
                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -1191,7 +1191,7 @@
                     </select>
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'içinde farklı ip adresinden' : 'from different ip addresses'}}</label>
                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="20"
-                           type="text" class="form-control"
+                           type="number" inputmode="number" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'tıklama gelirse' : 'if it clicks'}}</label>
                     <select class="form-select"
@@ -1203,7 +1203,7 @@
         </select>
         <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'kampanyasını' : 'campaign'}}</label>
                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="5"
-                           type="text" class="form-control"
+                           type="number" inputmode="number" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'dakika durdur, sonra geri aç.' : 'stop for a minute, then turn it back on.'}}</label>
                     <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
