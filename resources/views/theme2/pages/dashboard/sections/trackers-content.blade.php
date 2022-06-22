@@ -47,7 +47,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" href="#topbar-blocked-ips">
-                            <i class="uil uil-cloud-block pe-1"></i>
+                            <i class="uil uil-ban pe-1"></i>
                             <span>{{__('theme2-dashboard-global.blocked-ips')}}</span>
                         </a>
                     </li>
