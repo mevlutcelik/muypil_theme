@@ -131,5 +131,18 @@ return [
     "select-country"                    => "Ülke seç",
     "pause-campaign-rules"              => "Kampanya Duraklatma Kuralları",
     "pause-campaign-rules-desc"         => "Belirlediğiniz kurallar çerçevesinde kampanyalarınızı bir süre boyunca duraklatır ve saldırganların reklamını görmesi tamamen engellenir. Yoğun saldırı altındaysanız kullanılması önerilir.",
-    ];
+    "auto-ip-blocking"                  => "Otomatik IP Engelleme",
+    "block-ips-for-certain-period"      => "Belirli Bir Süre için IP'leri Engelle",
+    "block-ips-for-certain-period-desc" => "Her IP'nin bloke edileceği süre.",
+    "period-value"                      => "Periyot Değeri",
+    "manually-exclude-ips"              => "IP'leri Hariç Tut",
+    "manually-exclude-ips-desc"         => "<br/>Engellemek istediğiniz IP adreslerini (her IP adresi yeni bir satırda) sonraki kutuya doldurun. Bu IP'ler, siz bu kutudan kaldırılana kadar engellenecektir.<br/><br/>Yapabilirsiniz. joker karakter (*) veya CIDR gösterimini kullanarak tek bir IP adresi veya bir dizi IP adresi kullanın.<br/><br/>Örnekler: 112.4.5.67",
+    "write-and-press-enter"             => "Yazın ve Enter'a basın.",
+    "error-ip-address"                  => "Yazdığınız IP adresinin biçimi doğru değil",
+    "error-domain"                      => "Yazdığınız domainin biçimi doğru değil",
+    "whitelist-ips"                     => "İzin Verilen İp Adresleri",
+    "whitelist-ips-desc"                => "<br/>Sonraki kutuyu CyberDefense'in asla engellememesini istediğiniz IP adresleriyle (her IP adresi yeni bir satırda) doldurun.<br/><br/>Joker karakteri kullanarak tek bir IP adresi veya bir dizi IP adresi kullanabilirsiniz karakter (*) veya CIDR notasyonu.<br/><br/>Örnekler: 112.4.5.67",
+    "websites"                          => "Web Siteleriniz",
+    "websites-desc"                     => "Korunan Web Sitelerinizin Listesi",
+];
 ?>
