@@ -977,7 +977,7 @@
                         <div
                             class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex align-items-center justify-content-center justify-content-md-end">
                             <input id="textInputExample" onkeypress="return isNumberKey(event)" value="7"
-                                   type="text" class="form-control"
+                                   type="number" inputmode="number" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                             <select class="form-select" aria-label="Gün"
                                     style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
