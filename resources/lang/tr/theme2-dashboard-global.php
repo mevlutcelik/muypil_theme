@@ -111,5 +111,6 @@ return [
     "block-rules-list"                  => "IP, IP Aralığı veya Cidr Engelleme Kuralları",
     "add-rule"                          => "Kural Ekle",
     "copied-successfuly"                => "Başarıyla kopyalandı",
+    "copied-null"                       => "Kopyalanacak bir değer yok",
 ];
 ?>

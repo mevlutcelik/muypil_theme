@@ -110,5 +110,6 @@ return [
     "block-rules-list"                  => "Block Rules List",
     "add-rule"                          => "Add Rule",
     "copied-successfuly"                => "Copied successfuly",
+    "copied-null"                       => "There is no value to copy",
 ];
 ?>

@@ -63,12 +63,18 @@
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="form-floating mb-4 me-3">
-                                    <input id="datepicker-start" name="datepicker-start" type="date" value="{{date('Y')}}-{{date('m')}}-01" min="2018-01-01" max="{{date("Y-m-d")}}" class="form-control">
-                                    <label style="color: #fff;" for="datepicker-start">{{__('theme2-dashboard-global.started_at')}}</label>
+                                    <input id="datepicker-start" name="datepicker-start" type="date"
+                                           value="{{date('Y')}}-{{date('m')}}-01" min="2018-01-01"
+                                           max="{{date("Y-m-d")}}" class="form-control">
+                                    <label style="color: #fff;"
+                                           for="datepicker-start">{{__('theme2-dashboard-global.started_at')}}</label>
                                 </div>
                                 <div class="form-floating mb-4">
-                                    <input id="datepicker-finish" name="datepicker-finish" type="date" value="{{date("Y-m-d")}}" min="2018-01-01" max="{{date("Y-m-d")}}" class="form-control">
-                                    <label style="color: #fff;" for="datepicker-finish">{{__('theme2-dashboard-global.finished_at')}}</label>
+                                    <input id="datepicker-finish" name="datepicker-finish" type="date"
+                                           value="{{date("Y-m-d")}}" min="2018-01-01" max="{{date("Y-m-d")}}"
+                                           class="form-control">
+                                    <label style="color: #fff;"
+                                           for="datepicker-finish">{{__('theme2-dashboard-global.finished_at')}}</label>
                                 </div>
                                 {{--<div class="input-date">
                                     <label class="text-white-50"
@@ -92,7 +98,8 @@
                                    style="border: 1px solid rgba(255,255,255,0.05)">
                                 <thead>
                                 <tr class="muypil-table-header" style="background: rgba(255,255,255,0.15);color: #fff;">
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.action')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.action')}}</th>
                                     <th scope="col" class="d-none d-md-initial">
                                         <div class="form-floating">
                                             <input id="account" type="text" class="form-control mx-table-input"
@@ -189,7 +196,8 @@
                                     </th>
                                     <th scope="col" class="d-none d-md-initial">
                                         <div class="form-select-wrapper">
-                                            <select class="form-select" aria-label="{{__('theme2-dashboard-global.click-status')}}">
+                                            <select class="form-select"
+                                                    aria-label="{{__('theme2-dashboard-global.click-status')}}">
                                                 <option selected>{{__('theme2-dashboard-global.click-status')}}</option>
                                                 <option value="1">{{__('theme2-dashboard-global.all')}}</option>
                                                 <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
@@ -199,8 +207,10 @@
                                     </th>
                                     <th scope="col" class="d-none d-md-initial">
                                         <div class="form-select-wrapper">
-                                            <select class="form-select" aria-label="{{__('theme2-dashboard-global.scroll-status')}}">
-                                                <option selected>{{__('theme2-dashboard-global.scroll-status')}}</option>
+                                            <select class="form-select"
+                                                    aria-label="{{__('theme2-dashboard-global.scroll-status')}}">
+                                                <option
+                                                    selected>{{__('theme2-dashboard-global.scroll-status')}}</option>
                                                 <option value="1">{{__('theme2-dashboard-global.all')}}</option>
                                                 <option value="2">{{__('theme2-dashboard-global.yes')}}</option>
                                                 <option value="3">{{__('theme2-dashboard-global.no')}}</option>
@@ -209,16 +219,24 @@
                                     </th>
                                     <th scope="col" class="d-none d-md-initial">
                                         <div class="form-select-wrapper">
-                                            <select class="form-select" aria-label="{{__('theme2-dashboard-global.network')}}">
+                                            <select class="form-select"
+                                                    aria-label="{{__('theme2-dashboard-global.network')}}">
                                                 <option selected>{{__('theme2-dashboard-global.network')}}</option>
                                                 <option value="1">{{__('theme2-dashboard-global.all')}}</option>
-                                                <option value="2">{{__('theme2-dashboard-global.google-search')}}</option>
-                                                <option value="3">{{__('theme2-dashboard-global.search-partner')}}</option>
-                                                <option value="3">{{__('theme2-dashboard-global.display-network')}}</option>
-                                                <option value="3">{{__('theme2-dashboard-global.smart-shopping-campaign')}}</option>
-                                                <option value="3">{{__('theme2-dashboard-global.youtube-videos')}}</option>
-                                                <option value="3">{{__('theme2-dashboard-global.youtube-search')}}</option>
-                                                <option value="3">{{__('theme2-dashboard-global.google-video')}}</option>
+                                                <option
+                                                    value="2">{{__('theme2-dashboard-global.google-search')}}</option>
+                                                <option
+                                                    value="3">{{__('theme2-dashboard-global.search-partner')}}</option>
+                                                <option
+                                                    value="3">{{__('theme2-dashboard-global.display-network')}}</option>
+                                                <option
+                                                    value="3">{{__('theme2-dashboard-global.smart-shopping-campaign')}}</option>
+                                                <option
+                                                    value="3">{{__('theme2-dashboard-global.youtube-videos')}}</option>
+                                                <option
+                                                    value="3">{{__('theme2-dashboard-global.youtube-search')}}</option>
+                                                <option
+                                                    value="3">{{__('theme2-dashboard-global.google-video')}}</option>
                                             </select>
                                         </div>
                                     </th>
@@ -302,104 +320,259 @@
                                                 for="javascript">Javascript</label>
                                         </div>
                                     </th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.software-version')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.color-depth')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.fonts')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.local-storage')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.session-storage')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.software-version')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.color-depth')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.fonts')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.local-storage')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.session-storage')}}</th>
                                     <th scope="col" class="no-filter d-none d-md-initial">Cookie</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.time-zone')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.app-code-name')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.app-name')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.app-version')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.cookie-enabled')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.device-memory')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.do-not-track')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.hardware-concurrency')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.language')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.languages')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.on-line')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.product')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.product-sub')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.vendor')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.vendor-sub')}}</th>
-                                    <th scope="col" class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.web-driver')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.time-zone')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.app-code-name')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.app-name')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.app-version')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.cookie-enabled')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.device-memory')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.do-not-track')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.hardware-concurrency')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.language')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.languages')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.on-line')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.product')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.product-sub')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.vendor')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.vendor-sub')}}</th>
+                                    <th scope="col"
+                                        class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.web-driver')}}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
                                 Todo: Foreach ile gelen verileri listele--}}
-                                <tr data-bs-toggle="modal" data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
-                                    <td class="d-none d-md-initial" data-label="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a></td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.account')}}" title="{{__('theme2-dashboard-global.copy-column')}}">359-318-6843</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.campaing')}}" title="{{__('theme2-dashboard-global.copy-column')}}">47-Kızıltepe-12</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.keyword')}}" title="{{__('theme2-dashboard-global.copy-column')}}">beyaz eşya servisleri</td>
-                                    <td data-label="IP" title="{{__('theme2-dashboard-global.copy-column')}}">5.229.30.102</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-range')}}" title="{{__('theme2-dashboard-global.copy-column')}}">
+                                <tr data-bs-toggle="modal"
+                                    data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                                    <td class="d-none d-md-initial" data-label="&nbsp;"><a href="#"
+                                                                                           class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a>
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.account')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">359-318-6843
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.campaing')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">47-Kızıltepe-12
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.keyword')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">beyaz eşya servisleri
+                                    </td>
+                                    <td data-label="IP" title="{{__('theme2-dashboard-global.copy-column')}}">
+                                        5.229.30.102
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.ip-range')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">
                                         <div>5.229.0.0/16<sup
                                                 class="fs-14 d-inline-flex align-items-center justify-content-center"><span
                                                     class="badge bg-blue rounded-pill">15.897</span></sup></div>
                                     </td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.as-org')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Vodafone Telekomunikasyon A.S.</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-country')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Turkey</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-city')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep</td>
-                                    <td class="d-none d-md-initial" data-label="Platform" title="{{__('theme2-dashboard-global.copy-column')}}">AndroidOS 10</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.browser')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Chrome 87.0.4280.101</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.device')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Mobil</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.clicks-count')}}" title="{{__('theme2-dashboard-global.copy-column')}}">1</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.time-spent')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.click-status')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.scroll-status')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.network')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Google Search</td>
-                                    <td class="d-none d-md-initial" data-label="Gclid" title="{{__('theme2-dashboard-global.copy-column')}}">
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.as-org')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Vodafone Telekomunikasyon
+                                        A.S.
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.ip-country')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Turkey
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.ip-city')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep
+                                    </td>
+                                    <td class="d-none d-md-initial" data-label="Platform"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">AndroidOS 10
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.browser')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Chrome 87.0.4280.101
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.device')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Mobil
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.clicks-count')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">1
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.time-spent')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.click-status')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.scroll-status')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.network')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Google Search
+                                    </td>
+                                    <td class="d-none d-md-initial" data-label="Gclid"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">
                                         Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
                                     </td>
-                                    <td class="d-none d-md-initial" data-label="Redirect URL" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="User Agent" title="{{__('theme2-dashboard-global.copy-column')}}">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                    <td class="d-none d-md-initial" data-label="Redirect URL"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial" data-label="User Agent"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Mozilla/5.0 (Linux;
+                                        Android 10; M2006C3LG)
                                         AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
                                     </td>
-                                    <td class="d-none d-md-initial" data-label="Host" title="{{__('theme2-dashboard-global.copy-column')}}">176.33.90.255</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.as-number')}}" title="{{__('theme2-dashboard-global.copy-column')}}">34984</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-region')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-postal-code')}}" title="{{__('theme2-dashboard-global.copy-column')}}">27090</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.first-click')}}" title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17 16:08:44
+                                    <td class="d-none d-md-initial" data-label="Host"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">176.33.90.255
                                     </td>
-                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}" title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17 16:08:44
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.as-number')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">34984
                                     </td>
-                                    <td class="d-none d-md-initial" data-label="Javascript" title="{{__('theme2-dashboard-global.copy-column')}}">Bilinmeyen</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.software-version')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.color-depth')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.fonts')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.local-storage')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.session-storage')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.ip-region')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.ip-postal-code')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">27090
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.first-click')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17 16:08:44
+                                    </td>
+                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17 16:08:44
+                                    </td>
+                                    <td class="d-none d-md-initial" data-label="Javascript"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Bilinmeyen
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.software-version')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.color-depth')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.fonts')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.local-storage')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.session-storage')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
                                     <td class="d-none d-md-initial" data-label="Cookie">Hayır</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.time-zone')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.app-code-name')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.app-name')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.app-version')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.cookie-enabled')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.device-memory')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.do-not-track')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.language')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.languages')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.on-line')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.product')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.product-sub')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.vendor')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.vendor-sub')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.web-driver')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.time-zone')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.app-code-name')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.app-name')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.app-version')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.cookie-enabled')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.device-memory')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.do-not-track')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.language')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.languages')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.on-line')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.product')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.product-sub')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.vendor')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.vendor-sub')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                    </td>
+                                    <td class="d-none d-md-initial"
+                                        data-label="{{__('theme2-dashboard-global.web-driver')}}"
+                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
                         {{--Modal Start--}}
                         {{--TODO: Modali foreach ile listele -> gelen veriye göre --}}
-                        <div class="modal fade" id="modal-01" {{--TODO: modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}} tabindex="-1">
+                        <div class="modal fade" id="modal-01"
+                             {{--TODO: modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}} tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered modal-sm">
                                 <div class="modal-content text-center">
                                     <div class="modal-body">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
                                         <h2 class="mb-3 text-start">{{__('theme2-dashboard-global.detail')}}</h2>
                                         <div class="table-responsive">
                                             <table class="table table-bordered muypil-responsive-table-mobile"
@@ -408,65 +581,211 @@
                                                 {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
                                                 Todo: Foreach ile gelen verileri listele--}}
                                                 <tr>
-                                                    <td class="d-initial d-md-none" data-label="{{__('theme2-dashboard-global.action')}}" title="&nbsp;"><a href="#" class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a></td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.account')}}" title="{{__('theme2-dashboard-global.copy-column')}}">359-318-6843</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.campaing')}}" title="{{__('theme2-dashboard-global.copy-column')}}">47-Kızıltepe-12</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.keyword')}}" title="{{__('theme2-dashboard-global.copy-column')}}">beyaz eşya servisleri</td>
-                                                    <td data-label="IP" title="{{__('theme2-dashboard-global.copy-column')}}">5.229.30.102</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-range')}}" title="{{__('theme2-dashboard-global.copy-column')}}">
+                                                    <td class="d-initial d-md-none"
+                                                        data-label="{{__('theme2-dashboard-global.action')}}"
+                                                        title="&nbsp;"><a href="#"
+                                                                          class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a>
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.account')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
+                                                        359-318-6843
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.campaing')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
+                                                        47-Kızıltepe-12
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.keyword')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">beyaz eşya
+                                                        servisleri
+                                                    </td>
+                                                    <td data-label="IP"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
+                                                        5.229.30.102
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.ip-range')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
                                                         <div>5.229.0.0/16<sup
                                                                 class="fs-14 d-inline-flex align-items-center justify-content-center"><span
-                                                                    class="badge bg-blue rounded-pill">15.897</span></sup></div>
+                                                                    class="badge bg-blue rounded-pill">15.897</span></sup>
+                                                        </div>
                                                     </td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.as-org')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Vodafone Telekomunikasyon A.S.</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-country')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Turkey</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-city')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep</td>
-                                                    <td class="d-none d-md-initial" data-label="Platform" title="{{__('theme2-dashboard-global.copy-column')}}">AndroidOS 10</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.browser')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Chrome 87.0.4280.101</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.device')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Mobil</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.clicks-count')}}" title="{{__('theme2-dashboard-global.copy-column')}}">1</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.time-spent')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.click-status')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.scroll-status')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.network')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Google Search</td>
-                                                    <td class="d-none d-md-initial" data-label="Gclid" title="{{__('theme2-dashboard-global.copy-column')}}">
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.as-org')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Vodafone
+                                                        Telekomunikasyon A.S.
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.ip-country')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Turkey
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.ip-city')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep
+                                                    </td>
+                                                    <td class="d-none d-md-initial" data-label="Platform"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">AndroidOS
+                                                        10
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.browser')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Chrome
+                                                        87.0.4280.101
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.device')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Mobil
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.clicks-count')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">1
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.time-spent')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.click-status')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.scroll-status')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.network')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Google
+                                                        Search
+                                                    </td>
+                                                    <td class="d-none d-md-initial" data-label="Gclid"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
                                                         Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
                                                     </td>
-                                                    <td class="d-none d-md-initial" data-label="Redirect URL" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="User Agent" title="{{__('theme2-dashboard-global.copy-column')}}">Mozilla/5.0 (Linux; Android 10; M2006C3LG)
-                                                        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36
+                                                    <td class="d-none d-md-initial" data-label="Redirect URL"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
                                                     </td>
-                                                    <td class="d-none d-md-initial" data-label="Host" title="{{__('theme2-dashboard-global.copy-column')}}">176.33.90.255</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.as-number')}}" title="{{__('theme2-dashboard-global.copy-column')}}">34984</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-region')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.ip-postal-code')}}" title="{{__('theme2-dashboard-global.copy-column')}}">27090</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.first-click')}}" title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17 16:08:44
+                                                    <td class="d-none d-md-initial" data-label="User Agent"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
+                                                        Mozilla/5.0 (Linux; Android 10; M2006C3LG)
+                                                        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101
+                                                        Mobile Safari/537.36
                                                     </td>
-                                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}" title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17 16:08:44
+                                                    <td class="d-none d-md-initial" data-label="Host"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
+                                                        176.33.90.255
                                                     </td>
-                                                    <td class="d-none d-md-initial" data-label="Javascript" title="{{__('theme2-dashboard-global.copy-column')}}">Bilinmeyen</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.software-version')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.color-depth')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.fonts')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.local-storage')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.session-storage')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.as-number')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">34984
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.ip-region')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.ip-postal-code')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">27090
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.first-click')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17
+                                                        16:08:44
+                                                    </td>
+                                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17
+                                                        16:08:44
+                                                    </td>
+                                                    <td class="d-none d-md-initial" data-label="Javascript"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Bilinmeyen
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.software-version')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.color-depth')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.fonts')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.local-storage')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.session-storage')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
                                                     <td class="d-none d-md-initial" data-label="Cookie">Hayır</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.time-zone')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.app-code-name')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.app-name')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.app-version')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.cookie-enabled')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.device-memory')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.do-not-track')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.language')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.languages')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.on-line')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.product')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.product-sub')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.vendor')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.vendor-sub')}}" title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;</td>
-                                                    <td class="d-none d-md-initial" data-label="{{__('theme2-dashboard-global.web-driver')}}" title="{{__('theme2-dashboard-global.copy-column')}}">Hayır</td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.time-zone')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.app-code-name')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.app-name')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.app-version')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.cookie-enabled')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.device-memory')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.do-not-track')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.language')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.languages')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.on-line')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.product')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.product-sub')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.vendor')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.vendor-sub')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
+                                                    </td>
+                                                    <td class="d-none d-md-initial"
+                                                        data-label="{{__('theme2-dashboard-global.web-driver')}}"
+                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
+                                                    </td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -526,23 +845,43 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         let allRows = document.querySelectorAll('tr:not(.muypil-table-header)');
-        allRows.forEach(function (row){
-            window.addEventListener('resize', function(event){
-                if(window.innerWidth >= 768){
+        allRows.forEach(function (row) {
+            window.addEventListener('resize', function (event) {
+                if (window.innerWidth >= 768) {
                     row.removeAttribute('data-bs-target');
                 }
             });
-            if(screen.width >= 768){
+            if (screen.width >= 768) {
                 row.removeAttribute('data-bs-target');
             }
             let columns = row.querySelectorAll('td');
-            columns.forEach(function(column){
-                column.addEventListener('click', function (){
+            columns.forEach(function (column) {
+                column.addEventListener('click', function () {
                     console.clear();
                 });
-                column.addEventListener('dblclick', function(){
-                    console.log(2222);
-                    navigator.clipboard.writeText(this.innerHTML).then(function() {
+                column.addEventListener('dblclick', function () {
+                    if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
+                        navigator.clipboard.writeText(this.innerHTML).then(function () {
+                            const Toast = Swal.mixin({
+                                toast: true,
+                                position: 'top-end',
+                                showConfirmButton: false,
+                                timer: 3000,
+                                timerProgressBar: true,
+                                didOpen: (toast) => {
+                                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                }
+                            })
+
+                            Toast.fire({
+                                icon: 'success',
+                                title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                            })
+                        }, function (err) {
+                            /*is->Err*/
+                        });
+                    }else{
                         const Toast = Swal.mixin({
                             toast: true,
                             position: 'top-end',
@@ -556,12 +895,10 @@
                         })
 
                         Toast.fire({
-                            icon: 'success',
-                            title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                            icon: 'warning',
+                            title: '{{__('theme2-dashboard-global.copied-null')}}'
                         })
-                    }, function(err) {
-                       /*is->Err*/
-                    });
+                    }
                 });
             });
         });
