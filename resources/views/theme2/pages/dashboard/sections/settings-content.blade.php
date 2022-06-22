@@ -606,6 +606,14 @@
         .nav-link span {
             width: max-content;
         }
+
+        .input-tags {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
     </style>
 @endpush
 <section class="wrapper">
@@ -634,6 +642,18 @@
                     <i class="uil uil-pause-circle pe-1"></i>
                     <span>{{__('theme2-dashboard-global.pause-campaign-rules')}}</span>
                     <span class="badge gradient-2 ms-2">{{__('theme2-dashboard-global.new')}}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#topbar-auto-ip-blocking">
+                    <i class="uil uil-robot pe-1"></i>
+                    <span>{{__('theme2-dashboard-global.auto-ip-blocking')}}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#topbar-websites">
+                    <i class="uil uil-browser pe-1"></i>
+                    <span>{{__('theme2-dashboard-global.websites')}}</span>
                 </a>
             </li>
         </ul>
@@ -790,6 +810,7 @@
             <!--/.tab-pane -->
             <div class="tab-pane fade me-2" id="topbar-event-rules">
                 <div class="bg-blur p-6 mt-0">
+                    <h5 class="text-white">{{__('theme2-dashboard-global.event-rules')}}</h5>
                     {{--Satır Başlangıç--}}
                     <div class="line-box check-rules-line">
                         <div class="theme-switch-wrapper">
@@ -945,12 +966,99 @@
                 </div>
             </div>
             <!--/.tab-pane -->
+            <div class="tab-pane fade me-2" id="topbar-auto-ip-blocking">
+                <div class="bg-blur p-6 mt-0">
+                    <h5 class="text-white">{{__('theme2-dashboard-global.auto-ip-blocking')}}</h5>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex flex-column justify-content-center">
+                            <p>{{__('theme2-dashboard-global.block-ips-for-certain-period')}}</p>
+                            <p class="fs-14 mt-n4 text-white-50">{{__('theme2-dashboard-global.block-ips-for-certain-period-desc')}}</p>
+                        </div>
+                        <div
+                            class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex align-items-center justify-content-center justify-content-md-end">
+                            <input id="textInputExample" onkeypress="return isNumberKey(event)" value="7"
+                                   type="text" class="form-control"
+                                   style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
+                            <select class="form-select" aria-label="Gün"
+                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
+                                <option selected value="day">{{config('app.locale') === 'tr' ? 'Gün' : 'Day'}}</option>
+                                <option value="hour">{{config('app.locale') === 'tr' ? 'Saat' : 'Hour'}}</option>
+                                <option value="minute">{{config('app.locale') === 'tr' ? 'Dakika' : 'Minute'}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex flex-column justify-content-center">
+                            <p>{{__('theme2-dashboard-global.manually-exclude-ips')}}</p>
+                            <p class="fs-14 mt-n4 text-white-50">{!! __('theme2-dashboard-global.manually-exclude-ips-desc') !!}</p>
+                        </div>
+                        <div
+                            class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex align-items-center justify-content-center justify-content-md-end">
+                            <div class="input-tags mt-4">
+                                <div id="input-tags"
+                                     class="d-flex align-items-center flex-wrap justify-content-end"></div>
+                                <input autocomplete="off" id="input-ip-controle"
+                                       placeholder="{{__('theme2-dashboard-global.write-and-press-enter')}}"
+                                       type="text" inputmode="decimal" class="form-control"
+                                       style="padding: 0.75rem;font-size: 14px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex flex-column justify-content-center">
+                            <p>{{__('theme2-dashboard-global.whitelist-ips')}}</p>
+                            <p class="fs-14 mt-n4 text-white-50">{!! __('theme2-dashboard-global.whitelist-ips-desc') !!}</p>
+                        </div>
+                        <div
+                            class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex align-items-center justify-content-center justify-content-md-end">
+                            <div class="input-tags mt-4">
+                                <div id="input-tags-white"
+                                     class="d-flex align-items-center flex-wrap justify-content-end"></div>
+                                <input autocomplete="off" id="input-ip-controle-white"
+                                       placeholder="{{__('theme2-dashboard-global.write-and-press-enter')}}"
+                                       type="text" inputmode="decimal" class="form-control"
+                                       style="padding: 0.75rem;font-size: 14px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="d-flex align-items-center justify-content-center justify-content-center justify-content-md-end mt-4">
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                                class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
+                    </div>
+                </div>
+            </div>
+            <!--/.tab-pane -->
+            <div class="tab-pane fade me-2" id="topbar-websites">
+                <div class="bg-blur p-6 mt-0">
+                    <h5 class="text-white">{{__('theme2-dashboard-global.websites')}}</h5>
+                    <p class="fs-14">{{__('theme2-dashboard-global.websites-desc')}}</p>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-12 mb-4 mt-2 d-flex align-items-center justify-content-end">
+                            <div class="input-tags w-100">
+                                <div id="input-domain-tags"
+                                     class="d-flex align-items-center flex-wrap justify-content-start"></div>
+                                <input autocomplete="off" id="input-domain-controle"
+                                       placeholder="{{__('theme2-dashboard-global.write-and-press-enter')}}"
+                                       type="url" class="form-control"
+                                       style="padding: 0.75rem;font-size: 14px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                                class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
+                    </div>
+                </div>
+            </div>
+            <!--/.tab-pane -->
         </div>
         <!-- /.container -->
     </div>
 </section>
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         console.clear();
         let checkboxs = document.querySelectorAll('input[type="checkbox"][data-target]');
@@ -1089,11 +1197,11 @@
                     <select class="form-select"
                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 7rem;">
                         {{--TODO: Kampanyaları veritabanından alıp listeleyelim.--}}
-                        <option value="1">Kampanya1</option>
-                        <option value="2">Kampanya2</option>
-                        <option value="3">Kampanya3</option>
-                    </select>
-                    <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'kampanyasını' : 'campaign'}}</label>
+            <option value="1">Kampanya1</option>
+            <option value="2">Kampanya2</option>
+            <option value="3">Kampanya3</option>
+        </select>
+        <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'kampanyasını' : 'campaign'}}</label>
                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="5"
                            type="text" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -1103,5 +1211,107 @@
 {{--Satır bitişi--}}
             `);
         }
+
+        function isValidIpv4Addr(ip) {
+            return /^(?=\d+\.\d+\.\d+\.\d+$)(?:(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.?){4}$/.test(ip);
+        }
+
+        function isValidDomain(domain){
+            return /^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{2,30}\.[a-z]{2,})([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})?$/.test(domain);
+        }
+
+        $('#input-ip-controle').keyup(function (e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                if (isValidIpv4Addr(this.value.trim())) {
+                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value') + ',';
+                    if (previousValue.indexOf(this.value.trim()) === -1) {
+                        this.setAttribute('data-value', previousValue + this.value.trim());
+                        $('#input-tags').append(`<span class="badge bg-navy mx-1 my-2">${this.value.trim()}</span>`);
+                    } else {
+                        this.value = null;
+                    }
+                } else {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+
+                    Toast.fire({
+                        icon: 'error',
+                        title: '{{__('theme2-dashboard-global.error-ip-address')}}'
+                    })
+                }
+                this.value = null;
+            }
+        });
+        $('#input-ip-controle-white').keyup(function (e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                if (isValidIpv4Addr(this.value.trim())) {
+                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value') + ',';
+                    if (previousValue.indexOf(this.value.trim()) === -1) {
+                        this.setAttribute('data-value', previousValue + this.value.trim());
+                        $('#input-tags-white').append(`<span class="badge bg-navy mx-1 my-2">${this.value.trim()}</span>`);
+                    } else {
+                        this.value = null;
+                    }
+                } else {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+
+                    Toast.fire({
+                        icon: 'error',
+                        title: '{{__('theme2-dashboard-global.error-ip-address')}}'
+                    })
+                }
+                this.value = null;
+            }
+        });
+        $('#input-domain-controle').keyup(function (e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                if (isValidDomain(this.value.trim())) {
+                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value') + ',';
+                    if (previousValue.indexOf(this.value.trim()) === -1) {
+                        this.setAttribute('data-value', previousValue + this.value.trim());
+                        $('#input-domain-tags').append(`<span class="badge bg-navy mx-1 my-2">${this.value.trim()}</span>`);
+                    } else {
+                        this.value = null;
+                    }
+                } else {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+
+                    Toast.fire({
+                        icon: 'error',
+                        title: '{{__('theme2-dashboard-global.error-domain')}}'
+                    })
+                }
+                this.value = null;
+            }
+        });
     </script>
 @endpush
