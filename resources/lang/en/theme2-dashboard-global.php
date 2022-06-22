@@ -130,5 +130,18 @@ return [
     "select-country"                    => "Select country",
     "pause-campaign-rules"              => "Pause Campaign Rules",
     "pause-campaign-rules-desc"         => "It pauses your campaigns for a while within the framework of the rules you set, and the attackers are completely prevented from seeing your ad. Recommended if you are under heavy attack.",
+    "auto-ip-blocking"                  => "Auto IP Blocking",
+    "block-ips-for-certain-period"      => "Block IPs for a Certain Period",
+    "block-ips-for-certain-period-desc" => "The period that each IP will be blocked.",
+    "period-value"                      => "Period Value",
+    "manually-exclude-ips"              => "Manually Exclude IPs",
+    "manually-exclude-ips-desc"         => "<br/>Fill out the next box with IP addresses (each IP address in a new line) that you wish to add to your exclusion list. These IPs will be blocked until you remove them from this box.<br/><br/>You can use single IP addresses or a range of IP addresses by using the wildcard character (*) or CIDR notation.<br/><br/>Examples: 112.4.5.67",
+    "write-and-press-enter"             => "Write and press Enter",
+    "error-ip-address"                  => "The format of the IP address you typed is not correct",
+    "error-domain"                      => "The format of the domain you typed is not correct",
+    "whitelist-ips"                     => "Whitelist IPs",
+    "whitelist-ips-desc"                => "<br/>Fill out the next box with IP addresses (each IP address in a new line) that you wish for CyberDefense to never block.<br/><br/>You can use single IP addresses or a range of IP addresses by using the wildcard character (*) or CIDR notation.<br/><br/>Examples: 112.4.5.67",
+    "websites"                          => "User Domains",
+    "websites-desc"                     => "User Domains list page",
 ];
 ?>
