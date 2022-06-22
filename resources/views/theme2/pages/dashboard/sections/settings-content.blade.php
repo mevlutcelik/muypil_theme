@@ -680,7 +680,7 @@
                                         <option value="3">IP Aralığı</option>
                                     </select>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="text" class="form-control"
+                                           type="number" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -691,7 +691,7 @@
                                     <label class="mx-1 fs-14">içinde</label>
                                     <div class="d-flex align-items-center">
                                         <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                               type="text" class="form-control"
+                                               type="number" inputmode="number" class="form-control"
                                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     </div>
                                     <label class="mx-1 fs-14">defa tıklayabilir.</label>
@@ -711,7 +711,7 @@
                                         <option value="3">IP Aralığı</option>
                                     </select>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="text" class="form-control"
+                                           type="number" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
