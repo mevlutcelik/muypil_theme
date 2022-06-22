@@ -222,7 +222,7 @@
     <script>
         console.clear();
         let checkboxPlan = document.querySelector('input[type="checkbox"]');
-        checkboxPlan.addEventListener('click', function(e){
+        checkboxPlan.addEventListener('change', function(e){
             if(checkboxPlan.checked){
                 let priceShows = document.querySelectorAll('.price-show');
                 let priceHides = document.querySelectorAll('.price-hide');

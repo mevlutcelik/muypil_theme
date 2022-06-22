@@ -5,6 +5,7 @@
             width: 100%;
             height: calc((var(--vh, 1vh) * 100) - 290px);
             overflow-y: auto;
+            overflow-x: hidden;
         }
 
         /* width */

@@ -62,6 +62,11 @@
             color: #fff !important;
         }
 
+        select{
+            background-image: url({{asset('assets2/img/icons/914-9148298_downarrow-white-down-arrow-icon-white.png')}})!important;
+            background-size: calc(32px/3) calc(19px/3) !important;
+        }
+
         option {
             background-color: #121212;
         }
