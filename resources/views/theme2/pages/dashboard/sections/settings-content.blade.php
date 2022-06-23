@@ -545,15 +545,19 @@
         ::placeholder {
             color: rgba(255, 255, 255, 0.7) !important;
         }
+
         ::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.7) !important;
         }
+
         ::-moz-placeholder {
             color: rgba(255, 255, 255, 0.7) !important;
         }
+
         ::-ms-input-placeholder {
             color: rgba(255, 255, 255, 0.7) !important;
         }
+
         .select2-results__option {
             padding: 0.5rem 1rem;
             font-size: 14px;
@@ -606,6 +610,39 @@
             justify-content: center;
             align-items: flex-end;
         }
+
+        .mx-hide {
+            /*pointer-events: none;
+            opacity: 0;
+            height: 0;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;*/
+            display: none;
+        }
+
+        .btn-soft-blue {
+            background-color: rgba(224, 233, 250, 0.15);
+            color: #cedfff;
+        }
+
+        .btn-soft-blue {
+            background-color: rgba(224, 233, 250, 0.15);
+            color: #cedfff;
+        }
+
+        .btn-soft-blue:hover {
+            color: #a7bfec;
+        }
+
+        .btn-soft-red {
+            background-color: rgb(250, 230, 231, 0.15);
+            color: #ffd3d6;
+        }
+
+        .btn-soft-red:hover {
+            color: #f8a9ae;
+        }
     </style>
 @endpush
 <section class="wrapper">
@@ -648,6 +685,12 @@
                     <span>{{__('theme2-dashboard-global.websites')}}</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#topbar-campaigns-manager">
+                    <i class="uil uil-gift pe-1"></i>
+                    <span>{{__('theme2-dashboard-global.campaigns-manager')}}</span>
+                </a>
+            </li>
         </ul>
         <!-- /.nav-tabs -->
         <div class="tab-content">
@@ -672,7 +715,7 @@
                                         <option value="3">IP Aralığı</option>
                                     </select>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="number" inputmode="number" class="form-control"
+                                           type="text" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -683,7 +726,7 @@
                                     <label class="mx-1 fs-14">içinde</label>
                                     <div class="d-flex align-items-center">
                                         <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                               type="number" inputmode="number" class="form-control"
+                                               type="text" inputmode="number" class="form-control"
                                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     </div>
                                     <label class="mx-1 fs-14">defa tıklayabilir.</label>
@@ -703,7 +746,7 @@
                                         <option value="3">IP Aralığı</option>
                                     </select>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="number" inputmode="number" class="form-control"
+                                           type="text" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -714,7 +757,7 @@
                                     <label class="mx-1 fs-14">içinde</label>
                                     <div class="d-flex align-items-center">
                                         <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                               type="number" inputmode="number" class="form-control"
+                                               type="text" inputmode="number" class="form-control"
                                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     </div>
                                     <label class="mx-1 fs-14">defa tıklayabilir.</label>
@@ -731,7 +774,7 @@
                                 <div class="line-box check-rules-line">
                                     <label class="mx-1 fs-14">Allow up to</label>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="number" inputmode="number" class="form-control"
+                                           type="text" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <label class="mx-1 fs-14">ads clicks within</label>
                                     <input id="textInputExample" value="1" type="text" class="form-control"
@@ -761,11 +804,11 @@
                                 <div class="line-box check-rules-line">
                                     <label class="mx-1 fs-14">Allow up to</label>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="number" inputmode="number" class="form-control"
+                                           type="text" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <label class="mx-1 fs-14">ads clicks within</label>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="number" inputmode="number" class="form-control"
+                                           type="text" inputmode="number" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -878,7 +921,7 @@
                         <span class="me-2 ms-2 fs-14">{{config('app.locale') === 'tr' ? 'Sitede' : 'Block'}}</span>
                         @if(config('app.locale') === 'tr')
                             <input id="textInputExample" onkeypress="return isNumberKey(event)" placeholder="Süre"
-                                   type="number" inputmode="number" class="form-control"
+                                   type="text" inputmode="number" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="4">
                         @else
                             <select class="form-select" aria-label="IP"
@@ -969,7 +1012,7 @@
                         <div
                             class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex align-items-center justify-content-center justify-content-md-end">
                             <input id="textInputExample" onkeypress="return isNumberKey(event)" value="7"
-                                   type="number" inputmode="number" class="form-control"
+                                   type="text" inputmode="number" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                             <select class="form-select" aria-label="Gün"
                                     style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -1034,6 +1077,86 @@
                                        placeholder="{{__('theme2-dashboard-global.write-and-press-enter')}}"
                                        type="url" class="form-control"
                                        style="padding: 0.75rem;font-size: 14px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                                class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
+                    </div>
+                </div>
+            </div>
+            <!--/.tab-pane -->
+            <div class="tab-pane fade me-2" id="topbar-campaigns-manager">
+                <div class="bg-blur p-6 mt-0">
+                    <h5 class="text-white">{{__('theme2-dashboard-global.campaigns-manager')}}</h5>
+                    <div class="row">
+                        <div class="col-6 col-lg-6 mb-4 mt-4 d-flex flex-column align-items-start">
+                            <p class="text-white">{{__('theme2-dashboard-global.active-campaigns')}}</p>
+                            <input autocomplete="off"
+                                   placeholder="{{__('theme2-dashboard-global.search')}}"
+                                   type="url" class="form-control"
+                                   style="padding: 0.5rem;font-size: 13px;">
+                            <div class="d-flex flex-column mt-4 w-100" id="active-campaigns">
+                                {{--TODO: Aktif kampanyaları foreach ile listeleyelim--}}
+                                {{--Aktif Kampanya başlangıç--}}
+                                <a class="btn btn-soft-blue btn-icon btn-icon-start rounded mb-4" data-id="1"
+                                   style="padding: 6px 12px">
+                                    <span>03-13</span>
+                                    <i class="uil uil-arrow-right d-none d-md-block"
+                                       style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+                                </a>
+                                {{--Aktif Kampanya bitiş--}}
+                                {{--Aktif Kampanya başlangıç--}}
+                                <a class="btn btn-soft-blue btn-icon btn-icon-start rounded mb-4" data-id="2"
+                                   style="padding: 6px 12px">
+                                    <span>03-13</span>
+                                    <i class="uil uil-arrow-right d-none d-md-block"
+                                       style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+                                </a>
+                                {{--Aktif Kampanya bitiş--}}
+                                {{--Aktif Kampanya başlangıç--}}
+                                <a class="btn btn-soft-blue btn-icon btn-icon-start rounded mb-4" data-id="3"
+                                   style="padding: 6px 12px">
+                                    <span>03-13</span>
+                                    <i class="uil uil-arrow-right d-none d-md-block"
+                                       style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+                                </a>
+                                {{--Aktif Kampanya bitiş--}}
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-6 mb-4 mt-4 d-flex flex-column align-items-start">
+                            <p class="text-white">{{__('theme2-dashboard-global.disabled-campaigns')}}</p>
+                            <input autocomplete="off"
+                                   placeholder="{{__('theme2-dashboard-global.search')}}"
+                                   type="url" class="form-control"
+                                   style="padding: 0.5rem;font-size: 13px;">
+                            <div class="d-flex flex-column mt-4 w-100" id="disabled-campaigns">
+                                {{--TODO: Pasif Kampanyaları listeleyelim--}}
+                                {{--Pasif Kampanya başlangıç--}}
+                                <a class="btn btn-soft-red btn-icon btn-icon-start rounded mb-4" data-id="4"
+                                   style="padding: 6px 12px">
+                                    <span>71-10</span>
+                                    <i class="uil uil-arrow-left d-none d-md-block"
+                                       style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                                </a>
+                                {{--Pasif Kampanya bitiş--}}
+                                {{--Pasif Kampanya başlangıç--}}
+                                <a class="btn btn-soft-red btn-icon btn-icon-start rounded mb-4" data-id="5"
+                                   style="padding: 6px 12px">
+                                    <span>71-10</span>
+                                    <i class="uil uil-arrow-left d-none d-md-block"
+                                       style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                                </a>
+                                {{--Pasif Kampanya bitiş--}}
+                                {{--Pasif Kampanya başlangıç--}}
+                                <a class="btn btn-soft-red btn-icon btn-icon-start rounded mb-4" data-id="6"
+                                   style="padding: 6px 12px">
+                                    <span>71-10</span>
+                                    <i class="uil uil-arrow-left d-none d-md-block"
+                                       style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                                </a>
+                                {{--Pasif Kampanya bitiş--}}
                             </div>
                         </div>
                     </div>
@@ -1110,7 +1233,7 @@
                             <option value="3">IP Aralığı</option>
                         </select>
                         <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                               type="number" inputmode="number" class="form-control"
+                               type="text" inputmode="number" class="form-control"
                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         <select class="form-select" aria-label="Gün"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -1121,7 +1244,7 @@
                         <label class="mx-1 fs-14">içinde</label>
                         <div class="d-flex align-items-center">
                             <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                   type="number" inputmode="number" class="form-control"
+                                   type="text" inputmode="number" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         </div>
                         <label class="mx-1 fs-14">defa tıklayabilir.</label>
@@ -1138,7 +1261,7 @@
                     <div class="line-box check-rules-line">
                         <label class="mx-1 fs-14">Allow up to</label>
                         <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                               type="number" inputmode="number" class="form-control"
+                               type="text" inputmode="number" class="form-control"
                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         <label class="mx-1 fs-14">ads clicks within</label>
                         <input id="textInputExample" value="1" type="text" class="form-control"
@@ -1173,7 +1296,7 @@
             <div class="row p-0 p-md-2">
                 <div class="line-box check-rules-line">
                 <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                           type="number" inputmode="number" class="form-control"
+                           type="text" inputmode="number" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                            <select class="form-select" aria-label="Gün"
                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -1183,7 +1306,7 @@
                     </select>
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'içinde farklı ip adresinden' : 'from different ip addresses'}}</label>
                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="20"
-                           type="number" inputmode="number" class="form-control"
+                           type="text" inputmode="number" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'tıklama gelirse' : 'if it clicks'}}</label>
                     <select class="form-select"
@@ -1195,7 +1318,7 @@
         </select>
         <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'kampanyasını' : 'campaign'}}</label>
                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="5"
-                           type="number" inputmode="number" class="form-control"
+                           type="text" inputmode="number" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'dakika durdur, sonra geri aç.' : 'stop for a minute, then turn it back on.'}}</label>
                     <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
@@ -1208,17 +1331,19 @@
             return /^(?=\d+\.\d+\.\d+\.\d+$)(?:(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.?){4}$/.test(ip);
         }
 
-        function isValidDomain(domain){
+        function isValidDomain(domain) {
             return /^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{2,30}\.[a-z]{2,})([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})?$/.test(domain);
         }
 
         $('#input-ip-controle').keyup(function (e) {
             if (e.key === 'Enter' || e.keyCode === 13) {
                 if (isValidIpv4Addr(this.value.trim())) {
-                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value') + ',';
+                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value');
+                    previousValue = previousValue !== '' ? previousValue.split(',') : previousValue;
                     if (previousValue.indexOf(this.value.trim()) === -1) {
-                        this.setAttribute('data-value', previousValue + this.value.trim());
-                        $('#input-tags').append(`<span class="badge bg-navy mx-1 my-2">${this.value.trim()}</span>`);
+                        this.setAttribute('data-value', previousValue + (previousValue !== '' ? ',' : '') + this.value.trim());
+                        $('#input-tags').append(`<span data-ip="${this.value.trim()}" class="badge bg-navy mx-1 my-2"><a onclick="deleteBadgeAndDataValue('input-ip-controle', 'input-tags', '${this.value.trim()}')" style="background: rgba(255,255,255,0.15);width: 0.75rem;height: 0.75rem;display: inline-flex;align-items: center;justify-content: center;border-radius: 4px;cursor: pointer;margin-right: 0.25rem;transition: all .3s;}"><i class="uil uil-multiply"></i></a>${this.value.trim()}</span>`);
+                        this.value = null;
                     } else {
                         this.value = null;
                     }
@@ -1240,16 +1365,17 @@
                         title: '{{__('theme2-dashboard-global.error-ip-address')}}'
                     })
                 }
-                this.value = null;
             }
         });
         $('#input-ip-controle-white').keyup(function (e) {
             if (e.key === 'Enter' || e.keyCode === 13) {
                 if (isValidIpv4Addr(this.value.trim())) {
-                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value') + ',';
+                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value');
+                    previousValue = previousValue !== '' ? previousValue.split(',') : previousValue;
                     if (previousValue.indexOf(this.value.trim()) === -1) {
-                        this.setAttribute('data-value', previousValue + this.value.trim());
-                        $('#input-tags-white').append(`<span class="badge bg-navy mx-1 my-2">${this.value.trim()}</span>`);
+                        this.setAttribute('data-value', previousValue + (previousValue !== '' ? ',' : '') + this.value.trim());
+                        $('#input-tags-white').append(`<span data-ip="${this.value.trim()}" class="badge bg-navy mx-1 my-2"><a onclick="deleteBadgeAndDataValue('input-ip-controle-white', 'input-tags-white', '${this.value.trim()}')" style="background: rgba(255,255,255,0.15);width: 0.75rem;height: 0.75rem;display: inline-flex;align-items: center;justify-content: center;border-radius: 4px;cursor: pointer;margin-right: 0.25rem;transition: all .3s;}"><i class="uil uil-multiply"></i></a>${this.value.trim()}</span>`);
+                        this.value = null;
                     } else {
                         this.value = null;
                     }
@@ -1271,16 +1397,17 @@
                         title: '{{__('theme2-dashboard-global.error-ip-address')}}'
                     })
                 }
-                this.value = null;
             }
         });
         $('#input-domain-controle').keyup(function (e) {
             if (e.key === 'Enter' || e.keyCode === 13) {
                 if (isValidDomain(this.value.trim())) {
-                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value') + ',';
+                    let previousValue = this.getAttribute('data-value') === null ? '' : this.getAttribute('data-value');
+                    previousValue = previousValue !== '' ? previousValue.split(',') : previousValue;
                     if (previousValue.indexOf(this.value.trim()) === -1) {
-                        this.setAttribute('data-value', previousValue + this.value.trim());
-                        $('#input-domain-tags').append(`<span class="badge bg-navy mx-1 my-2">${this.value.trim()}</span>`);
+                        this.setAttribute('data-value', previousValue + (previousValue !== '' ? ',' : '') + this.value.trim());
+                        $('#input-domain-tags').append(`<span data-ip="${this.value.trim()}" class="badge bg-navy mx-1 my-2"><a onclick="deleteBadgeAndDataValue('input-domain-controle', 'input-domain-tags', '${this.value.trim()}')" style="background: rgba(255,255,255,0.15);width: 0.75rem;height: 0.75rem;display: inline-flex;align-items: center;justify-content: center;border-radius: 4px;cursor: pointer;margin-right: 0.25rem;transition: all .3s;}"><i class="uil uil-multiply"></i></a>${this.value.trim()}</span>`);
+                        this.value = null;
                     } else {
                         this.value = null;
                     }
@@ -1302,8 +1429,102 @@
                         title: '{{__('theme2-dashboard-global.error-domain')}}'
                     })
                 }
-                this.value = null;
             }
         });
+
+        function deleteBadgeAndDataValue(input, badge, ip) {
+            let elInput = $(`#${input}`);
+            let elBadge = $(`#${badge} .badge[data-ip="${ip}"]`);
+            let previousValue = elInput.attr('data-value') === null ? '' : elInput.attr('data-value');
+            let isSplit = false;
+            if (previousValue.indexOf(',') !== -1) {
+                previousValue = previousValue.split(',');
+                isSplit = true;
+            }
+            if (previousValue.indexOf(ip) !== -1) {
+                if (isSplit) {
+                    previousValue.splice(previousValue.indexOf(ip), 1);
+                    previousValue = previousValue.toString();
+                } else {
+                    previousValue = previousValue.replace((previousValue.indexOf(',') === -1 ? ip : ',' + ip), '');
+                }
+                if (elInput.attr('data-value', previousValue)) {
+                    elBadge.remove();
+                }
+            }
+        }
+
+        function controleCampaign() {
+            let arrActives = [], arrDisabled = [];
+            /*document.querySelectorAll('#active-campaigns [data-id]').forEach(function (activeEl) {
+                activeEl.addEventListener('click', function () {
+                    let button = this;
+                    let dataId = this.getAttribute('data-id');
+                    let buttonText = this.querySelector('span').innerHTML;
+                    let newEl = `{{--Pasif Kampanya başlangıç--}}
+            <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${dataId}"
+               style="padding: 6px 12px">
+                <i class="uil uil-arrow-left d-none d-md-block"
+                   style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                <span>${buttonText}</span>
+                <i class="uil uil-arrow-circle-up d-sm-block d-md-none"
+                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+            </a>
+{{--Pasif Kampanya bitiş--}}`;
+                    document.querySelector('#disabled-campaigns').innerHTML += newEl;
+                    /!*this.classList.add('mx-hide');*!/
+                    arrActives.push(newEl);
+                    button.remove();
+                    controleCampaign();
+                    /!*setTimeout(function () {
+                        button.remove();
+                        document.querySelector(`#disabled-campaigns [data-id="${dataId}"]`).classList.remove('mx-hide');
+                    }, 300);*!/
+                });
+                arrActives.push(activeEl);
+            });
+            document.querySelectorAll('#disabled-campaigns [data-id]').forEach(function (disabledEl) {
+                disabledEl.addEventListener('click', function () {
+                    let button = this;
+                    let dataId = this.getAttribute('data-id');
+                    let buttonText = this.querySelector('span').innerHTML;
+                    let newEl = `{{--Aktif Kampanya başlangıç--}}
+            <a class="btn btn-soft-blue btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${dataId}"
+               style="padding: 6px 12px">
+                <span>${buttonText}</span>
+                <i class="uil uil-arrow-circle-down d-sm-block d-md-none"
+                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+                <i class="uil uil-arrow-right d-none d-md-block"
+                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+            </a>
+{{--Aktif Kampanya bitiş--}}`;
+                    document.querySelector('#active-campaigns').innerHTML += newEl;
+                    this.classList.add('mx-hide');
+                    arrActives.push(newEl);
+                    button.remove();
+                    controleCampaign();
+                    /!*setTimeout(function () {
+                        button.remove();
+                        document.querySelector(`#active-campaigns [data-id="${dataId}"]`).classList.remove('mx-hide');
+                    }, 300);*!/
+                });
+                arrDisabled.push(disabledEl);
+            });*/
+            $('#active-campaigns').children().click(function () {
+                let newEl = `{{--Pasif Kampanya başlangıç--}}
+                <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
+               style="padding: 6px 12px">
+                <i class="uil uil-arrow-left"
+                   style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                <span>${this.querySelector('span').innerHTML}</span>
+                </a>
+                {{--Pasif Kampanya bitiş--}}`;
+                $('#active-campaigns').append(newEl);
+                this.remove();
+                controleCampaign();
+            });
+        }
+
+        controleCampaign();
     </script>
 @endpush
