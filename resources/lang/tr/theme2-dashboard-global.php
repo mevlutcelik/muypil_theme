@@ -144,5 +144,9 @@ return [
     "whitelist-ips-desc"                => "<br/>Sonraki kutuyu CyberDefense'in asla engellememesini istediğiniz IP adresleriyle (her IP adresi yeni bir satırda) doldurun.<br/><br/>Joker karakteri kullanarak tek bir IP adresi veya bir dizi IP adresi kullanabilirsiniz karakter (*) veya CIDR notasyonu.<br/><br/>Örnekler: 112.4.5.67",
     "websites"                          => "Web Siteleriniz",
     "websites-desc"                     => "Korunan Web Sitelerinizin Listesi",
+    "campaigns-manager"                 => "Kampanya Yöneticisi",
+    "search"                            => "Ara...",
+    "active-campaigns"                  => "Aktif Kampanyalar",
+    "disabled-campaigns"                => "Pasif Kampanyalar",
 ];
 ?>
