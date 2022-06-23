@@ -148,5 +148,6 @@ return [
     "search"                            => "Ara...",
     "active-campaigns"                  => "Aktif Kampanyalar",
     "disabled-campaigns"                => "Pasif Kampanyalar",
+    "load-more"                         => "Daha fazla yükle",
 ];
 ?>

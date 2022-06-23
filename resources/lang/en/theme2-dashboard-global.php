@@ -109,7 +109,7 @@ return [
     "block-rules"                       => "Block Rules",
     "block-rules-list"                  => "Block Rules List",
     "add-rule"                          => "Add Rule",
-    "save-rule"                         => "Save Rule",
+    "save-rule"                         => "Save",
     "copied-successfuly"                => "Copied successfuly",
     "copied-null"                       => "There is no value to copy",
     "block-rule-1"                      => "If javascript disabled block",
@@ -147,6 +147,6 @@ return [
     "search"                            => "Search...",
     "active-campaigns"                  => "Active Campaigns",
     "disabled-campaigns"                => "Disabled Campaigns",
-
+    "load-more"                         => "Load More",
 ];
 ?>

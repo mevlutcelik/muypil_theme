@@ -1161,7 +1161,11 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" onclick="asd()" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
+                        <a href="#"
+                           class="btn btn-navy btn-sm rounded-pill me-2"><i
+                                class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.load-more')}}</a>
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
