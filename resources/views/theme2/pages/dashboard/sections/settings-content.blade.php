@@ -1161,7 +1161,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" onclick="asd()" class="btn btn-light text-dark btn-sm rounded-pill"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1453,7 +1453,15 @@
                 }
             }
         }
+        let arrActiveCampaigns = [], arrDisabledCampaigns = [];
+        document.querySelectorAll('#active-campaigns [data-id]').forEach(function (child){
+            arrActiveCampaigns.push(child.getAttribute('data-id'));
+        });
+        document.querySelectorAll('#disabled-campaigns [data-id]').forEach(function (child){
+            arrDisabledCampaigns.push(child.getAttribute('data-id'));
+        });
         $(document).on('click', '#active-campaigns [data-id]', function (){
+            arrActiveCampaigns.indexOf(this.getAttribute('data-id')) !== -1 ? arrActiveCampaigns.splice(arrActiveCampaigns.indexOf(this.getAttribute('data-id')), 1) : null;
             let newEl = `{{--Pasif Kampanya başlangıç--}}
             <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
                style="padding: 6px 12px">
@@ -1463,9 +1471,11 @@
                 </a>
                 {{--Pasif Kampanya bitiş--}}`;
             $('#disabled-campaigns').append(newEl);
+            arrDisabledCampaigns.push(this.getAttribute('data-id'));
             this.remove();
         });
         $(document).on('click', '#disabled-campaigns [data-id]', function (){
+            arrDisabledCampaigns.indexOf(this.getAttribute('data-id')) !== -1 ? arrDisabledCampaigns.splice(arrDisabledCampaigns.indexOf(this.getAttribute('data-id')), 1) : null;
             let newEl = `{{--Aktif Kampanya başlangıç--}}
             <a class="btn btn-soft-blue btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
                style="padding: 6px 12px">
@@ -1477,6 +1487,7 @@
                 </a>
                 {{--Aktif Kampanya bitiş--}}`;
             $('#active-campaigns').append(newEl);
+            arrActiveCampaigns.push(this.getAttribute('data-id'));
             this.remove();
         });
     </script>
