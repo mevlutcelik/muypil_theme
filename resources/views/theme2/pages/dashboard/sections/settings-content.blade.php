@@ -1513,7 +1513,7 @@
         }
 
         controleCampaign();
-        $('#active-campaigns').children().click(function () {
+        $(document).on('click', '#active-campaigns [data-id]', function (){
             let newEl = `{{--Pasif Kampanya başlangıç--}}
             <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
                style="padding: 6px 12px">
@@ -1525,12 +1525,12 @@
             $('#disabled-campaigns').append(newEl);
             this.remove();
         });
-        $('#disabled-campaigns').children().click(function () {
+        $(document).on('click', '#disabled-campaigns [data-id]', function (){
             let newEl = `{{--Aktif Kampanya başlangıç--}}
             <a class="btn btn-soft-blue btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
                style="padding: 6px 12px">
                 <span>${this.querySelector('span').innerHTML}</span>
-                <i class="uil uil-arrow-circle-down d-sm-block d-md-none"
+                <i class="uil uil-arrow-right d-sm-block d-md-none"
                    style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
                 <i class="uil uil-arrow-right d-none d-md-block"
                    style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
