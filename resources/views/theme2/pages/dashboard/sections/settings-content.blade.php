@@ -1510,23 +1510,34 @@
                 });
                 arrDisabled.push(disabledEl);
             });*/
-            $('#active-campaigns').children().click(function () {
-                let newEl = `{{--Pasif Kampanya başlangıç--}}
-                <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
+        }
+
+        controleCampaign();
+        $('#active-campaigns').children().click(function () {
+            let newEl = `{{--Pasif Kampanya başlangıç--}}
+            <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
                style="padding: 6px 12px">
                 <i class="uil uil-arrow-left"
                    style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
                 <span>${this.querySelector('span').innerHTML}</span>
                 </a>
                 {{--Pasif Kampanya bitiş--}}`;
-                let endEl = $('#disabled-campaigns').children();
-                console.log(endEl);
-                $('#disabled-campaigns').html(endEl);
-                $('#disabled-campaigns').append(newEl);
-                this.remove();
-            });
-        }
-
-        controleCampaign();
+            $('#disabled-campaigns').append(newEl);
+            this.remove();
+        });
+        $('#disabled-campaigns').children().click(function () {
+            let newEl = `{{--Aktif Kampanya başlangıç--}}
+            <a class="btn btn-soft-blue btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
+               style="padding: 6px 12px">
+                <span>${this.querySelector('span').innerHTML}</span>
+                <i class="uil uil-arrow-circle-down d-sm-block d-md-none"
+                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+                <i class="uil uil-arrow-right d-none d-md-block"
+                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
+                </a>
+                {{--Aktif Kampanya bitiş--}}`;
+            $('#active-campaigns').append(newEl);
+            this.remove();
+        });
     </script>
 @endpush
