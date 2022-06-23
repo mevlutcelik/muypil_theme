@@ -1103,7 +1103,7 @@
                                 <a class="btn btn-soft-blue btn-icon btn-icon-start rounded mb-4" data-id="1"
                                    style="padding: 6px 12px">
                                     <span>03-13</span>
-                                    <i class="uil uil-arrow-right d-none d-md-block"
+                                    <i class="uil uil-arrow-right"
                                        style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
                                 </a>
                                 {{--Aktif Kampanya bitiş--}}
@@ -1111,7 +1111,7 @@
                                 <a class="btn btn-soft-blue btn-icon btn-icon-start rounded mb-4" data-id="2"
                                    style="padding: 6px 12px">
                                     <span>03-13</span>
-                                    <i class="uil uil-arrow-right d-none d-md-block"
+                                    <i class="uil uil-arrow-right"
                                        style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
                                 </a>
                                 {{--Aktif Kampanya bitiş--}}
@@ -1119,7 +1119,7 @@
                                 <a class="btn btn-soft-blue btn-icon btn-icon-start rounded mb-4" data-id="3"
                                    style="padding: 6px 12px">
                                     <span>03-13</span>
-                                    <i class="uil uil-arrow-right d-none d-md-block"
+                                    <i class="uil uil-arrow-right"
                                        style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
                                 </a>
                                 {{--Aktif Kampanya bitiş--}}
@@ -1136,25 +1136,25 @@
                                 {{--Pasif Kampanya başlangıç--}}
                                 <a class="btn btn-soft-red btn-icon btn-icon-start rounded mb-4" data-id="4"
                                    style="padding: 6px 12px">
-                                    <span>71-10</span>
-                                    <i class="uil uil-arrow-left d-none d-md-block"
+                                    <i class="uil uil-arrow-left"
                                        style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                                    <span>71-10</span>
                                 </a>
                                 {{--Pasif Kampanya bitiş--}}
                                 {{--Pasif Kampanya başlangıç--}}
                                 <a class="btn btn-soft-red btn-icon btn-icon-start rounded mb-4" data-id="5"
                                    style="padding: 6px 12px">
-                                    <span>71-10</span>
-                                    <i class="uil uil-arrow-left d-none d-md-block"
+                                    <i class="uil uil-arrow-left"
                                        style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                                    <span>71-10</span>
                                 </a>
                                 {{--Pasif Kampanya bitiş--}}
                                 {{--Pasif Kampanya başlangıç--}}
                                 <a class="btn btn-soft-red btn-icon btn-icon-start rounded mb-4" data-id="6"
                                    style="padding: 6px 12px">
-                                    <span>71-10</span>
-                                    <i class="uil uil-arrow-left d-none d-md-block"
+                                    <i class="uil uil-arrow-left"
                                        style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
+                                    <span>71-10</span>
                                 </a>
                                 {{--Pasif Kampanya bitiş--}}
                             </div>
@@ -1519,9 +1519,11 @@
                 <span>${this.querySelector('span').innerHTML}</span>
                 </a>
                 {{--Pasif Kampanya bitiş--}}`;
-                $('#active-campaigns').append(newEl);
+                let endEl = $('#disabled-campaigns').children();
+                console.log(endEl);
+                $('#disabled-campaigns').html(endEl);
+                $('#disabled-campaigns').append(newEl);
                 this.remove();
-                controleCampaign();
             });
         }
 
