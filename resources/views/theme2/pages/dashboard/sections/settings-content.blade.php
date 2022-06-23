@@ -1453,66 +1453,6 @@
                 }
             }
         }
-
-        function controleCampaign() {
-            let arrActives = [], arrDisabled = [];
-            /*document.querySelectorAll('#active-campaigns [data-id]').forEach(function (activeEl) {
-                activeEl.addEventListener('click', function () {
-                    let button = this;
-                    let dataId = this.getAttribute('data-id');
-                    let buttonText = this.querySelector('span').innerHTML;
-                    let newEl = `{{--Pasif Kampanya başlangıç--}}
-            <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${dataId}"
-               style="padding: 6px 12px">
-                <i class="uil uil-arrow-left d-none d-md-block"
-                   style="font-size: 16px;margin-top: 3px;margin-right: 10px;"></i>
-                <span>${buttonText}</span>
-                <i class="uil uil-arrow-circle-up d-sm-block d-md-none"
-                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
-            </a>
-{{--Pasif Kampanya bitiş--}}`;
-                    document.querySelector('#disabled-campaigns').innerHTML += newEl;
-                    /!*this.classList.add('mx-hide');*!/
-                    arrActives.push(newEl);
-                    button.remove();
-                    controleCampaign();
-                    /!*setTimeout(function () {
-                        button.remove();
-                        document.querySelector(`#disabled-campaigns [data-id="${dataId}"]`).classList.remove('mx-hide');
-                    }, 300);*!/
-                });
-                arrActives.push(activeEl);
-            });
-            document.querySelectorAll('#disabled-campaigns [data-id]').forEach(function (disabledEl) {
-                disabledEl.addEventListener('click', function () {
-                    let button = this;
-                    let dataId = this.getAttribute('data-id');
-                    let buttonText = this.querySelector('span').innerHTML;
-                    let newEl = `{{--Aktif Kampanya başlangıç--}}
-            <a class="btn btn-soft-blue btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${dataId}"
-               style="padding: 6px 12px">
-                <span>${buttonText}</span>
-                <i class="uil uil-arrow-circle-down d-sm-block d-md-none"
-                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
-                <i class="uil uil-arrow-right d-none d-md-block"
-                   style="font-size: 16px;margin-top: 3px;margin-left: 10px;"></i>
-            </a>
-{{--Aktif Kampanya bitiş--}}`;
-                    document.querySelector('#active-campaigns').innerHTML += newEl;
-                    this.classList.add('mx-hide');
-                    arrActives.push(newEl);
-                    button.remove();
-                    controleCampaign();
-                    /!*setTimeout(function () {
-                        button.remove();
-                        document.querySelector(`#active-campaigns [data-id="${dataId}"]`).classList.remove('mx-hide');
-                    }, 300);*!/
-                });
-                arrDisabled.push(disabledEl);
-            });*/
-        }
-
-        controleCampaign();
         $(document).on('click', '#active-campaigns [data-id]', function (){
             let newEl = `{{--Pasif Kampanya başlangıç--}}
             <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
