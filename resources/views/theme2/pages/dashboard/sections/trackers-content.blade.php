@@ -93,6 +93,7 @@
                             </div>
                             <!-- /.form-floating -->
                         </div>
+                        <p class="text-white-50 fw-bold d-none d-md-block">{{__('theme2-dashboard-global.double-click-for-copy')}}</p>
                         <div class="table-responsive">
                             <table class="table table-bordered muypil-responsive-table"
                                    style="border: 1px solid rgba(255,255,255,0.05)">
@@ -369,7 +370,7 @@
                                 {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
                                 Todo: Foreach ile gelen verileri listele--}}
                                 <tr data-bs-toggle="modal"
-                                    data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                                    data-bs-target="#modal-01">
                                     <td class="d-none d-md-initial" data-label="&nbsp;"><a href="#"
                                                                                            class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a>
                                     </td>
@@ -565,9 +566,8 @@
                             </table>
                         </div>
                         {{--Modal Start--}}
-                        {{--TODO: Modali foreach ile listele -> gelen veriye göre --}}
-                        <div class="modal fade" id="modal-01"
-                             {{--TODO: modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}} tabindex="-1">
+                        {{--TODO: Modal'i dinamik hale getirelim--}}
+                        <div class="modal fade" id="modal-01" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered modal-sm">
                                 <div class="modal-content text-center">
                                     <div class="modal-body">
@@ -578,8 +578,7 @@
                                             <table class="table table-bordered muypil-responsive-table-mobile"
                                                    style="border: 1px solid rgba(255,255,255,0.05)">
                                                 <tbody>
-                                                {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
-                                                Todo: Foreach ile gelen verileri listele--}}
+                                                {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.--}}
                                                 <tr>
                                                     <td class="d-initial d-md-none"
                                                         data-label="{{__('theme2-dashboard-global.action')}}"
