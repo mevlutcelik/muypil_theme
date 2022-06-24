@@ -20,9 +20,36 @@
     <meta name="theme-color" content="@yield('meta-color')">
     <script src="{{ asset('assets2/js/jquery/jquery.min.js') }}"></script>
     @stack('styles')
+    <style>
+        .alert-icon i {
+            position: relative;
+            padding: 0;
+            margin-right: 0.5rem;
+        }
+
+        .alert-info {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #eef6f9;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0;
+        }
+
+        .alert-info a {
+            color: #ffd9a3 !important;
+        }
+    </style>
 </head>
 <body data-bs-spy="scroll" style="@yield('body-style')">
 <div class="content-wrapper">
+    {{--Alert Start--}}
+    <div class="alert alert-info alert-icon" role="alert">
+        {{--TODO: Dil dosyasından __USER__ isimli bir değişken geliyor. Replace ile değiştirelim--}}
+        <i class="uil uil-exclamation-circle"></i> <span>{{__('theme2-dashboard-global.alert-message-user')}} <a href="#" class="alert-link hover">{{__('theme2-dashboard-global.alert-message-user-action')}}</a>.</span>
+    </div>
+    {{--Alert Finish--}}
     @yield('content')
 </div>
 <div class="progress-wrap">
