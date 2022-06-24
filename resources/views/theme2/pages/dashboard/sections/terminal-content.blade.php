@@ -31,6 +31,7 @@
         }
 
         .t-overflow-elipsis {
+            -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -43,48 +44,10 @@
 
         .muypil-terminal-cursor {
             -webkit-animation: blink 1s 0.5s infinite;
-            -moz-animation: blink 1s 0.5s infinite;
-            -o-animation: blink 1s 0.5s infinite;
             animation: blink 1s 0.5s infinite;
         }
 
         @-webkit-keyframes blink {
-            0% {
-                opacity: 0;
-            }
-            40% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
-        @-moz-keyframes blink {
-            0% {
-                opacity: 0;
-            }
-            40% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
-        @-o-keyframes blink {
             0% {
                 opacity: 0;
             }
@@ -131,6 +94,8 @@
         .muypil-terminal-content {
             height: calc((var(--vh, 1vh) * 100) - 278px);
             max-height: calc((var(--vh, 1vh) * 100) - 278px);
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
             overflow: auto;
             padding-top: 1rem;
@@ -144,8 +109,14 @@
             font-size: 14px;
             font-weight: bold;
             text-align: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
             height: 2rem;
             border-radius: 0.4rem 0.4rem 0 0;
@@ -156,8 +127,14 @@
             position: absolute;
             top: calc((2rem / 2) - (0.5rem / 2));
             left: 1rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
         }
 
@@ -186,10 +163,15 @@
             font-size: 14px;
             font-family: 'Fira Code', monospace;
             font-weight: bold;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             width: 100%;
             line-height: 2;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         }
 
@@ -206,6 +188,7 @@
 
         .muypil-terminal-line img {
             height: 0.75rem;
+            -o-object-fit: cover;
             object-fit: cover;
         }
 
@@ -231,6 +214,8 @@
             }
 
             .muypil-terminal-line {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 width: 100%;
             }
@@ -238,11 +223,6 @@
     </style>
 @endpush
 <section class="wrapper pt-14 pt-md-16 px-3 px-md-6 px-lg-12 px-xl-18">
-    {{--Alert Start--}}{{--
-    <div class="alert alert-info alert-icon" role="alert">
-        <i class="uil uil-exclamation-circle"></i> <span>A simple info alert with <a href="#" class="alert-link hover">an example link</a>.</span>
-    </div>
-    --}}{{--Alert Finish--}}
     <div class="card shadow-lg muypil-terminal">
         <div class="muypil-terminal-header">
             <div class="circles">
