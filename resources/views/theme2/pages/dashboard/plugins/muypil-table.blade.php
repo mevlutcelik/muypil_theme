@@ -1,8 +1,13 @@
 @push('styles')
     <style>
         .table-responsive {
+            cursor: -webkit-grab;
             cursor: grab;
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: -webkit-transform 0.3s;
+            -o-transition: transform 0.3s;
             transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
             width: 100%;
         }
 
@@ -28,6 +33,7 @@
         }
 
         .table-responsive:active {
+            cursor: -webkit-grabbing;
             cursor: grabbing;
         }
 
@@ -39,6 +45,9 @@
         }
 
         .muypil-responsive-table.table th {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             user-select: none;
         }
 
@@ -50,11 +59,16 @@
 
         .muypil-responsive-table.table select {
             background: transparent;
+            -webkit-box-shadow: none;
             box-shadow: none;
             border: none;
             color: #fff;
             height: 52px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
+            -webkit-appearance: auto !important;
+            -moz-appearance: auto !important;
             appearance: auto !important;
         }
 
@@ -75,11 +89,15 @@
         .muypil-responsive-table.table td {
             background-color: transparent;
             text-align: start;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             user-select: none;
             /*min-width: 10rem;*/
             /*max-width: 10rem;*/
             overflow: hidden;
             /*width: 10rem;*/
+            -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
             white-space: nowrap;
             line-height: 56px;
@@ -96,10 +114,13 @@
 
         .mx-table-input {
             background: transparent;
+            -webkit-box-shadow: none;
             box-shadow: none;
             border: none;
             color: #fff;
             height: 64px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
@@ -129,6 +150,14 @@
         }
 
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        ::-moz-placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        ::-ms-input-placeholder {
             color: rgba(0, 0, 0, 0.4);
         }
 
@@ -237,17 +266,28 @@
                 margin-bottom: 3rem;
                 word-break: break-all;
                 background-color: transparent;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
                 flex-direction: column;
             }
 
             table.muypil-responsive-table-mobile td {
                 border: none;
                 border-bottom: 1px solid rgba(164, 174, 198, .2);
+                display: -webkit-box !important;
+                display: -ms-flexbox !important;
                 display: flex !important;
                 font-size: .8em;
                 text-align: right;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
                 justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
                 align-items: center;
                 word-break: break-all;
             }
