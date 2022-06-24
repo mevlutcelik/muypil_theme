@@ -57,7 +57,7 @@
         <i class="uil uil-setting"></i>
         <span>{{__('theme2-dashboard-global.settings')}}</span>
     </a>
-    <a href="#">
+    <a href="{{route('dashboard.profile')}}" {{Route::is('dashboard.profile') ? 'class=active' : null}}>
         <i class="uil uil-user"></i>
         <span>{{__('theme2-dashboard-global.my-profile')}}</span>
     </a>
