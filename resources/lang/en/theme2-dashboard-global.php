@@ -166,5 +166,10 @@ return [
     "freeze-account"                    => "Freeze Account",
     "alert-message-user"                => "Now you are supporting this user: (__USER__). For checkout to your real account",
     "alert-message-user-action"         => "click",
+    "packet-count"                      => "Packet Count",
+    "has-packet"                        => "Has Packet",
+    "date"                              => "Date",
+    "edit"                              => "Edit",
+    "double-click-for-copy"             => "Double click to copy the data in the column",
 ];
 ?>
