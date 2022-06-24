@@ -253,6 +253,7 @@
         }
 
         .form-check-input {
+            -webkit-box-shadow: none;
             box-shadow: none;
             border-color: rgba(255, 255, 255, 0.15);
             cursor: pointer;
@@ -267,6 +268,8 @@
         }
 
         .form-check-input[type=radio] {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
             appearance: none !important;
         }
 
@@ -333,6 +336,7 @@
             background: rgba(255, 255, 255, 0.15);
             color: #fff;
             border-radius: 1rem;
+            -webkit-box-shadow: 0 0 0 .05rem rgba(8, 60, 130, .06), 0 0 1.25rem rgba(30, 34, 40, .04);
             box-shadow: 0 0 0 .05rem rgba(8, 60, 130, .06), 0 0 1.25rem rgba(30, 34, 40, .04);
         }
 
@@ -341,8 +345,12 @@
         }
 
         .theme-switch-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-top: 0;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             /*margin-left: 2em;*/
         }
@@ -372,6 +380,8 @@
             position: absolute;
             right: 0;
             top: 0;
+            -webkit-transition: .4s;
+            -o-transition: .4s;
             transition: .4s;
         }
 
@@ -382,6 +392,8 @@
             height: 20px;
             left: calc((28px / 2) - (20px / 2));
             position: absolute;
+            -webkit-transition: .4s;
+            -o-transition: .4s;
             transition: .4s;
             width: 20px;
         }
@@ -391,6 +403,8 @@
         }
 
         input:checked + .slider:before {
+            -webkit-transform: translateX(20px);
+            -ms-transform: translateX(20px);
             transform: translateX(20px);
         }
 
@@ -452,6 +466,7 @@
         .line-box {
             display: -webkit-box !important;
             overflow: auto;
+            -ms-flex-wrap: initial !important;
             flex-wrap: initial !important;
             margin-bottom: 1rem !important;
         }
@@ -477,6 +492,8 @@
             border-radius: 0.5rem;
             padding: 6px 8px 12px;
             outline: none;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
@@ -484,6 +501,30 @@
             border: 1px solid transparent;
             background-color: rgba(0, 0, 0, 0.6);
         }
+
+        .select2-container--default.select2-container--focus textarea::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ;
+
+        .select2-container--default.select2-container--focus textarea::-moz-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ;
+
+        .select2-container--default.select2-container--focus textarea:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ;
+
+        .select2-container--default.select2-container--focus textarea::-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ;
 
         .select2-container--default.select2-container--focus textarea::placeholder {
             color: rgba(255, 255, 255, 0.7);
@@ -517,6 +558,8 @@
             font-weight: 500;
             font-size: 15px;
             margin-top: 0;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
@@ -528,6 +571,8 @@
             font-weight: bold;
             padding-left: 26px;
             font-family: 'Urbanist', sans-serif;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
@@ -535,11 +580,29 @@
             color: white;
             border-right-color: transparent;
             padding: 0 6px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
         .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover, .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
 
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        ::-moz-placeholder {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        :-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        ::-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.7) !important;
         }
 
         ::placeholder {
@@ -573,6 +636,7 @@
 
         .select2-dropdown {
             background-color: rgba(0, 0, 0, 0.7);
+            -webkit-backdrop-filter: blur(0.5rem);
             backdrop-filter: blur(0.5rem);
             border-color: transparent;
             border-radius: 0.5rem;
@@ -600,14 +664,25 @@
         }
 
         .nav-link span {
+            width: -webkit-max-content;
+            width: -moz-max-content;
             width: max-content;
         }
 
         .input-tags {
             position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: end;
+            -ms-flex-align: end;
             align-items: flex-end;
         }
 
@@ -974,6 +1049,7 @@
                             {{--TODO: input ve selectlerin namelerini veya değiştirelim--}} multiple="multiple">
                         {{--TODO: Veritabanından hangi ülke seçili olduğu verisi gelecek--}}
                         @foreach($arrCountrys as $key => $value)
+                            <script>console.log({{$key}})</script>
                             {{--TODO: Static olarak Türkiye'yi seçtim ama veritabanı kontrolüne göre seçim yapılmalı--}}
                             <option {{$key === 'TR' ? 'selected' : null}} value="{{$key}}">{{$value}}</option>
                         @endforeach
