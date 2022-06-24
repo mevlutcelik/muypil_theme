@@ -173,6 +173,7 @@
                     <span class="text-white mt-4 fs-20 fw-bold d-flex align-items-center justify-content-center">Ad Soyad <i
                             class="ms-1 uil uil-shield-check"></i></span> {{--TODO: Kullanıcının ad soyadını yazalım--}}
                     <span class="text-white-50 mt-1 fs-16 fw-bold d-flex align-items-center justify-content-center">name@domain.com</span> {{--TODO: Kullanıcının e-postasını yazalım--}}
+                    <a href="#" style="background: rgba(255, 255, 255, 0.15);border-color:transparent;color: #f1caca;" class="btn btn-red btn-sm d-block d-lg-none mt-4">{{__('theme2-dashboard-global.logout')}}</a>
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
