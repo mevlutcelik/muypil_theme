@@ -126,43 +126,19 @@
                     </div>
                     <div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body" style="margin-left: 35px;">
                         <ul class="navbar-nav ms-lg-auto">
-                            {{--TODO: navbardaki linklere href="{{route('NAME')}}" eklenecek--}}
+                            {{--TODO: navbardaki linklere href="{{route('NAME')}}" eklenecek / düzenlenecek--}}
                             <li class="nav-item dropdown dropdown-mega">
                                 <a class="nav-link {{Route::is('dashboard.home') ? 'active' : null}}"
                                    href="{{route('dashboard.home')}}">{{__('theme2-dashboard-global.terminal')}}</a>
                                 <!--/.dropdown-menu -->
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle {{Route::is('dashboard.administration') ? 'active' : null}}"
-                                   href="#"
-                                   data-bs-toggle="dropdown">{{__('theme2-dashboard-global.administration')}}</a>
-                                <ul class="dropdown-menu mt-n3">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item"
-                                           href="#">{{__('theme2-dashboard-global.all-packets')}}</a>
-                                    </li>
-                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.currencies')}}</a>
-                                    </li>
-                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.tasks')}}</a></li>
-                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.contact-messages')}}</a>
-                                    </li>
-                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.careers')}}</a></li>
-                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.discounts')}}</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown"> {{--TODO: Bu li elementini (membership) sadece yetkisi super-admin alanlar görebilecek--}}
                                 <a class="nav-link dropdown-toggle {{Route::is('dashboard.membership') ? 'active' : null}}"
                                    href="#"
                                    data-bs-toggle="dropdown">{{__('theme2-dashboard-global.membership')}}</a>
                                 <ul class="dropdown-menu mt-n3">
                                     <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.users')}}</a>
+                                                            href="{{route('dashboard.users')}}">{{__('theme2-dashboard-global.users')}}</a>
                                     </li>
                                     <li class="nav-item"><a class="dropdown-item"
                                                             href="#">{{__('theme2-dashboard-global.incomplete-user')}}</a></li>
@@ -171,12 +147,6 @@
                                     </li>
                                     <li class="nav-item"><a class="dropdown-item"
                                                             href="#">{{__('theme2-dashboard-global.roles')}}</a></li>
-                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.customers')}}</a>
-                                    </li>
-                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="#">{{__('theme2-dashboard-global.personal-report')}}</a>
-                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
