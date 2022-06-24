@@ -22,8 +22,8 @@
         .mx-card {
             background: rgba(255, 255, 255, 0.15);
             border-radius: 1rem;
-            height: calc((var(--vh, 1vh) * 100) - 200px);
-            max-height: calc((var(--vh, 1vh) * 100) - 200px);
+            height: calc((var(--vh, 1vh) * 100) - 244px);
+            max-height: calc((var(--vh, 1vh) * 100) - 244px);
             padding: 2rem;
             overflow-y: auto;
             overflow-x: hidden;
@@ -91,11 +91,8 @@
     </style>
 @endpush
 <section class="wrapper">
-    <div class="container pt-13 pb-18 pt-md-14 pb-md-22 text-center">
-        <div class="row">
-            <!--/column -->
-        </div>
-        <!--/.row -->
+    <div class="pb-18 pt-12 pb-md-20">
+        {{----}}
     </div>
     <!-- /.container -->
 </section>
