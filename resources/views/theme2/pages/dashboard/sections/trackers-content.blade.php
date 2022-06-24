@@ -57,7 +57,7 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active mx-2 mx-md-4 mx-lg-6 mx-xl-8" id="topbar-statistics">
                         {{--Table Start--}}
-                        <div class="d-flex align-items-center justify-content-center justify-content-md-between">
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-between mt-4">
                             <div class="fw-bold d-none d-md-block"
                                  style="margin-bottom: 1rem;color: rgba(255,255,255,0.6);">{{__('theme2-dashboard-global.filter-message')}}
                             </div>
