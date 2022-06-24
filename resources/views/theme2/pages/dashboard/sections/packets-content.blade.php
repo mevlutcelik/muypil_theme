@@ -35,8 +35,12 @@
             -webkit-appearance: auto !important;
         }
         .theme-switch-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-top: 0;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             /*margin-left: 2em;*/
         }
@@ -59,6 +63,8 @@
             position: absolute;
             right: 0;
             top: 0;
+            -webkit-transition: .4s;
+            -o-transition: .4s;
             transition: .4s;
         }
 
@@ -69,6 +75,8 @@
             height: 20px;
             left: calc((28px / 2) - (20px / 2));
             position: absolute;
+            -webkit-transition: .4s;
+            -o-transition: .4s;
             transition: .4s;
             width: 20px;
         }
@@ -78,6 +86,8 @@
         }
 
         input:checked + .slider:before {
+            -webkit-transform: translateX(20px);
+            -ms-transform: translateX(20px);
             transform: translateX(20px);
         }
 
