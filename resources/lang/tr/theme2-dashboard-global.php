@@ -167,5 +167,10 @@ return [
     "freeze-account"                    => "Otomatik Yenileme Kapat",
     "alert-message-user"                => "Şu kullanıcının gözünden görüyorsunuz: (__USER__). Gerçek hesabınıza dönmek için",
     "alert-message-user-action"         => "tıklayın",
+    "packet-count"                      => "Paket Sayımı",
+    "has-packet"                        => "Paket var mı?",
+    "date"                              => "Tarih",
+    "edit"                              => "Düzenle",
+    "double-click-for-copy"             => "Kolondaki veriyi kopyalamak için çift tıklayın",
 ];
 ?>
