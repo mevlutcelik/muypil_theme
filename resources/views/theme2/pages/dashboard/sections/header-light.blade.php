@@ -129,7 +129,7 @@
                             {{--TODO: navbardaki linklere href="{{route('NAME')}}" eklenecek--}}
                             <li class="nav-item dropdown dropdown-mega">
                                 <a class="nav-link {{Route::is('dashboard.home') ? 'active' : null}}"
-                                   href="#">{{__('theme2-dashboard-global.terminal')}}</a>
+                                   href="{{route('dashboard.home')}}">{{__('theme2-dashboard-global.terminal')}}</a>
                                 <!--/.dropdown-menu -->
                             </li>
                             <li class="nav-item dropdown">
@@ -238,6 +238,7 @@
                             </li>
                             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{__('theme2-dashboard-global.my-profile')}}</a>
                                 <ul class="dropdown-menu mt-n3">
+                                    <li class="nav-item"><a class="dropdown-item" href="{{route('dashboard.profile')}}">{{__('theme2-dashboard-global.view-my-profile')}}</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="#">{{__('theme2-dashboard-global.logout')}}</a></li>
                                 </ul>
                             </li>
