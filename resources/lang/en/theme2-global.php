@@ -124,6 +124,7 @@ return [
     "careers-desc"                      => "Your place is ready with us, join now!",
     "first-name"                        => "First Name",
     "last-name"                         => "Last Name",
+    "full-name"                         => "Full Name",
     "phone"                             => "Phone",
     "position"                          => "Position",
     "select-position"                   => "Select Position",
