@@ -149,14 +149,7 @@
             width: initial;
             color: #fff;
         }
-
-        .tab-content {
-            margin-top: 0;
-            width: 100%;
-            height: calc((var(--vh, 1vh) * 100) - 566px);
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
+        .tab-content{overflow: hidden;height: fit-content;}
         .bg-blur{border-radius: 1rem;}
     </style>
 @endpush
@@ -170,8 +163,8 @@
     <!-- /.container -->
 </section>
 <section class="wrapper container">
-    <div class="row g-6">
-        <div class="col-lg-12">
+    <div class="row g-6 pe-1">
+        <div class="col-lg-12" style="max-height: calc((var(--vh, 1vh) * 100) - 260px);overflow-y: auto;overflow-x: hidden">
             <div class="card" style="border-radius: 1rem;">
                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                     <span class="avatar bg-dark text-sky w-14 h-14">
@@ -183,7 +176,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-                <ul class="nav nav-tabs muypil-top-bar nav-pills pb-0 pb-sm-0 pb-md-0 pb-lg-0 pb-xl-4 mt-4">
+                <ul class="nav nav-tabs muypil-top-bar nav-pills pb-0 pb-md-4 pb-lg-4 pb-xl-4 mt-4">
                     <li class="nav-item">
                         <a class="nav-link active" data-bs-toggle="tab" href="#topbar-personal-information">
                             <i class="uil uil-user-circle pe-1"></i>
@@ -212,7 +205,7 @@
                 <!-- /.nav-tabs -->
             </div>
             <div class="tab-content">
-                <div class="tab-pane fade show active card me-2" style="background: transparent;box-shadow: none;"
+                <div class="tab-pane fade show active card" style="background: transparent;box-shadow: none;"
                      id="topbar-personal-information">
                     <div class="bg-blur p-6">
                         <h5 class="text-white">{{__('theme2-dashboard-global.personal-information')}}</h5>
