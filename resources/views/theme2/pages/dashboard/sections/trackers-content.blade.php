@@ -8,7 +8,7 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-xl-10 mx-auto d-flex align-items-start flex-column">
-                <ul class="nav nav-tabs muypil-top-bar nav-pills px-2 px-md-4 px-lg-6 p-xxl-8">
+                <ul class="nav nav-tabs muypil-top-bar nav-pills px-2 px-md-4 px-lg-6 px-xxl-8">
                     <li class="nav-item">
                         <a class="nav-link active" data-bs-toggle="tab" href="#topbar-statistics">
                             <i class="uil uil-analytics pe-1"></i>
@@ -881,7 +881,7 @@
                         }, function (err) {
                             /*is->Err*/
                         });
-                    }else{
+                    } else {
                         const Toast = Swal.mixin({
                             toast: true,
                             position: 'top-end',
