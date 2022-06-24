@@ -37,5 +37,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
         Route::view('packets', 'theme2.pages.dashboard.packets.index')->name('packets');
         Route::view('packets/checkout', 'theme2.pages.dashboard.packets.checkout')->name('packets-checkout');
         Route::view('settings', 'theme2.pages.dashboard.settings.index')->name('settings');
+        Route::view('profile', 'theme2.pages.dashboard.profile.index')->name('profile');
     });
 });
