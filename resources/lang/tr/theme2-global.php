@@ -123,6 +123,7 @@ return [
     "careers-desc"                      => "Bizimle yeriniz hazır, Hemen katılın!",
     "first-name"                        => "Ad",
     "last-name"                         => "Soyad",
+    "full-name"                         => "Ad Soyad",
     "phone"                             => "Telefon",
     "position"                          => "Pozisyon",
     "select-position"                   => "Pozisyon seç",
