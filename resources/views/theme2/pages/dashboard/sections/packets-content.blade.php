@@ -88,10 +88,13 @@
         .slider.round:before {
             border-radius: 50%;
         }
+        .icon-list.bullet-bg i{
+            top: 0;
+        }
     </style>
 @endpush
 <section class="wrapper">
-    <div class="pb-18 pt-12 pb-md-20">
+    <div class="pb-18 pt-12 pt-md-17 pb-md-20">
         {{----}}
     </div>
     <!-- /.container -->
