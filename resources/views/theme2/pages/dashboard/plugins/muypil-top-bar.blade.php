@@ -13,6 +13,10 @@
             width: 0;
         }
 
+        .muypil-top-bar{
+            scrollbar-color: #0A4C95 rgba(255,255,255,0.15);
+        }
+
         /* Track */
         .muypil-top-bar::-webkit-scrollbar-track {
             background: transparent;
@@ -32,6 +36,7 @@
             display: -webkit-box;
             overflow-x: auto;
             overflow-y: hidden;
+            -ms-flex-wrap: initial;
             flex-wrap: initial;
             max-width: 100vw;
         }
@@ -51,6 +56,7 @@
         }
 
         .muypil-top-bar .nav-link:active {
+            cursor: -webkit-grab;
             cursor: grab;
         }
 
