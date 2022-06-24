@@ -17,6 +17,8 @@
             border-radius: 0.375rem;
             background-color: rgba(200, 220, 255, 0.2);
             margin-left: 0.5rem;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
     </style>
