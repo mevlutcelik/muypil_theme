@@ -3,6 +3,7 @@
         .table-responsive {
             cursor: grab;
             transition: transform 0.3s;
+            width: 100%;
         }
 
         /* width */
