@@ -129,35 +129,11 @@
         }
 
         .muypil-terminal-content {
-            height: calc((var(--vh, 1vh) * 100) - 234px);
-            max-height: calc((var(--vh, 1vh) * 100) - 234px);
+            height: calc((var(--vh, 1vh) * 100) - 278px);
+            max-height: calc((var(--vh, 1vh) * 100) - 278px);
             transition: all 0.3s;
             overflow: auto;
             padding-top: 1rem;
-        }
-
-        .alert-icon i {
-            position: relative;
-            padding: 0;
-            margin-right: 0.5rem;
-        }
-
-        .alert-info {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: #eef6f9;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            padding: 0.25rem 0.75rem;
-        }
-
-        .alert-info a {
-            color: #ffd9a3 !important;
-        }
-
-        .muypil-terminal.is-alert .muypil-terminal-content {
-            height: calc((var(--vh, 1vh) * 100) - 300px);
-            max-height: calc((var(--vh, 1vh) * 100) - 300px);
         }
 
         .muypil-terminal-header {
@@ -262,12 +238,12 @@
     </style>
 @endpush
 <section class="wrapper pt-14 pt-md-16 px-3 px-md-6 px-lg-12 px-xl-18">
-    {{--Alert Start--}}
+    {{--Alert Start--}}{{--
     <div class="alert alert-info alert-icon" role="alert">
         <i class="uil uil-exclamation-circle"></i> <span>A simple info alert with <a href="#" class="alert-link hover">an example link</a>.</span>
     </div>
-    {{--Alert Finish--}}
-    <div class="card shadow-lg muypil-terminal is-alert"> {{--TODO: Eğer alert yoksa "is-alert" classını kaldıralım--}}
+    --}}{{--Alert Finish--}}
+    <div class="card shadow-lg muypil-terminal">
         <div class="muypil-terminal-header">
             <div class="circles">
                 <div class="circle-red"></div>
