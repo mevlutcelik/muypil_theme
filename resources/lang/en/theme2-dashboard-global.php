@@ -129,7 +129,7 @@ return [
     "country-rules-1-radio"             => "Block any click coming from the following countries",
     "country-rules-2-radio"             => "Only allow clicks coming from the following countries",
     "select-country"                    => "Select country",
-    "pause-campaign-rules"              => "Pause Campaign Rules",
+    "pause-campaign-rules"              => "Campaign Pause Rules",
     "pause-campaign-rules-desc"         => "It pauses your campaigns for a while within the framework of the rules you set, and the attackers are completely prevented from seeing your ad. Recommended if you are under heavy attack.",
     "auto-ip-blocking"                  => "Auto IP Blocking",
     "block-ips-for-certain-period"      => "Block IPs for a Certain Period",
@@ -171,5 +171,7 @@ return [
     "date"                              => "Date",
     "edit"                              => "Edit",
     "double-click-for-copy"             => "Double click to copy the data in the column",
+    "track-conversions"                 => "Track Conversions",
+    "test-tracking-code"                => "Test Tracking Kode",
 ];
 ?>
