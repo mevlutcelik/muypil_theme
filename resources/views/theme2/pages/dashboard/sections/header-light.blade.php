@@ -58,15 +58,15 @@
                             <section class="logo-container" style="top: 17px;left: -16px">
                                 <div class="logo-center" style="left: 17px;"></div>
                                 <div>
-                                    <article class="logo-ring1">
+                                    <div class="logo-ring1">
                                         <div></div>
-                                    </article>
-                                    <article class="logo-ring2">
+                                    </div>
+                                    <div class="logo-ring2">
                                         <div></div>
-                                    </article>
-                                    <article class="logo-ring3">
+                                    </div>
+                                    <div class="logo-ring3">
                                         <div></div>
-                                    </article>
+                                    </div>
                                 </div>
                             </section>
                             <h1 class="footer-logo-text" style="margin-left: 2rem;margin-bottom: 0;margin-right: -1rem;">MUYPIL</h1>
@@ -134,15 +134,15 @@
                                 <section class="logo-container" style="top: 17px;left: -16px">
                                     <div class="logo-center" style="left: 17px;"></div>
                                     <div>
-                                        <article class="logo-ring1">
+                                        <div class="logo-ring1">
                                             <div></div>
-                                        </article>
-                                        <article class="logo-ring2">
+                                        </div>
+                                        <div class="logo-ring2">
                                             <div></div>
-                                        </article>
-                                        <article class="logo-ring3">
+                                        </div>
+                                        <div class="logo-ring3">
                                             <div></div>
-                                        </article>
+                                        </div>
                                     </div>
                                 </section>
                                 <h1 class="footer-logo-text" style="margin-left: 2rem;margin-bottom: 0;margin-right: -1rem;">MUYPIL</h1>
