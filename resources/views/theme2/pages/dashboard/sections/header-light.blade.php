@@ -14,7 +14,7 @@
             width: 1.75rem;
             height: 1.75rem;
             padding: 0.125rem;
-            border-radius: 0.375rem;
+            border-radius: 2px;
             background-color: rgba(200, 220, 255, 0.2);
             margin-left: 0.5rem;
             -webkit-transition: all 0.3s;
