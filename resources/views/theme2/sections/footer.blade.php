@@ -1,3 +1,12 @@
+@php
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    $iconTop = false;
+    if(preg_match('/Chrome/i',$userAgent)){
+        $iconTop = false;
+    }else if(preg_match('/Firefox/i',$userAgent) || preg_match('/Safari/i',$userAgent)){
+        $iconTop = true;
+    }
+@endphp
 <footer class="bg-light">
     <div class="container pb-13 mt-12 pb-md-15">
         <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-300 mb-14"
@@ -21,10 +30,10 @@
         <div class="row gy-6 gy-lg-0">
             <div class="col-md-4 col-lg-3">
                 <div class="widget">
-                    <div class="logo logo-dark" style="margin-left: -8rem;margin-bottom: 1.5rem;">
-                        <a href="/" style="font-size: 2px;position: relative;">
+                    <div class="logo logo-dark" style="margin-left: -8rem;margin-bottom: 1.5rem;position: relative;">
+                        <a href="/" style="font-size: 2px;position: initial;">
                             <h1 class="logo-text header-logo-text">MUYPIL</h1>
-                            <section class="logo-container">
+                            <section class="logo-container" {{$iconTop ? 'style=top:-64px;' : null}}>
                                 <div class="logo-center header-logo-center"></div>
                                 <article class="blue-ring logo-ring1">
                                     <div></div>
