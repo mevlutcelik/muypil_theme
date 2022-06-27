@@ -167,7 +167,7 @@
 
         input[type="date"] {
             border: rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
+            border-radius: 2px;
             padding: 0.25rem 0.5rem;
             font-size: 15px;
             margin-left: 0.5rem;

@@ -1,5 +1,5 @@
 <section class="section-frame overflow-hidden">
-    <div class="wrapper bg-soft-white" style="border-radius: 1rem;">
+    <div class="wrapper bg-soft-white" style="border-radius: 2px;">
         <div class="container py-17">
             <div class="row text-center">
                 <div class="col-xl-11 col-xxl-10 mx-auto">

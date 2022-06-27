@@ -8,7 +8,7 @@
             <div class="col-lg-6">
                 <h2 class="display-4 mb-3">{{__('theme2-global.what-i-do-2-title')}}</h2>
                 <p class="lead fs-lg">{{__('theme2-global.what-i-do-2-text')}}</p>
-                <a href="#" class="btn btn-purple rounded-pill mt-2">{{__('theme2-global.header-button')}}</a>
+                <a href="#" class="btn btn-purple rounded mt-2">{{__('theme2-global.header-button')}}</a>
             </div>
             <!--/column -->
         </div>
@@ -54,7 +54,7 @@
             <div class="col-lg-5">
                 <h2 class="display-4 mb-3">{{__('theme2-global.what-i-do-4-title')}}</h2>
                 <p class="lead fs-lg">{{__('theme2-global.what-i-do-4-text')}}</p>
-                <a href="#" class="btn btn-primary rounded-pill mt-2">{{__('theme2-global.header-button')}}</a>
+                <a href="#" class="btn btn-primary rounded mt-2">{{__('theme2-global.header-button')}}</a>
             </div>
             <!--/column -->
         </div>

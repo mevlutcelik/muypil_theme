@@ -81,7 +81,7 @@
                     <h4 class="widget-title  mb-3">{!! __('theme2-global.join-community') !!}</h4>
                     <p class="mb-5">{!! __('theme2-global.join-community-desc') !!}</p>
                     <div class="newsletter-wrapper mb-3">
-                        <a href="{{route('register')}}" class="btn btn-expand btn-soft-primary rounded-pill">
+                        <a href="{{route('register')}}" class="btn btn-expand btn-soft-primary rounded">
                             <i class="uil uil-arrow-right"></i>
                             <span>{{__('theme2-global.header-button')}}</span>
                         </a>

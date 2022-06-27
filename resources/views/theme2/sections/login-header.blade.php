@@ -28,7 +28,7 @@
                                 <span class="password-toggle"><i class="uil uil-eye"></i></span>
                                 <label for="password">{{__('theme2-global.password')}}</label>
                             </div>
-                            <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">{{__('theme2-global.login')}}</a>
+                            <a class="btn btn-primary rounded btn-login w-100 mb-2">{{__('theme2-global.login')}}</a>
                         </form>
                         <!-- /form -->
                         <div class="d-flex align-items-center justify-content-between">

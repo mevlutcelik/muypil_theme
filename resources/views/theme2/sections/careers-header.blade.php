@@ -1,7 +1,7 @@
 @push('styles')
     <style>
         input::-webkit-file-upload-button {
-            border-radius: 0.5rem !important;
+            border-radius: 2px !important;
         }
     </style>
 @endpush
@@ -71,7 +71,7 @@
                                        id="cv" style="padding-bottom: 2rem;padding-left: 1.5rem;"
                                        accept="application/pdf" required>
                             </div>
-                            <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">{{__('theme2-global.send')}}</a>
+                            <a class="btn btn-primary rounded btn-login w-100 mb-2">{{__('theme2-global.send')}}</a>
                         </form>
                         <!-- /form -->
                     </div>

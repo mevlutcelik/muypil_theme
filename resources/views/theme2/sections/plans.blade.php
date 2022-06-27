@@ -23,7 +23,7 @@
                     <div class="switcher-button bg-primary"></div>
                 </div>
                 <p class="mb-0 ps-3">{{__('theme2-global.yearly')}}</p>
-                <span style="margin-left: 0.5rem" class="badge bg-pale-violet text-violet rounded-pill">{{__('theme2-global.cheaper')}}</span>
+                <span style="margin-left: 0.5rem" class="badge bg-pale-violet text-violet rounded">{{__('theme2-global.cheaper')}}</span>
             </div>
             <div class="row gy-6 mt-3 mt-md-5">
                 <div class="col-md-6 col-lg-4">

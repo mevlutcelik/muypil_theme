@@ -4,7 +4,7 @@
             <div class="col-lg-8 mx-auto mb-5">
                 <h3 class="display-1 mb-6 text-white">{{__('theme2-global.what-i-do-title')}}</h3>
                 <p class="lead fs-18 mb-5 text-white-50 text-center">{{__('theme2-global.what-i-do-text')}}</p>
-                <a href="{{route('register')}}" class="btn btn-lg btn-violet rounded-pill">{{__('theme2-global.header-button')}}</a>
+                <a href="{{route('register')}}" class="btn btn-lg btn-violet rounded">{{__('theme2-global.header-button')}}</a>
             </div>
             <!-- /column -->
         </div>

@@ -394,7 +394,7 @@
                                         title="{{__('theme2-dashboard-global.copy-column')}}">
                                         <div>5.229.0.0/16<sup
                                                 class="fs-14 d-inline-flex align-items-center justify-content-center"><span
-                                                    class="badge bg-blue rounded-pill">15.897</span></sup></div>
+                                                    class="badge bg-blue rounded">15.897</span></sup></div>
                                     </td>
                                     <td class="d-none d-md-initial"
                                         data-label="{{__('theme2-dashboard-global.as-org')}}"
@@ -609,7 +609,7 @@
                                                         title="{{__('theme2-dashboard-global.copy-column')}}">
                                                         <div>5.229.0.0/16<sup
                                                                 class="fs-14 d-inline-flex align-items-center justify-content-center"><span
-                                                                    class="badge bg-blue rounded-pill">15.897</span></sup>
+                                                                    class="badge bg-blue rounded">15.897</span></sup>
                                                         </div>
                                                     </td>
                                                     <td class="d-none d-md-initial"

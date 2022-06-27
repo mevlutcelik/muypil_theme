@@ -1,7 +1,7 @@
 @push('styles')
     <style>
         canvas {
-            border-radius: 1rem;
+            border-radius: 2px;
         }
     </style>
 @endpush

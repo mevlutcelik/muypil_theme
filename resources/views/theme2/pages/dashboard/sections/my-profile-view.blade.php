@@ -61,7 +61,7 @@
 
         .mx-card {
             background: rgba(255, 255, 255, 0.15);
-            border-radius: 1rem;
+            border-radius: 2px;
             height: calc((var(--vh, 1vh) * 100) - 244px);
             max-height: calc((var(--vh, 1vh) * 100) - 244px);
             padding: 2rem;
@@ -176,7 +176,7 @@
             color: #fff;
         }
         .tab-content{overflow: hidden;height: -webkit-fit-content;height: -moz-fit-content;height: fit-content;}
-        .bg-blur{border-radius: 1rem;}
+        .bg-blur{border-radius: 2px;}
     </style>
 @endpush
 <section class="wrapper">
@@ -191,7 +191,7 @@
 <section class="wrapper container">
     <div class="row g-6 pe-1">
         <div class="col-lg-12" style="max-height: calc((var(--vh, 1vh) * 100) - 260px);overflow-y: auto;overflow-x: hidden">
-            <div class="card" style="border-radius: 1rem;">
+            <div class="card" style="border-radius: 2px;">
                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                     <span class="avatar bg-dark text-sky w-14 h-14">
                         <span class="fs-22">AS</span> {{--TODO: içerisinde "AS" yazan spanın içerisinde kullanıcının adının ve soyadının baş harfleri yer alıyor--}}
@@ -263,7 +263,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                            <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                            <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                     class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                         </div>
                     </div>
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                            <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                            <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                     class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                         </div>
                     </div>

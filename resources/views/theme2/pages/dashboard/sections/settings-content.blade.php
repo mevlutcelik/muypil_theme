@@ -247,7 +247,11 @@
 @endphp
 @push('styles')
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/gruvbox-dark.min.css">
     <style>
+        pre{
+            background-color: initial;
+        }
         input:checked + .slider {
             background-color: #66bb6a;
         }
@@ -318,7 +322,7 @@
 
         .mx-card {
             background: rgba(255, 255, 255, 0.15);
-            border-radius: 1rem;
+            border-radius: 2px;
             height: calc((var(--vh, 1vh) * 100) - 244px);
             max-height: calc((var(--vh, 1vh) * 100) - 244px);
             padding: 2rem;
@@ -335,7 +339,7 @@
         .bg-blur {
             background: rgba(255, 255, 255, 0.15);
             color: #fff;
-            border-radius: 1rem;
+            border-radius: 2px;
             -webkit-box-shadow: 0 0 0 .05rem rgba(8, 60, 130, .06), 0 0 1.25rem rgba(30, 34, 40, .04);
             box-shadow: 0 0 0 .05rem rgba(8, 60, 130, .06), 0 0 1.25rem rgba(30, 34, 40, .04);
         }
@@ -489,7 +493,7 @@
         .select2-container--default .select2-selection--multiple {
             background-color: rgba(255, 255, 255, 0.15);
             border-color: transparent;
-            border-radius: 0.5rem;
+            border-radius: 2px;
             padding: 6px 8px 12px;
             outline: none;
             -webkit-transition: all 0.3s;
@@ -639,7 +643,8 @@
             -webkit-backdrop-filter: blur(0.5rem);
             backdrop-filter: blur(0.5rem);
             border-color: transparent;
-            border-radius: 0.5rem;
+            /*border-radius: 2px;*/
+            border-radius: 2px;
         }
 
         /* width */
@@ -852,11 +857,19 @@
                             {{--Satır başlangıcı--}}
                             <div class="row p-0 p-md-2">
                                 <div class="line-box check-rules-line">
-                                    <label class="mx-1 fs-14">Allow up to</label>
+                                    {{-- The same IP can click 1 time in 1 day. --}}
+                                    <label class="mx-1 fs-14">The same</label>
+                                    <select class="form-select" aria-label="IP"
+                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
+                                        <option value="ip">IP</option>
+                                        <option value="2">Cidr</option>
+                                        <option value="3">IP Range</option>
+                                    </select>
+                                    <label class="mx-1 fs-14">can click</label>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <label class="mx-1 fs-14">ad clicks within</label>
+                                    <label class="mx-1 fs-14">time in</label>
                                     <input id="textInputExample" value="1" type="text" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
@@ -864,15 +877,6 @@
                                         <option value="day">Day</option>
                                         <option value="hour">Hour</option>
                                         <option value="minute">Minute</option>
-                                    </select>
-                                    @if(config('app.locale') === 'tr')
-                                        <label class="mx-1 fs-14">defa tıklayabilir.</label>
-                                    @endif
-                                    <select class="form-select" aria-label="IP"
-                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                        <option value="ip">IP</option>
-                                        <option value="2">Cidr</option>
-                                        <option value="3">IP Range</option>
                                     </select>
                                     <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
                                             class="uil uil-trash-alt"></i></a>
@@ -882,28 +886,26 @@
                             {{--Satır başlangıcı--}}
                             <div class="row p-0 p-md-2">
                                 <div class="line-box check-rules-line">
-                                    <label class="mx-1 fs-14">Allow up to</label>
+                                    {{-- The same IP can click 1 time in 1 day. --}}
+                                    <label class="mx-1 fs-14">The same</label>
+                                    <select class="form-select" aria-label="IP"
+                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
+                                        <option value="ip">IP</option>
+                                        <option value="2">Cidr</option>
+                                        <option value="3">IP Range</option>
+                                    </select>
+                                    <label class="mx-1 fs-14">can click</label>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <label class="mx-1 fs-14">ad clicks within</label>
-                                    <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="text" inputmode="numeric" class="form-control"
+                                    <label class="mx-1 fs-14">time in</label>
+                                    <input id="textInputExample" value="1" type="text" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                         <option value="day">Day</option>
                                         <option value="hour">Hour</option>
                                         <option value="minute">Minute</option>
-                                    </select>
-                                    @if(config('app.locale') === 'tr')
-                                        <label class="mx-1 fs-14">defa tıklayabilir.</label>
-                                    @endif
-                                    <select class="form-select" aria-label="IP"
-                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                        <option value="ip">IP</option>
-                                        <option value="2">Cidr</option>
-                                        <option value="3">IP Range</option>
                                     </select>
                                     <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
                                             class="uil uil-trash-alt"></i></a>
@@ -914,9 +916,9 @@
                     @endif
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
                         <a href="#" onclick="addDetectionRule('{{config('app.locale')}}')"
-                           class="btn btn-navy btn-sm rounded-pill me-2"><i
+                           class="btn btn-navy btn-sm rounded me-2"><i
                                 class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.add-rule')}}</a>
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                     {{--Input (Satır) Bitiş--}}
@@ -1029,7 +1031,7 @@
                     </div>
                     {{--Satır Bitiş--}}
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1060,7 +1062,7 @@
                         @endforeach
                     </select>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1073,9 +1075,9 @@
                     <div id="pause-campaign-rule"></div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
                         <a href="#" onclick="addPauseCampaignRule()"
-                           class="btn btn-navy btn-sm rounded-pill me-2"><i
+                           class="btn btn-navy btn-sm rounded me-2"><i
                                 class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.add-rule')}}</a>
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1138,7 +1140,7 @@
                     </div>
                     <div
                         class="d-flex align-items-center justify-content-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1161,7 +1163,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1243,9 +1245,9 @@
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
                         {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
                         <a href="#"
-                           class="btn btn-navy btn-sm rounded-pill me-2"><i
+                           class="btn btn-navy btn-sm rounded me-2"><i
                                 class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.load-more')}}</a>
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
+                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1255,12 +1257,19 @@
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.track-conversions')}}</h5>
                     <div class="row">
-                        //
+                        <pre><code class="language-html">{{"<!-- Start Muypil.com Tracking -->
+<script>
+    const muypilTag = document.createElement('script');
+    muypilTag.setAttribute('type', 'text/javascript');
+    muypilTag.setAttribute('src', 'https://muypil.com/js/tracker.js');
+    document.head.append(muypilTag)
+</script>
+<!-- End Muypil.com Tracking -->"}}</code></pre>
                     </div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
                         {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
                         <a href="#"
-                           class="btn btn-navy btn-sm rounded-pill me-2"><i
+                           class="btn btn-navy btn-sm rounded me-2"><i
                                 class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.test-tracking-code')}}</a>
                     </div>
                 </div>
@@ -1273,6 +1282,8 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/go.min.js"></script>
     <script>
         console.clear();
         let checkboxs = document.querySelectorAll('input[type="checkbox"][data-target]');

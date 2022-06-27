@@ -42,7 +42,7 @@
         }
 
         .muypil-top-bar .nav-link {
-            border-radius: 0.5rem;
+            border-radius: 2px;
             padding: 0.5rem 0.75rem;
             font-size: 16px;
             margin-bottom: 0 !important;

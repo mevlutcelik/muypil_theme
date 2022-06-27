@@ -21,7 +21,7 @@
         }
         .mx-card {
             background: rgba(255, 255, 255, 0.15);
-            border-radius: 1rem;
+            border-radius: 2px;
             height: calc((var(--vh, 1vh) * 100) - 244px);
             max-height: calc((var(--vh, 1vh) * 100) - 244px);
             padding: 2rem;
@@ -126,7 +126,7 @@
                     </label>
                 </div>
                 <p class="mb-0 ps-3 text-white-50">{{__('theme2-global.yearly')}}</p>
-                <span style="margin-left: 0.5rem" class="badge bg-navy text-white rounded-pill">{{__('theme2-global.cheaper')}}</span>
+                <span style="margin-left: 0.5rem" class="badge bg-navy text-white rounded">{{__('theme2-global.cheaper')}}</span>
             </div>
             <div class="row gy-6 mt-3 mt-md-5">
                 <div class="col-md-6 col-lg-4">

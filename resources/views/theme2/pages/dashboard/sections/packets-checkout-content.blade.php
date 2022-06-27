@@ -61,7 +61,7 @@
 
         .mx-card {
             background: rgba(255, 255, 255, 0.15);
-            border-radius: 1rem;
+            border-radius: 2px;
             height: calc((var(--vh, 1vh) * 100) - 244px);
             max-height: calc((var(--vh, 1vh) * 100) - 244px);
             padding: 2rem;

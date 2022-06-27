@@ -5,7 +5,7 @@
                 <h1 class="fs-15 text-uppercase text-sky mb-3">{{__('theme2-global.agencies')}}</h1>
                 <h3 class="display-1 mb-6 text-white">{{__('theme2-global.agencies-header-title')}}</h3>
                 <p class="lead fs-18 mb-5 text-white-50 text-center">{{__('theme2-global.agencies-header-desc')}}</p>
-                <a href="{{route('register')}}" class="btn btn-lg btn-yellow rounded-pill">{{__('theme2-global.header-button')}}</a>
+                <a href="{{route('register')}}" class="btn btn-lg btn-yellow rounded">{{__('theme2-global.header-button')}}</a>
             </div>
             <!-- /column -->
         </div>

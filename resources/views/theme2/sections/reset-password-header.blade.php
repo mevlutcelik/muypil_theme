@@ -23,7 +23,7 @@
                                 <input type="email" class="form-control" placeholder="{{__('theme2-global.email')}}" id="email">
                                 <label for="email">{{__('theme2-global.email')}}</label>
                             </div>
-                            <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">{{__('theme2-global.send')}}</a>
+                            <a class="btn btn-primary rounded btn-login w-100 mb-2">{{__('theme2-global.send')}}</a>
                         </form>
                         <!-- /form -->
                         <div class="d-flex align-items-center justify-content-center">
