@@ -14,7 +14,7 @@
                         <!-- /column -->
                         <div class="col-md-6 col-lg-3">
                             <div class="progressbar semi-circle leaf" data-value="95" style="position: relative;"></div>
-                            <h4>{{__('theme2-global.company-progress-1-title')}}</h4>
+                            <h4>{{__('theme2-global.company-progress-2-title')}}</h4>
                             <p class="mb-0">{{__('theme2-global.company-progress-2-desc')}}</p>
                         </div>
                         <!-- /column -->
