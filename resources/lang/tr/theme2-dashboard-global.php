@@ -172,5 +172,7 @@ return [
     "date"                              => "Tarih",
     "edit"                              => "Düzenle",
     "double-click-for-copy"             => "Kolondaki veriyi kopyalamak için çift tıklayın",
+    "track-conversions"                 => "İzleme Kodu",
+    "test-tracking-code"                => "İzleme Kodunu Test Et",
 ];
 ?>
