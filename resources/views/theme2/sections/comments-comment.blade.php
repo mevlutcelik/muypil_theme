@@ -1,6 +1,6 @@
 <section class="wrapper bg-soft-primary">
     <div class="container py-14 py-md-17">
-        <div class="row mt-md-n23 position-relative">
+        <div class="row mt-n21 mt-md-n23 position-relative">
         </div>
         <!-- /.row -->
         <div class="grid">
