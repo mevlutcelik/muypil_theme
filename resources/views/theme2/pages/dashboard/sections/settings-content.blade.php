@@ -745,7 +745,6 @@
                 <a class="nav-link" data-bs-toggle="tab" href="#topbar-pause-campaign-rules">
                     <i class="uil uil-pause-circle pe-1"></i>
                     <span>{{__('theme2-dashboard-global.pause-campaign-rules')}}</span>
-                    <span class="badge gradient-2 ms-2">{{__('theme2-dashboard-global.new')}}</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -764,6 +763,12 @@
                 <a class="nav-link" data-bs-toggle="tab" href="#topbar-campaigns-manager">
                     <i class="uil uil-gift pe-1"></i>
                     <span>{{__('theme2-dashboard-global.campaigns-manager')}}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#topbar-track-conversions">
+                    <i class="uil uil-brackets-curly pe-1"></i>
+                    <span>{{__('theme2-dashboard-global.track-conversions')}}</span>
                 </a>
             </li>
         </ul>
@@ -851,7 +856,7 @@
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <label class="mx-1 fs-14">ads clicks within</label>
+                                    <label class="mx-1 fs-14">ad clicks within</label>
                                     <input id="textInputExample" value="1" type="text" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <select class="form-select" aria-label="Gün"
@@ -881,7 +886,7 @@
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <label class="mx-1 fs-14">ads clicks within</label>
+                                    <label class="mx-1 fs-14">ad clicks within</label>
                                     <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
@@ -1063,8 +1068,7 @@
             <!--/.tab-pane -->
             <div class="tab-pane fade me-2" id="topbar-pause-campaign-rules">
                 <div class="bg-blur p-6 mt-0">
-                    <h5 class="text-white">({{__('theme2-dashboard-global.new')}}
-                        ) {{__('theme2-dashboard-global.pause-campaign-rules')}}</h5>
+                    <h5 class="text-white">({{__('theme2-dashboard-global.new')}}) {{__('theme2-dashboard-global.pause-campaign-rules')}}</h5>
                     <p class="fs-15">{{__('theme2-dashboard-global.pause-campaign-rules-desc')}}</p>
                     <div id="pause-campaign-rule"></div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
@@ -1243,6 +1247,21 @@
                                 class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.load-more')}}</a>
                         <a href="#" class="btn btn-light text-dark btn-sm rounded-pill"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
+                    </div>
+                </div>
+            </div>
+            <!--/.tab-pane -->
+            <div class="tab-pane fade me-2" id="topbar-track-conversions">
+                <div class="bg-blur p-6 mt-0">
+                    <h5 class="text-white">{{__('theme2-dashboard-global.track-conversions')}}</h5>
+                    <div class="row">
+                        //
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
+                        {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
+                        <a href="#"
+                           class="btn btn-navy btn-sm rounded-pill me-2"><i
+                                class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.test-tracking-code')}}</a>
                     </div>
                 </div>
             </div>
