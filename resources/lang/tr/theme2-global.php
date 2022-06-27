@@ -29,7 +29,7 @@ return [
     "header-card-2-title"               => "Optimizasyonu Arttır",
     "header-card-2-text"                => "Siteden kısa sürede çıkan bot ve yazılımlar reklamlarını göremeyeceği için optimizasyonun hızla yükselecek.",
     "header-card-3-title"               => "Kalite Puanını Yükselt",
-    "header-card-3-text"                => "Sitede vakit geçirmeyen ve dönüşüm gerçekleştirmeyen bot veya rakiplerin artık reklamlarını göremeyecek. Bu nedenle anahtar kelime kalite puanın günden güne yükselecek.",
+    "header-card-3-text"                => "Hemen çıkma oranı yüksek tıklamalar artık reklamlarını göremeyecek ve kalite puanın yükselecek.",
     "header-card-4-title"               => "Üst Sıraya Yüksel",
     "header-card-4-text"                => "Anahtar kelime kalite puanın yükseldiği için artık reklamlara daha az ödeme yapacaksın ve daha üst sıralarda yer alacaksın.",
     "partners-title"                    => "Dünya çapında 5.000'den fazla insan bize güveniyor",
