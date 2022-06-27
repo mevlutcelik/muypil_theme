@@ -2,20 +2,20 @@
     <nav class="navbar navbar-expand-lg center-logo transparent position-absolute navbar-dark">
         <div class="container justify-content-between align-items-center">
             <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none">
-                <div class="navbar-brand"><div class="logo logo-dark">
+                <div class="navbar-brand"><div class="logo logo-dark" style="position: relative;">
                         <a href="{{route('home')}}" style="font-size: 2px;position: relative;">
                             <h1 class="logo-text header-logo-text">MUYPIL</h1>
                             <section class="logo-container">
                                 <div class="logo-center header-logo-center"></div>
-                                <article class="blue-ring logo-ring1">
+                                <div class="blue-ring logo-ring1">
                                     <div></div>
-                                </article>
-                                <article class="blue-ring logo-ring2">
+                                </div>
+                                <div class="blue-ring logo-ring2">
                                     <div></div>
-                                </article>
-                                <article class="blue-ring logo-ring3">
+                                </div>
+                                <div class="blue-ring logo-ring3">
                                     <div></div>
-                                </article>
+                                </div>
                             </section>
                         </a>
                     </div>
