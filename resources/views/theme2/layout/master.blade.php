@@ -45,10 +45,10 @@
 <body data-bs-spy="scroll" style="@yield('body-style')">
 <div class="content-wrapper">
     {{--Alert Start--}}
-    <div class="alert alert-info alert-icon" role="alert">
-        {{--TODO: Dil dosyasından __USER__ isimli bir değişken geliyor. Replace ile değiştirelim--}}
+    {{--<div class="alert alert-info alert-icon" role="alert">
+        --}}{{--TODO: Dil dosyasından __USER__ isimli bir değişken geliyor. Replace ile değiştirelim--}}{{--
         <i class="uil uil-exclamation-circle"></i> <span>{{__('theme2-dashboard-global.alert-message-user')}} <a href="#" class="alert-link hover">{{__('theme2-dashboard-global.alert-message-user-action')}}</a>.</span>
-    </div>
+    </div>--}}
     {{--Alert Finish--}}
     @yield('content')
 </div>
