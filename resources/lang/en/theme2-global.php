@@ -30,7 +30,7 @@ return [
     "header-card-2-title"               => "Increase Optimization",
     "header-card-2-text"                => "Since bots and software that leave the site in a short time will not be able to see their ads, your optimization will increase rapidly.",
     "header-card-3-title"               => "Raise Quality Score",
-    "header-card-3-text"                => "Bots or competitors who do not spend time on the site and do not convert will no longer see their ads. Therefore, your keyword quality score will increase day by day.",
+    "header-card-3-text"                => "Clicks with a high bounce rate will no longer see your ads and your quality score will increase.",
     "header-card-4-title"               => "Rise Up",
     "header-card-4-text"                => "As your keyword quality score increases, you will now pay less for ads and rank higher.",
     "partners-title"                    => "Trusted by over 5.000 clients across the world",
