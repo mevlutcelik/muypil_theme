@@ -1,5 +1,5 @@
 <section class="wrapper bg-soft-primary">
-    <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
+    <div class="container pt-0 py-14 pt-md-16 pt-lg-0 pb-md-16">
         <div class="row">
             <div class="col-xl-10 mx-auto">
 
