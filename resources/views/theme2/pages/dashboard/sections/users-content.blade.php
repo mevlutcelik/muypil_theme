@@ -1,3 +1,21 @@
+@php
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    $iconTop = false;
+    if(preg_match('/Chrome/i',$userAgent)){
+        $iconTop = false;
+    }else if(preg_match('/Firefox/i',$userAgent) || preg_match('/Safari/i',$userAgent)){
+        $iconTop = true;
+    }
+@endphp
+@if($iconTop)
+    <style>
+        .muypil-responsive-table.table thead tr {
+            background: rgba(0, 0, 0, 0.6) !important;
+            color: #fff !important;
+            backdrop-filter: initial !important;
+        }
+    </style>
+@endif
 <section class="wrapper">
     <div class="py-13 py-md-16">
         <div class="row text-center">
@@ -19,9 +37,10 @@
 
                 <div class="table-responsive">
                     <table class="table table-bordered muypil-responsive-table"
-                           style="border: 1px solid rgba(255,255,255,0.05)">
+                           style="border: 1px solid rgba(255,255,255,0.05);">
                         <thead>
-                        <tr class="muypil-table-header" style="background: rgba(255,255,255,0.15);color: #fff;">
+                        <tr class="muypil-table-header"
+                            style="background: rgba(255,255,255,0.15);color: #fff;backdrop-filter: blur(0.5rem)">
                             <th scope="col"
                                 class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.action')}}</th>
                             <th scope="col"
@@ -69,6 +88,411 @@
                         <tbody>
                         {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
                         Todo: Foreach ile gelen verileri listele--}}
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
+                        <tr data-bs-toggle="modal"
+                            data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.ip-city')}}">
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-pen"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-eye"></i></a>
+                                <a style="background-color: rgba(255,255,255,0.15);border-color:transparent;" href="#"
+                                   class="btn btn-circle btn-primary btn-sm"><i class="uil uil-users-alt"></i></a>
+                            </td>
+                            <td class="d-initial d-md-none"
+                                data-label="{{__('theme2-global.full-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.first-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Jale
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.last-name')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Karatekin
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-global.email')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">jkaratekin2@gmail.com
+                            </td>
+                            <td class="d-none d-md-initial" data-label="{{__('theme2-global.phone')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                +905305706733
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.packet-count')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">
+                                10
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.has-packet')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">Evet
+                            </td>
+                            <td class="d-none d-md-initial"
+                                data-label="{{__('theme2-dashboard-global.date')}}"
+                                title="{{__('theme2-dashboard-global.copy-column')}}">04/08/2021 22:02
+                            </td>
+                        </tr>
                         <tr data-bs-toggle="modal"
                             data-bs-target="#modal-01" {{--TODO: #modal-01 yazan yeri gelen verinin idsi ile değiştirelim--}}>
                             <td class="d-none d-md-initial"
