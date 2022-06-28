@@ -117,6 +117,27 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="d-flex align-items-center justify-content-center justify-content-md-end w-100 mt-4">
+                    <nav class="d-flex" aria-label="pagination">
+                        <ul class="pagination mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.pagination -->
+                    </nav>
+                    <!-- /nav -->
+                </div>
                 {{--Modal Start--}}
                 {{--TODO: Modali dinamik hale getirelim --}}
                 <div class="modal fade" id="modal-01" tabindex="-1">
@@ -138,7 +159,8 @@
                                                 <div>
                                                     <a style="background-color: rgba(0,0,0,0.15);border-color:transparent;color:#000;"
                                                        href="#" class="btn btn-circle btn-primary btn-sm"><i
-                                                            class="uil uil-pen" data-bs-toggle="modal" data-bs-target="#modal-02"></i></a> {{--TODO: #modal-edit-02 yazan yeri #modal-edit__USERID__ ile değiştirelim--}}
+                                                            class="uil uil-pen" data-bs-toggle="modal"
+                                                            data-bs-target="#modal-02"></i></a> {{--TODO: #modal-edit-02 yazan yeri #modal-edit__USERID__ ile değiştirelim--}}
                                                     <a style="background-color: rgba(0,0,0,0.15);border-color:transparent;color:#000;"
                                                        href="#" class="btn btn-circle btn-primary btn-sm"><i
                                                             class="uil uil-eye"></i></a>
