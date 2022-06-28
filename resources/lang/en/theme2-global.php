@@ -23,7 +23,7 @@ return [
     "blog"                              => "Blog",
     "header-title-underline"            => "Protect",
     "header-title"                      => "__underline your Google Ads Account from __word",
-    "header-desc"                       => "Protect your ads with Muypil<sup class='fs-8 lh-sm'>™</sup>. Stop fake impressions and unnecessary clicks now. At least 20% of your advertising budget is wasted. Increase your return on investment with Muypil<sup class='fs-8 lh-sm'>™</sup> and rise to the top by always winning the race.",
+    "header-desc"                       => "Protect your ads with muypil<sup class='fs-8 lh-sm'>™</sup>. Stop fake impressions and unnecessary clicks now. At least 20% of your advertising budget is wasted. Increase your ROI with muypil<sup class='fs-8 lh-sm'>™</sup> and <span class='underline-3 style-2 yellow'>raise your ad to the first place</span>.",
     "header-button"                     => "Start Now",
     "header-card-1-title"               => "Save your budget",
     "header-card-1-text"                => "Protect your ads from bots, competitors, malware with Muypil<sup class='fs-8 lh-sm'>™</sup>. So save at least 20%.",
