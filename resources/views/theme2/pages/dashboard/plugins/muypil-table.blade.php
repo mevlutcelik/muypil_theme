@@ -9,6 +9,10 @@
             transition: transform 0.3s;
             transition: transform 0.3s, -webkit-transform 0.3s;
             width: 100%;
+            overflow-x: auto;
+            overflow-y: auto;
+            height: calc((var(--vh, 1vh) * 100) - 380px);
+            position: relative;
         }
 
         /* width */
@@ -42,6 +46,18 @@
             width: 100%;
             overflow-y: hidden;
             overflow-x: auto;
+        }
+
+        .muypil-responsive-table.table thead{
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .muypil-responsive-table.table thead tr{
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            backdrop-filter: blur(0.5rem);
         }
 
         .muypil-responsive-table.table th {
