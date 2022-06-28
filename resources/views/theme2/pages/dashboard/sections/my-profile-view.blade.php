@@ -175,8 +175,35 @@
             width: initial;
             color: #fff;
         }
-        .tab-content{overflow: hidden;height: -webkit-fit-content;height: -moz-fit-content;height: fit-content;}
-        .bg-blur{border-radius: 2px;}
+
+        .tab-content {
+            overflow: hidden;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+        }
+
+        .bg-blur {
+            border-radius: 2px;
+        }
+
+        .tab-centered-with {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @media all and (min-width: 768px) {
+            .tab-centered-with {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        @media all and (min-width: 1024px) {
+            .tab-centered-with {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
     </style>
 @endpush
 <section class="wrapper">
@@ -190,18 +217,8 @@
 </section>
 <section class="wrapper container">
     <div class="row g-6 pe-1">
-        <div class="col-lg-12" style="max-height: calc((var(--vh, 1vh) * 100) - 260px);overflow-y: auto;overflow-x: hidden">
-            <div class="card" style="border-radius: 2px;">
-                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <span class="avatar bg-dark text-sky w-14 h-14">
-                        <span class="fs-22">AS</span> {{--TODO: içerisinde "AS" yazan spanın içerisinde kullanıcının adının ve soyadının baş harfleri yer alıyor--}}
-                    </span>
-                    <span class="text-white mt-4 fs-20 fw-bold d-flex align-items-center justify-content-center">Ad Soyad <i
-                            class="ms-1 uil uil-shield-check"></i></span> {{--TODO: Kullanıcının ad soyadını yazalım--}}
-                    <span class="text-white-50 mt-1 fs-16 fw-bold d-flex align-items-center justify-content-center">name@domain.com</span> {{--TODO: Kullanıcının e-postasını yazalım--}}
-                    <a href="#" style="background: rgba(255, 255, 255, 0.15);border-color:transparent;color: #f1caca;" class="btn btn-red btn-sm d-block d-lg-none mt-4">{{__('theme2-dashboard-global.logout')}}</a>
-                </div>
-            </div>
+        <div class="col-lg-12"
+             style="max-height: calc((var(--vh, 1vh) * 100) - 260px);overflow-y: auto;overflow-x: hidden">
             <div class="d-flex align-items-center justify-content-center">
                 <ul class="nav nav-tabs muypil-top-bar nav-pills pb-0 pb-md-4 pb-lg-4 pb-xl-4 mt-4">
                     <li class="nav-item">
@@ -231,7 +248,7 @@
                 </ul>
                 <!-- /.nav-tabs -->
             </div>
-            <div class="tab-content">
+            <div class="tab-content tab-centered-with">
                 <div class="tab-pane fade show active card" style="background: transparent;box-shadow: none;"
                      id="topbar-personal-information">
                     <div class="bg-blur p-6">
@@ -240,7 +257,8 @@
                             <div class="col-12 col-md-6">
                                 <div class="form-floating mb-4">
                                     <input id="textInputExample" type="text" class="form-control" autocomplete="off"
-                                           placeholder="{{__('theme2-global.first-name')}}" value="Ad"> {{--TODO: Input value değerine kullanıcının adını yazalım--}}
+                                           placeholder="{{__('theme2-global.first-name')}}"
+                                           value="Ad"> {{--TODO: Input value değerine kullanıcının adını yazalım--}}
                                     <label for="textInputExample">{{__('theme2-global.first-name')}}</label>
                                 </div>
                                 <!-- /.form-floating -->
@@ -248,7 +266,8 @@
                             <div class="col-12 col-md-6">
                                 <div class="form-floating mb-4">
                                     <input id="textInputExample" type="text" class="form-control" autocomplete="off"
-                                           placeholder="{{__('theme2-global.last-name')}}" value="Soyad"> {{--TODO: Input value değerine kullanıcının soyadını yazalım--}}
+                                           placeholder="{{__('theme2-global.last-name')}}"
+                                           value="Soyad"> {{--TODO: Input value değerine kullanıcının soyadını yazalım--}}
                                     <label for="textInputExample">{{__('theme2-global.last-name')}}</label>
                                 </div>
                                 <!-- /.form-floating -->
@@ -256,7 +275,8 @@
                             <div class="col-12 col-md-12">
                                 <div class="form-floating mb-4">
                                     <input id="textInputExample" type="text" class="form-control" autocomplete="off"
-                                           placeholder="{{__('theme2-global.email')}}" value="name@domain.com"> {{--TODO: Input value değerine kullanıcının e-posta adresini yazalım--}}
+                                           placeholder="{{__('theme2-global.email')}}"
+                                           value="name@domain.com"> {{--TODO: Input value değerine kullanıcının e-posta adresini yazalım--}}
                                     <label for="textInputExample">{{__('theme2-global.email')}}</label>
                                 </div>
                                 <!-- /.form-floating -->
@@ -276,23 +296,28 @@
                         <div class="row">
                             <div class="col-12 col-md-12">
                                 <div class="form-floating password-field mb-4">
-                                    <input type="password" class="form-control" id="current_password" placeholder="{{__('theme2-dashboard-global.current-password')}}">
+                                    <input type="password" class="form-control" id="current_password"
+                                           placeholder="{{__('theme2-dashboard-global.current-password')}}">
                                     <span class="password-toggle text-white"><i class="uil uil-eye"></i></span>
-                                    <label for="current_password">{{__('theme2-dashboard-global.current-password')}}</label>
+                                    <label
+                                        for="current_password">{{__('theme2-dashboard-global.current-password')}}</label>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="form-floating password-field mb-4">
-                                    <input type="password" class="form-control" id="new_password" placeholder="{{__('theme2-dashboard-global.new-password')}}">
+                                    <input type="password" class="form-control" id="new_password"
+                                           placeholder="{{__('theme2-dashboard-global.new-password')}}">
                                     <span class="password-toggle text-white"><i class="uil uil-eye"></i></span>
                                     <label for="new_password">{{__('theme2-dashboard-global.new-password')}}</label>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="form-floating password-field mb-4">
-                                    <input type="password" class="form-control" id="password_confirmation" placeholder="{{__('theme2-dashboard-global.password-confirmation')}}">
+                                    <input type="password" class="form-control" id="password_confirmation"
+                                           placeholder="{{__('theme2-dashboard-global.password-confirmation')}}">
                                     <span class="password-toggle text-white"><i class="uil uil-eye"></i></span>
-                                    <label for="password_confirmation">{{__('theme2-dashboard-global.password-confirmation')}}</label>
+                                    <label
+                                        for="password_confirmation">{{__('theme2-dashboard-global.password-confirmation')}}</label>
                                 </div>
                             </div>
                         </div>
@@ -352,7 +377,8 @@
                                 <p class="text-white">{{__('theme2-dashboard-global.freezing-account')}}</p>
                                 <p class="fs-14 text-white-50 mt-n4">{{__('theme2-dashboard-global.freezing-account-desc')}}</p>
                             </div>
-                            <a href="#" class="btn btn-navy text-white btn-sm">{{__('theme2-dashboard-global.freeze-account')}}</a>
+                            <a href="#"
+                               class="btn btn-navy text-white btn-sm">{{__('theme2-dashboard-global.freeze-account')}}</a>
                         </div>
                     </div>
                 </div>
