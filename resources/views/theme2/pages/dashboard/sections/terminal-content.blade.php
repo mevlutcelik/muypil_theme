@@ -1,6 +1,6 @@
 @push('styles')
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+        /*@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');*/
         /* width */
         ::-webkit-scrollbar {
             width: 4px;
@@ -105,7 +105,8 @@
             position: sticky;
             top: 0;
             background-color: #000;
-            font-family: 'Fira Code', monospace;
+            /*font-family: 'Fira Code', monospace;*/
+            font-family: 'Urbanist', sans-serif;
             font-size: 14px;
             font-weight: bold;
             text-align: center;
@@ -161,7 +162,8 @@
             padding: 0 1rem 0.75em;
             margin: 0;
             font-size: 14px;
-            font-family: 'Fira Code', monospace;
+            /*font-family: 'Fira Code', monospace;*/
+            font-family: 'Urbanist', sans-serif;
             font-weight: bold;
             -webkit-box-align: center;
             -ms-flex-align: center;
