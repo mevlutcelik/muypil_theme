@@ -2,7 +2,7 @@
 return [
     "terminal"                          => "Terminal",
     "administration"                    => "Yönetim",
-    "membership"                        => "Üyelik",
+    "membership"                        => "Yönetim",
     "analytics"                         => "Analitik",
     "settings"                          => "Ayarlar",
     "packets"                           => "Paketler",
