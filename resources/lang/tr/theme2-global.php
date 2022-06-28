@@ -22,7 +22,7 @@ return [
     "reset-password"                    => "Şifremi Unuttum",
     "header-title-underline"            => "koruyun",
     "header-title"                      => "Google Ads Hesabınızı __word __underline",
-    "header-desc"                       => "Muypil<sup class='fs-8 lh-sm'>™</sup> ile reklamlarınızı koruyun. Sahte gösterimleri ve gereksiz tıklamaları hemen durdurun. Reklam bütçenizin en az %20'si boşa gidiyor. Muypil<sup class='fs-8 lh-sm'>™</sup> ile yatırım getirinizi arttırın ve yarışı daima kazanarak ilk sıralara yükselin.",
+    "header-desc"                       => "Muypil<sup class='fs-8 lh-sm'>™</sup> ile reklamlarınızı koruyun. Sahte gösterimleri ve gereksiz tıklamaları hemen durdurun. Reklam bütçenizin en az %20'si boşa gidiyor. Muypil<sup class='fs-8 lh-sm'>™</sup> ile yatırım getirinizi arttırın ve <span class='underline-3 style-2 yellow'>reklamınızı ilk sıraya yükseltin</span>.",
     "header-button"                     => "Şimdi Başla",
     "header-card-1-title"               => "Bütçeni Koru",
     "header-card-1-text"                => "Muypil<sup class='fs-8 lh-sm'>™</sup> ile reklamlarını botlardan, rakiplerinden, kötü yazılımlardan koru. Böylece en az %20 tarasarruf et.",
