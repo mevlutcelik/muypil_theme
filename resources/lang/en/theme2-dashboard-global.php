@@ -142,7 +142,7 @@ return [
     "error-domain"                      => "The format of the domain you typed is not correct",
     "whitelist-ips"                     => "Whitelist IPs",
     "whitelist-ips-desc"                => "<br/>Fill out the next box with IP addresses (each IP address in a new line) that you wish for CyberDefense to never block.<br/><br/>You can use single IP addresses or a range of IP addresses by using the wildcard character (*) or CIDR notation.<br/><br/>Examples: 112.4.5.67",
-    "websites"                          => "User Domains",
+    "websites"                          => "Domains",
     "websites-desc"                     => "User Domains list page",
     "campaigns-manager"                 => "Campaigns Manager",
     "search"                            => "Search...",
