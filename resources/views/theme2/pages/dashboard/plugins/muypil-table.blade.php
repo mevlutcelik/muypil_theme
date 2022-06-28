@@ -310,6 +310,26 @@
             font-size: 0.875rem;
             padding: 0.5rem;
         }
+        a.page-link{
+            background-color: rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.5);
+            font-weight: bold;
+            border-color: rgba(255,255,255,0.035);
+        }
+        .pagination .page-link{
+            width: 2rem;
+            height: 2rem;
+        }
+        .page-item.active .page-link,.page-item .page-link:hover{
+            color: #fff !important;
+            background-color: rgba(255,255,255,0.32);
+            border-color: rgba(255,255,255,0.035);
+        }
+        .page-item.disabled .page-link{
+            background-color: rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.5);
+            border-color: rgba(255,255,255,0.035);
+        }
     </style>
 @endpush
 @push('scripts')
