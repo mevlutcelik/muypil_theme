@@ -174,5 +174,6 @@ return [
     "double-click-for-copy"             => "Kolondaki veriyi kopyalamak için çift tıklayın",
     "track-conversions"                 => "İzleme Kodu",
     "test-tracking-code"                => "İzleme Kodunu Test Et",
+    "track-message"                     => "Aşağıdaki kodu web sitenizin <head></head> tagları arasına yerleştirerek reklamınıza tıklayan kullanıcılar hakkında daha detaylı bilgilere sahip olabilirsiniz.",
 ];
 ?>

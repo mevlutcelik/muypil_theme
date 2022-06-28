@@ -1256,6 +1256,10 @@
             <div class="tab-pane fade me-2" id="topbar-track-conversions">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.track-conversions')}}</h5>
+                    <div class="alert alert-info alert-icon" role="alert">
+                        <i class="uil uil-map-marker-info"></i>
+                        {{__('theme2-dashboard-global.track-message')}}
+                    </div>
                     <div class="row">
                         <pre><code class="language-html">{{"<!-- Start Muypil.com Tracking -->
 <script>
