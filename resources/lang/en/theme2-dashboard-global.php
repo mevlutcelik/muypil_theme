@@ -2,7 +2,7 @@
 return [
     "terminal"                          => "Terminal",
     "administration"                    => "Administration",
-    "membership"                        => "Membership",
+    "membership"                        => "Management",
     "analytics"                         => "Analytics",
     "settings"                          => "Settings",
     "packets"                           => "Packets",
