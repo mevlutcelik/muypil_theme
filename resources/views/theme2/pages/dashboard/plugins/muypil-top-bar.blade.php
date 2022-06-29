@@ -14,7 +14,7 @@
         }
 
         .muypil-top-bar{
-            scrollbar-color: #0A4C95 rgba(255,255,255,0.15);
+            scrollbar-color: rgba(0,0,0,0.15) transparent;
         }
 
         /* Track */
