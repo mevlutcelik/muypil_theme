@@ -176,5 +176,6 @@ return [
     "test-tracking-code"                => "İzleme Kodunu Test Et",
     "track-message"                     => "Aşağıdaki kodu web sitenizin <head></head> tagları arasına yerleştirerek reklamınıza tıklayan kullanıcılar hakkında daha detaylı bilgilere sahip olabilirsiniz.",
     "rules"                             => "Kurallar",
+    "go-tracking-code"                  => "Sadece <a href=\"#\" id=\"go-tracking-code\" class=\"alert-link hover\">izleme kodu</a> yüklenen hesaplarda çalışır.",
 ];
 ?>

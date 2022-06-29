@@ -928,6 +928,9 @@
             <div class="tab-pane fade me-2" id="topbar-event-rules">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.event-rules')}}</h5>
+                    <div class="alert alert-info alert-icon" role="alert">
+                        <i class="uil uil-exclamation-circle"></i> <span>{!! __('theme2-dashboard-global.go-tracking-code') !!}</span>
+                    </div>
                     {{--Satır Başlangıç--}}
                     <div class="line-box check-rules-line">
                         <div class="theme-switch-wrapper">
@@ -1603,6 +1606,9 @@
             $('#active-campaigns').append(newEl);
             arrActiveCampaigns.push(this.getAttribute('data-id'));
             this.remove();
+        });
+        $('#go-tracking-code').click(function (){
+            document.querySelector(`[href="#topbar-track-conversions"]`).click();
         });
     </script>
 @endpush
