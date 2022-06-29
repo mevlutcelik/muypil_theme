@@ -231,7 +231,7 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link {{Route::is('dashboard.settings') ? 'active' : null}}"
-                                   href="{{route('dashboard.settings')}}">{{__('theme2-dashboard-global.settings')}}</a>
+                                   href="{{route('dashboard.settings')}}">{{__('theme2-dashboard-global.rules')}}</a>
                             </li>
                             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{__('theme2-dashboard-global.my-profile')}}</a>
                                 <ul class="dropdown-menu mt-n3">
