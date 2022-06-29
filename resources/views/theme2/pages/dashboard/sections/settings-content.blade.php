@@ -1070,7 +1070,7 @@
             <!--/.tab-pane -->
             <div class="tab-pane fade me-2" id="topbar-pause-campaign-rules">
                 <div class="bg-blur p-6 mt-0">
-                    <h5 class="text-white">({{__('theme2-dashboard-global.new')}}) {{__('theme2-dashboard-global.pause-campaign-rules')}}</h5>
+                    <h5 class="text-white">{{__('theme2-dashboard-global.pause-campaign-rules')}}</h5>
                     <p class="fs-15">{{__('theme2-dashboard-global.pause-campaign-rules-desc')}}</p>
                     <div id="pause-campaign-rule"></div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
