@@ -236,7 +236,7 @@
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" href="#topbar-personal-settings">
                             <i class="uil uil-setting pe-1"></i>
-                            <span>{{__('theme2-dashboard-global.personal-settings')}}</span>
+                            <span>{{__('theme2-dashboard-global.settings')}}</span>
                         </a>
                     </li>
                     {{--<li class="nav-item">
@@ -331,7 +331,7 @@
                 <div class="tab-pane fade card me-2" style="background: transparent;box-shadow: none;"
                      id="topbar-personal-settings">
                     <div class="bg-blur p-6">
-                        <h5 class="text-white">{{__('theme2-dashboard-global.personal-settings')}}</h5>
+                        <h5 class="text-white">{{__('theme2-dashboard-global.settings')}}</h5>
                         <div class="d-flex align-items-center justify-content-between mt-2">
                             <div class="d-flex flex-column justify-content-center">
                                 <p class="text-white">{{__('theme2-dashboard-global.local-time-zone')}}</p>
