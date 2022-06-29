@@ -1304,7 +1304,7 @@
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
                         {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
                         <a href="#"
-                           class="btn btn-navy btn-sm rounded me-2"><i
+                           class="btn btn-navy btn-sm rounded"><i
                                 class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.test-tracking-code')}}</a>
                     </div>
                 </div>
