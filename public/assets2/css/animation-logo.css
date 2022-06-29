@@ -1,8 +1,9 @@
+/* Start Logo Styles */
 .logo-text {
     font-family: Aquire, system-ui, sans-serif;
     text-align: center;
-    background: -webkit-linear-gradient(left, #ff9800, #4caf50, #ba1d71, #673ab7, #ffffff);
-    background: linear-gradient(left, #ff9800, #4caf50, #ba1d71, #673ab7, #ffffff);
+    /*background: -webkit-linear-gradient(left, #ff9800, #4caf50, #ba1d71, #673ab7, #ffffff);
+    background: linear-gradient(left, #ff9800, #4caf50, #ba1d71, #673ab7, #ffffff);*/
     color: #343f52;
     background-size: 3200px 200px;
     -webkit-background-clip: text;
@@ -77,7 +78,7 @@
 
 .header-logo-center {
     background-color: #343f52 !important;
-    left: 37px !important;
+    left: 38px !important;
     top: 78px;
 }
 
@@ -263,3 +264,5 @@
     -ms-transform: translate(0, 0.5em);
     transform: translate(0, 0.5em);
 }
+
+/* End Logo Styles */
