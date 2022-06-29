@@ -40,7 +40,6 @@
             -ms-flex-wrap: initial;
             flex-wrap: initial;
             max-width: 100vw;
-            width: 98%;
         }
 
         .muypil-top-bar .nav-link {

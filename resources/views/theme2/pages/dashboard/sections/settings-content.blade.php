@@ -779,7 +779,7 @@
         </ul>
         <!-- /.nav-tabs -->
         <div class="tab-content">
-            <div class="tab-pane fade show active card me-2" style="background: transparent;box-shadow: none;"
+            <div class="tab-pane fade show active card" style="background: transparent;box-shadow: none;"
                  id="topbar-ip-rules">
                 <div class="bg-blur p-6">
                     <h5 class="text-white">{{__('theme2-dashboard-global.ip-rules')}}</h5>
@@ -925,7 +925,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-event-rules">
+            <div class="tab-pane fade" id="topbar-event-rules">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.event-rules')}}</h5>
                     <div class="alert alert-info alert-icon" role="alert">
@@ -1040,7 +1040,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-country-rules">
+            <div class="tab-pane fade" id="topbar-country-rules">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.country-rules')}}</h5>
                     <p class="fs-15">{{__('theme2-dashboard-global.country-rules-desc')}}</p>
@@ -1071,7 +1071,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-pause-campaign-rules">
+            <div class="tab-pane fade" id="topbar-pause-campaign-rules">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.pause-campaign-rules')}}</h5>
                     <p class="fs-15">{{__('theme2-dashboard-global.pause-campaign-rules-desc')}}</p>
@@ -1086,7 +1086,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-ip-blocking">
+            <div class="tab-pane fade" id="topbar-ip-blocking">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.ip-blocking')}}</h5>
                     <div class="row">
@@ -1149,7 +1149,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-websites">
+            <div class="tab-pane fade" id="topbar-websites">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.websites')}}</h5>
                     <p class="fs-14">{{__('theme2-dashboard-global.websites-desc')}}</p>
@@ -1172,7 +1172,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-campaigns-manager">
+            <div class="tab-pane fade" id="topbar-campaigns-manager">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.campaigns-manager')}}</h5>
                     <div class="row">
@@ -1256,7 +1256,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-track-conversions">
+            <div class="tab-pane fade" id="topbar-track-conversions">
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.tracking-code')}}</h5>
                     <div class="alert alert-info alert-icon" role="alert">
