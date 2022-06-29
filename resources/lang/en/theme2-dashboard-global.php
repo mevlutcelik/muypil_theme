@@ -173,7 +173,7 @@ return [
     "double-click-for-copy"             => "Double click to copy the data in the column",
     "tracking-code"                     => "Tracking Code",
     "test-tracking-code"                => "Test Tracking Kode",
-    "track-message"                     => "By placing the code below between the <head></head> tags of your website, you can have more detailed information about the users who clicked on your ad.",
+    "track-message"                     => "<div>By placing the code below between the __HEAD__ tags of your website, you can have more detailed information about the users who clicked on your ad.</div>",
     "rules"                             => "Rules",
     "go-tracking-code"                  => "It only works on accounts that have the <a href=\"#\" id=\"go-tracking-code\" class=\"alert-link hover\">tracking code</a> installed.",
 ];

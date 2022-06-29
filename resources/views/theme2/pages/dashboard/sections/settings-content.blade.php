@@ -244,6 +244,7 @@
         "ZM"=> "Zambia",
         "ZW"=> "Zimbabwe"
     ];
+    $alertMessageHead = str_replace('__HEAD__', '<span style="background-color: #282a36;padding: 3px 6px;border-radius: 6px;font-family: \'Fira Code\', monospace;">'.htmlspecialchars('<head></head>').'</span>', __('theme2-dashboard-global.track-message'));
 @endphp
 @push('styles')
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
@@ -1289,7 +1290,7 @@
                     <h5 class="text-white">{{__('theme2-dashboard-global.tracking-code')}}</h5>
                     <div class="alert alert-info alert-icon" role="alert">
                         <i class="uil uil-map-marker-info"></i>
-                        {{__('theme2-dashboard-global.track-message')}}
+                        {!! $alertMessageHead !!}
                     </div>
                     <pre><span class="grey">{{'<!-- Start Muypil.com Tracking -->'}}</span>{{"\n"}}<span
                             class="purple">{{'<script>'}}</span>{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}<span

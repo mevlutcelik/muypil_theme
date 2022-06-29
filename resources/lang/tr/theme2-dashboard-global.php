@@ -174,7 +174,7 @@ return [
     "double-click-for-copy"             => "Kolondaki veriyi kopyalamak için çift tıklayın",
     "tracking-code"                     => "İzleme Kodu",
     "test-tracking-code"                => "İzleme Kodunu Test Et",
-    "track-message"                     => "Aşağıdaki kodu web sitenizin <head></head> tagları arasına yerleştirerek reklamınıza tıklayan kullanıcılar hakkında daha detaylı bilgilere sahip olabilirsiniz.",
+    "track-message"                     => "<div>Aşağıdaki kodu web sitenizin __HEAD__ tagları arasına yerleştirerek reklamınıza tıklayan kullanıcılar hakkında daha detaylı bilgilere sahip olabilirsiniz.</div>",
     "rules"                             => "Kurallar",
     "go-tracking-code"                  => "Sadece <a href=\"#\" id=\"go-tracking-code\" class=\"alert-link hover\">izleme kodu</a> yüklenen hesaplarda çalışır.",
 ];
