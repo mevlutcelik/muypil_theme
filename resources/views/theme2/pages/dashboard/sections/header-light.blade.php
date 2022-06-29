@@ -226,10 +226,10 @@
                                 <a class="nav-link {{Route::is('dashboard.trackers') ? 'active' : null}}"
                                    href="{{route('dashboard.trackers')}}">{{__('theme2-dashboard-global.reports')}}</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            {{--<li class="nav-item dropdown">
                                 <a class="nav-link {{Route::is('dashboard.packets') ? 'active' : null}}"
                                    href="{{route('dashboard.packets')}}">{{__('theme2-dashboard-global.packets')}}</a>
-                            </li>
+                            </li>--}}
                             <li class="nav-item dropdown">
                                 <a class="nav-link {{Route::is('dashboard.settings') ? 'active' : null}}"
                                    href="{{route('dashboard.settings')}}">{{__('theme2-dashboard-global.rules')}}</a>

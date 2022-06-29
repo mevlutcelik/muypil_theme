@@ -21,7 +21,7 @@
             z-index: 6;
         }
         .mobile-app-bar a{
-            width: calc(100vw / 5);
+            width: calc(100vw / 4);
             height: 3rem;
             color: rgba(255,255,255,0.4);
             display: -webkit-box;
@@ -67,10 +67,10 @@
         <i class="uil uil-analytics"></i>
         <span>{{__('theme2-dashboard-global.reports')}}</span>
     </a>
-    <a href="{{route('dashboard.packets')}}" {{Route::is('dashboard.packets') || Route::is('dashboard.packets-checkout') ? 'class=active' : null}}>
+    {{--<a href="{{route('dashboard.packets')}}" {{Route::is('dashboard.packets') || Route::is('dashboard.packets-checkout') ? 'class=active' : null}}>
         <i class="uil uil-box"></i>
         <span>{{__('theme2-dashboard-global.packets')}}</span>
-    </a>
+    </a>--}}
     <a href="{{route('dashboard.settings')}}" {{Route::is('dashboard.settings') ? 'class=active' : null}}>
         <i class="uil uil-setting"></i>
         <span>{{__('theme2-dashboard-global.settings')}}</span>
