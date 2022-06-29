@@ -40,6 +40,7 @@
             -ms-flex-wrap: initial;
             flex-wrap: initial;
             max-width: 100vw;
+            width: 98%;
         }
 
         .muypil-top-bar .nav-link {
@@ -50,6 +51,10 @@
             margin-right: 0.5rem !important;
             background: rgba(255, 255, 255, 0.15);
             color: rgba(255, 255, 255, 0.7);
+        }
+
+        .muypil-top-bar .nav-item:last-child .nav-link{
+            margin-right: 0 !important;
         }
 
         .muypil-top-bar .nav-link:hover, .muypil-top-bar .nav-link:focus {
