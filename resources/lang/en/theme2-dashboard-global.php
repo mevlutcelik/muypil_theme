@@ -171,7 +171,7 @@ return [
     "date"                              => "Date",
     "edit"                              => "Edit",
     "double-click-for-copy"             => "Double click to copy the data in the column",
-    "track-conversions"                 => "Track Conversions",
+    "tracking-code"                     => "Tracking Code",
     "test-tracking-code"                => "Test Tracking Kode",
     "track-message"                     => "By placing the code below between the <head></head> tags of your website, you can have more detailed information about the users who clicked on your ad.",
 ];

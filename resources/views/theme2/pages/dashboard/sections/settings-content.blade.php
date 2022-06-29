@@ -773,7 +773,7 @@
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#topbar-track-conversions">
                     <i class="uil uil-brackets-curly pe-1"></i>
-                    <span>{{__('theme2-dashboard-global.track-conversions')}}</span>
+                    <span>{{__('theme2-dashboard-global.tracking-code')}}</span>
                 </a>
             </li>
         </ul>
@@ -1255,7 +1255,7 @@
             <!--/.tab-pane -->
             <div class="tab-pane fade me-2" id="topbar-track-conversions">
                 <div class="bg-blur p-6 mt-0">
-                    <h5 class="text-white">{{__('theme2-dashboard-global.track-conversions')}}</h5>
+                    <h5 class="text-white">{{__('theme2-dashboard-global.tracking-code')}}</h5>
                     <div class="alert alert-info alert-icon" role="alert">
                         <i class="uil uil-map-marker-info"></i>
                         {{__('theme2-dashboard-global.track-message')}}
