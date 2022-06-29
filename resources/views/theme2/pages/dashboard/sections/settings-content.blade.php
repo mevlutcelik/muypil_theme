@@ -729,9 +729,9 @@
     <div class="container py-14 py-md-16">
         <ul class="nav nav-tabs muypil-top-bar nav-pills pb-0 pb-sm-0 pb-md-0 pb-lg-0 pb-xl-4">
             <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#topbar-detection-rules">
+                <a class="nav-link active" data-bs-toggle="tab" href="#topbar-ip-rules">
                     <i class="uil uil-clipboard pe-1"></i>
-                    <span>{{__('theme2-dashboard-global.detection-rules')}}</span>
+                    <span>{{__('theme2-dashboard-global.ip-rules')}}</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -780,9 +780,9 @@
         <!-- /.nav-tabs -->
         <div class="tab-content">
             <div class="tab-pane fade show active card me-2" style="background: transparent;box-shadow: none;"
-                 id="topbar-detection-rules">
+                 id="topbar-ip-rules">
                 <div class="bg-blur p-6">
-                    <h5 class="text-white">{{__('theme2-dashboard-global.detection-rules')}}</h5>
+                    <h5 class="text-white">{{__('theme2-dashboard-global.ip-rules')}}</h5>
                     <p class="fs-15">{{__('theme2-dashboard-global.block-rules-list')}}</p>
                     {{--Input (Satır) Başlangıç--}}
                     @if(config('app.locale') === 'tr')

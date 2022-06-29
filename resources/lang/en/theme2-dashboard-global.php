@@ -106,7 +106,7 @@ return [
     "copy-column"                       => "Double click to copy.",
     "detail"                            => "Detail",
     "logout"                            => "Logout",
-    "detection-rules"                   => "Detection Rules",
+    "ip-rules"                          => "IP Rules",
     "block-rules"                       => "Block Rules",
     "block-rules-list"                  => "Block Rules List",
     "add-rule"                          => "Add Rule",

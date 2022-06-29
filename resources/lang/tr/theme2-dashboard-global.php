@@ -107,7 +107,7 @@ return [
     "copy-column"                       => "Kopyalamak için çift tıklayın.",
     "detail"                            => "Detay",
     "logout"                            => "Çıkış Yap",
-    "detection-rules"                   => "Algılama Kuralları",
+    "ip-rules"                          => "IP Kuralları",
     "block-rules"                       => "IP Engelleme Sistemi",
     "block-rules-list"                  => "IP, IP Aralığı veya Cidr Engelleme Kuralları",
     "add-rule"                          => "Kural Ekle",
