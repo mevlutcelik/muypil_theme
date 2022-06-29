@@ -152,14 +152,14 @@
 
 .logo-ring1 div:after {
     background: #ff9800;
-    -webkit-box-shadow: 0 0 20px #ff9800;
-    box-shadow: 0 0 20px #ff9800;
+    /*-webkit-box-shadow: 0 0 20px #ff9800;
+    box-shadow: 0 0 20px #ff9800;*/
 }
 
 .logo-light .logo-ring1 div:after {
     background: #ffe1b0;
-    -webkit-box-shadow: 0 0 20px #ffe5b7;
-    box-shadow: 0 0 20px #ffe5b7;
+    /*-webkit-box-shadow: 0 0 20px #ffe5b7;
+    box-shadow: 0 0 20px #ffe5b7;*/
 }
 
 .logo:hover .logo-ring1, .muypil-logo:hover .logo-ring1 {
@@ -185,14 +185,14 @@
 
 .logo-ring2 div:after {
     background: #2196f3;
-    -webkit-box-shadow: 0 0 20px #2196f3;
-    box-shadow: 0 0 20px #2196f3;
+    /*-webkit-box-shadow: 0 0 20px #2196f3;
+    box-shadow: 0 0 20px #2196f3;*/
 }
 
 .logo-light .logo-ring2 div:after {
     background: #b9e0ff;
-    -webkit-box-shadow: 0 0 20px #b9e0ff;
-    box-shadow: 0 0 20px #b9e0ff;
+    /*-webkit-box-shadow: 0 0 20px #b9e0ff;
+    box-shadow: 0 0 20px #b9e0ff;*/
 }
 
 .logo:hover .logo-ring2, .muypil-logo:hover .logo-ring2 {
@@ -218,14 +218,14 @@
 
 .logo-ring3 div:after {
     background: #f44336;
-    -webkit-box-shadow: 0 0 20px #f44336;
-    box-shadow: 0 0 20px #f44336;
+    /*-webkit-box-shadow: 0 0 20px #f44336;
+    box-shadow: 0 0 20px #f44336;*/
 }
 
 .logo-light .logo-ring3 div:after {
     background: #ffb1ab;
-    -webkit-box-shadow: 0 0 20px #ffb1ab;
-    box-shadow: 0 0 20px #ffb1ab;
+    /*-webkit-box-shadow: 0 0 20px #ffb1ab;
+    box-shadow: 0 0 20px #ffb1ab;*/
 }
 
 .logo:hover .logo-ring3, .muypil-logo:hover .logo-ring3 {
