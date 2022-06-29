@@ -15,7 +15,7 @@
                     <div class="logo logo-dark" style="position:relative;">
                         <a href="{{route('home')}}" style="font-size: 2px;position: initial;">
                             <h1 class="logo-text header-logo-text">MUYPIL</h1>
-                            <section class="logo-container" {{$iconTop ? 'style=top:-64px;' : null}}>
+                            <section class="logo-container" {{$iconTop ? 'style=top:-60px;' : null}}>
                                 <div class="logo-center header-logo-center"></div>
                                 <div class="blue-ring logo-ring1">
                                     <div></div>
@@ -70,7 +70,7 @@
                         <div class="logo logo-dark" style="position:relative;">
                             <a href="{{route('home')}}" style="font-size: 2px;position: initial;">
                                 <h1 class="logo-text header-logo-text">MUYPIL</h1>
-                                <section class="logo-container" {{$iconTop ? 'style=top:-64px;' : null}}>
+                                <section class="logo-container" {{$iconTop ? 'style=top:-60px;' : null}}>
                                     <div class="logo-center header-logo-center"></div>
                                     <div class="blue-ring logo-ring1">
                                         <div></div>

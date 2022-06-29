@@ -33,7 +33,7 @@
                     <div class="logo logo-dark" style="margin-left: -8rem;margin-bottom: 1.5rem;position: relative;">
                         <a href="/" style="font-size: 2px;position: initial;">
                             <h1 class="logo-text header-logo-text">MUYPIL</h1>
-                            <section class="logo-container" {{$iconTop ? 'style=top:-64px;' : null}}>
+                            <section class="logo-container" {{$iconTop ? 'style=top:-60px;' : null}}>
                                 <div class="logo-center header-logo-center"></div>
                                 <article class="blue-ring logo-ring1">
                                     <div></div>
