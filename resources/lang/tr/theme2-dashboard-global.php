@@ -132,7 +132,7 @@ return [
     "select-country"                    => "Ülke seç",
     "pause-campaign-rules"              => "Kampanya Duraklatma Kuralları",
     "pause-campaign-rules-desc"         => "Belirlediğiniz kurallar çerçevesinde kampanyalarınızı bir süre boyunca duraklatır ve saldırganların reklamını görmesi tamamen engellenir. Yoğun saldırı altındaysanız kullanılması önerilir.",
-    "auto-ip-blocking"                  => "Otomatik IP Engelleme",
+    "ip-blocking"                       => "IP Engelleme",
     "block-ips-for-certain-period"      => "Belirli Bir Süre için IP'leri Engelle",
     "block-ips-for-certain-period-desc" => "Her IP'nin bloke edileceği süre.",
     "period-value"                      => "Periyot Değeri",

@@ -753,9 +753,9 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#topbar-auto-ip-blocking">
-                    <i class="uil uil-robot pe-1"></i>
-                    <span>{{__('theme2-dashboard-global.auto-ip-blocking')}}</span>
+                <a class="nav-link" data-bs-toggle="tab" href="#topbar-ip-blocking">
+                    <i class="uil uil-ban pe-1"></i>
+                    <span>{{__('theme2-dashboard-global.ip-blocking')}}</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -1083,9 +1083,9 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade me-2" id="topbar-auto-ip-blocking">
+            <div class="tab-pane fade me-2" id="topbar-ip-blocking">
                 <div class="bg-blur p-6 mt-0">
-                    <h5 class="text-white">{{__('theme2-dashboard-global.auto-ip-blocking')}}</h5>
+                    <h5 class="text-white">{{__('theme2-dashboard-global.ip-blocking')}}</h5>
                     <div class="row">
                         <div class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex flex-column justify-content-center">
                             <p>{{__('theme2-dashboard-global.block-ips-for-certain-period')}}</p>

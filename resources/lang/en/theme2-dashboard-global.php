@@ -131,7 +131,7 @@ return [
     "select-country"                    => "Select country",
     "pause-campaign-rules"              => "Campaign Pause Rules",
     "pause-campaign-rules-desc"         => "It pauses your campaigns for a while within the framework of the rules you set, and the attackers are completely prevented from seeing your ad. Recommended if you are under heavy attack.",
-    "auto-ip-blocking"                  => "Auto IP Blocking",
+    "ip-blocking"                       => "IP Blocking",
     "block-ips-for-certain-period"      => "Block IPs for a Certain Period",
     "block-ips-for-certain-period-desc" => "The period that each IP will be blocked.",
     "period-value"                      => "Period Value",
