@@ -3,7 +3,7 @@
     $iconTop = false;
     if(preg_match('/Chrome/i',$userAgent)){
         $iconTop = false;
-    }else if(preg_match('/Firefox/i',$userAgent) || preg_match('/Safari/i',$userAgent)){
+    }else if(preg_match('/Firefox/i',$userAgent)){
         $iconTop = true;
     }
 @endphp
@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg center-logo transparent position-absolute navbar-dark">
         <div class="container justify-content-between align-items-center">
             <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none">
-                <div class="navbar-brand">
+                <div class="navbar-brand" style="position: relative;">
                     <div class="logo logo-dark" style="position:relative;">
                         <a href="{{route('home')}}" style="font-size: 2px;position: initial;">
                             <h1 class="logo-text header-logo-text">MUYPIL</h1>
@@ -64,7 +64,7 @@
             <!-- /.d-flex -->
             <div class="navbar-collapse-wrapper d-flex flex-row align-items-center w-100">
                 <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header mx-lg-auto order-0 order-lg-1 d-lg-flex px-lg-15">
+                    <div class="offcanvas-header mx-lg-auto order-0 order-lg-1 d-lg-flex px-lg-15" style="position: relative;">
                         {{--<a href="./index.html" class="transition-none d-none d-lg-flex"><img class="logo-dark" src="{{asset('assets2/img/logo-dark.png')}}" srcset="{{asset('assets2/img/logo-dark@2x.png 2x')}}" alt="" />
                             <img class="logo-light" src="{{asset('assets2/img/logo-light.png')}}" srcset="{{asset('assets2/img/logo-light@2x.png 2x')}}" alt="" /></a>--}}
                         <div class="logo logo-dark" style="position:relative;">
