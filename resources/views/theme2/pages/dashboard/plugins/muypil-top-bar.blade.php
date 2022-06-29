@@ -6,6 +6,7 @@
             height: calc((var(--vh, 1vh) * 100) - 290px);
             overflow-y: auto;
             overflow-x: hidden;
+            scrollbar-color: rgba(0,0,0,0.15) transparent;
         }
 
         /* width */
