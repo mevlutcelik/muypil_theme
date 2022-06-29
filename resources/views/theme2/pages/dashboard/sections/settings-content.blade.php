@@ -247,11 +247,38 @@
 @endphp
 @push('styles')
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.css">
     <style>
-        pre{
-            background-color: initial;
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+        pre {
+            background-color: #282a36;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 1rem;
+            font-family: 'Fira Code', monospace;
+            position: relative;
         }
+
+        pre span.grey {
+            color: #91939b;
+        }
+
+        pre span.purple {
+            color: #d2a8ff;
+        }
+
+        pre span.blue {
+            color: #699dfb;
+        }
+
+        pre span.green {
+            color: #7de182;
+        }
+
+        pre span.orange {
+            color: #ffca68;
+        }
+
         input:checked + .slider {
             background-color: #66bb6a;
         }
@@ -929,7 +956,8 @@
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.event-rules')}}</h5>
                     <div class="alert alert-info alert-icon" role="alert">
-                        <i class="uil uil-exclamation-circle"></i> <span>{!! __('theme2-dashboard-global.go-tracking-code') !!}</span>
+                        <i class="uil uil-exclamation-circle"></i>
+                        <span>{!! __('theme2-dashboard-global.go-tracking-code') !!}</span>
                     </div>
                     {{--Satır Başlangıç--}}
                     <div class="line-box check-rules-line">
@@ -1263,16 +1291,16 @@
                         <i class="uil uil-map-marker-info"></i>
                         {{__('theme2-dashboard-global.track-message')}}
                     </div>
-                    <div class="row">
-                        <pre><code class="language-html">{{"<!-- Start Muypil.com Tracking -->
-<script>
-    const muypilTag = document.createElement('script');
-    muypilTag.setAttribute('type', 'text/javascript');
-    muypilTag.setAttribute('src', 'https://muypil.com/js/tracker.js');
-    document.head.append(muypilTag)
-</script>
-<!-- End Muypil.com Tracking -->"}}</code></pre>
-                    </div>
+                    <pre><span class="grey">{{'<!-- Start Muypil.com Tracking -->'}}</span>{{"\n"}}<span
+                            class="purple">{{'<script>'}}</span>{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}<span
+                            class="blue">{{'const'}}</span><span>&nbsp;muypilTag</span><span>&nbsp;=</span><span>&nbsp;document.</span><span
+                            class="green">createElement</span><span>(<span
+                                class="orange">'script'</span>);</span>{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}muypilTag.<span
+                            class="green">setAttribute</span>(<span class="orange">'type'</span>,<span class="orange">'text/javascript'</span>);{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}muypilTag.<span
+                            class="green">setAttribute</span>(<span class="orange">'src'</span>,<span class="orange">'https://muypil.com/js/tracker.js'</span>);{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}document.head.<span
+                            class="green">append</span>(muypilTag);{{"\n"}}<span class="purple">{{'</script>'}}{{"\n"}}<span class="grey">{{'<!-- End Muypil.com Tracking -->'}}</span></span><a
+                            id="copy-code-btn" style="position:absolute;right:1rem;top:1rem;" href="#"
+                            class="btn btn-circle btn-primary btn-sm"><i class="uil uil-copy"></i></a></pre>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
                         {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
                         <a href="#"
@@ -1289,7 +1317,6 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/go.min.js"></script>
     <script>
         console.clear();
@@ -1570,14 +1597,15 @@
                 }
             }
         }
+
         let arrActiveCampaigns = [], arrDisabledCampaigns = [];
-        document.querySelectorAll('#active-campaigns [data-id]').forEach(function (child){
+        document.querySelectorAll('#active-campaigns [data-id]').forEach(function (child) {
             arrActiveCampaigns.push(child.getAttribute('data-id'));
         });
-        document.querySelectorAll('#disabled-campaigns [data-id]').forEach(function (child){
+        document.querySelectorAll('#disabled-campaigns [data-id]').forEach(function (child) {
             arrDisabledCampaigns.push(child.getAttribute('data-id'));
         });
-        $(document).on('click', '#active-campaigns [data-id]', function (){
+        $(document).on('click', '#active-campaigns [data-id]', function () {
             arrActiveCampaigns.indexOf(this.getAttribute('data-id')) !== -1 ? arrActiveCampaigns.splice(arrActiveCampaigns.indexOf(this.getAttribute('data-id')), 1) : null;
             let newEl = `{{--Pasif Kampanya başlangıç--}}
             <a class="btn btn-soft-red btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
@@ -1591,7 +1619,7 @@
             arrDisabledCampaigns.push(this.getAttribute('data-id'));
             this.remove();
         });
-        $(document).on('click', '#disabled-campaigns [data-id]', function (){
+        $(document).on('click', '#disabled-campaigns [data-id]', function () {
             arrDisabledCampaigns.indexOf(this.getAttribute('data-id')) !== -1 ? arrDisabledCampaigns.splice(arrDisabledCampaigns.indexOf(this.getAttribute('data-id')), 1) : null;
             let newEl = `{{--Aktif Kampanya başlangıç--}}
             <a class="btn btn-soft-blue btn-icon btn-icon-start /!*mx-hide*!/ rounded mb-4" data-id="${this.getAttribute('data-id')}"
@@ -1607,8 +1635,39 @@
             arrActiveCampaigns.push(this.getAttribute('data-id'));
             this.remove();
         });
-        $('#go-tracking-code').click(function (){
+        $('#go-tracking-code').click(function () {
             document.querySelector(`[href="#topbar-track-conversions"]`).click();
+        });
+        $('#copy-code-btn').click(function () {
+            let codeEncode = `<!-- Start Muypil.com Tracking -->
+&lt;script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;const muypilTag = document.createElement('script');
+&nbsp;&nbsp;&nbsp;&nbsp;muypilTag.setAttribute('type','text/javascript');
+&nbsp;&nbsp;&nbsp;&nbsp;muypilTag.setAttribute('src','https://muypil.com/js/tracker.js');
+&nbsp;&nbsp;&nbsp;&nbsp;document.head.append(muypilTag);
+&lt;/script&gt;
+<!-- End Muypil.com Tracking -->`;
+            var codeDecode = $('<textarea/>').html(codeEncode).val();
+            navigator.clipboard.writeText(codeDecode).then(function () {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                })
+            }, function (err) {
+                /*is->Err*/
+            });
         });
     </script>
 @endpush
