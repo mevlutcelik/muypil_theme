@@ -860,7 +860,7 @@
                 });
                 column.addEventListener('dblclick', function () {
                     if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
-                        navigator.clipboard.writeText(this.innerHTML).then(function () {
+                        navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
                             const Toast = Swal.mixin({
                                 toast: true,
                                 position: 'top-end',
