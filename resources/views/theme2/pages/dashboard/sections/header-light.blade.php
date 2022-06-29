@@ -35,6 +35,7 @@
             align-items: center;
             padding: 0.25rem 0.75rem;
             border-radius: 0;
+            letter-spacing: 0.75px;
         }
 
         .alert-info a {
