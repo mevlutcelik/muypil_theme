@@ -3,7 +3,7 @@
     $iconTop = false;
     if(preg_match('/Chrome/i',$userAgent)){
         $iconTop = false;
-    }else if(preg_match('/Firefox/i',$userAgent) || preg_match('/Safari/i',$userAgent)){
+    }else if(preg_match('/Firefox/i',$userAgent)){
         $iconTop = true;
     }
 @endphp
