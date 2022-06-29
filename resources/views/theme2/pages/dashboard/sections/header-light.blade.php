@@ -223,7 +223,7 @@
                         <ul class="navbar-nav me-lg-auto">
                             <li class="nav-item dropdown">
                                 <a class="nav-link {{Route::is('dashboard.trackers') ? 'active' : null}}"
-                                   href="{{route('dashboard.trackers')}}">{{__('theme2-dashboard-global.analytics')}}</a>
+                                   href="{{route('dashboard.trackers')}}">{{__('theme2-dashboard-global.reports')}}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link {{Route::is('dashboard.packets') ? 'active' : null}}"

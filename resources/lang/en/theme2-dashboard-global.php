@@ -3,7 +3,7 @@ return [
     "terminal"                          => "Terminal",
     "administration"                    => "Administration",
     "membership"                        => "Management",
-    "analytics"                         => "Analytics",
+    "reports"                           => "Reports",
     "settings"                          => "Settings",
     "packets"                           => "Packets",
     "all-account"                       => "All Account",

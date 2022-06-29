@@ -65,7 +65,7 @@
     </a>
     <a href="{{route('dashboard.trackers')}}" {{Route::is('dashboard.trackers') ? 'class=active' : null}}>
         <i class="uil uil-analytics"></i>
-        <span>{{__('theme2-dashboard-global.analytics')}}</span>
+        <span>{{__('theme2-dashboard-global.reports')}}</span>
     </a>
     <a href="{{route('dashboard.packets')}}" {{Route::is('dashboard.packets') || Route::is('dashboard.packets-checkout') ? 'class=active' : null}}>
         <i class="uil uil-box"></i>

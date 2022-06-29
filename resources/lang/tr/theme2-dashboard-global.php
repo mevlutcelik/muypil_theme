@@ -3,7 +3,7 @@ return [
     "terminal"                          => "Terminal",
     "administration"                    => "Yönetim",
     "membership"                        => "Yönetim",
-    "analytics"                         => "Analitik",
+    "reports"                           => "Raporlar",
     "settings"                          => "Ayarlar",
     "packets"                           => "Paketler",
     "all-account"                       => "Tüm Hesaplar",
