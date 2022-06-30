@@ -1398,7 +1398,7 @@
                            type="text" inputmode="numeric" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'dakika durdur, sonra geri aç.' : 'stop for a minute, then turn it back on.'}}</label>
-                    <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
+                    <a href="#" id="delete-rules-line" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
                                 class="uil uil-trash-alt"></i></a>
 {{--Satır bitişi--}}
             `);
