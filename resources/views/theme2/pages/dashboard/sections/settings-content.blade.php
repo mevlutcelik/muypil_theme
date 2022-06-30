@@ -911,8 +911,8 @@
                         <select class="form-select" aria-label="IP"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="1">
                             <option value="ip">IP</option>
-                            <option value="2">Cidr</option>
-                            <option value="3">{{__('theme2-dashboard-global.ip-range')}}</option>
+                            <option value="cidr">Cidr</option>
+                            <option value="ip-range">{{__('theme2-dashboard-global.ip-range')}}</option>
                         </select>
                         @if(config('app.locale') === 'tr')
                             <span class="ms-2 fs-14">engelle</span>
@@ -931,8 +931,8 @@
                         <select class="form-select" aria-label="IP"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="2">
                             <option value="ip">IP</option>
-                            <option value="2">Cidr</option>
-                            <option value="3">{{__('theme2-dashboard-global.ip-range')}}</option>
+                            <option value="cidr">Cidr</option>
+                            <option value="ip-range">{{__('theme2-dashboard-global.ip-range')}}</option>
                         </select>
                         @if(config('app.locale') === 'tr')
                             <span class="ms-2 fs-14">engelle</span>
@@ -951,8 +951,8 @@
                         <select class="form-select" aria-label="IP"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="3">
                             <option value="ip">IP</option>
-                            <option value="2">Cidr</option>
-                            <option value="3">{{__('theme2-dashboard-global.ip-range')}}</option>
+                            <option value="cidr">Cidr</option>
+                            <option value="ip-range">{{__('theme2-dashboard-global.ip-range')}}</option>
                         </select>
                         @if(config('app.locale') === 'tr')
                             <span class="ms-2 fs-14">engelle</span>
@@ -969,15 +969,15 @@
                         </div>
                         <span class="me-2 ms-2 fs-14">{{config('app.locale') === 'tr' ? 'Sitede' : 'Block'}}</span>
                         @if(config('app.locale') === 'tr')
-                            <input id="textInputExample" onkeypress="return isNumberKey(event)" placeholder="Süre"
+                            <input id="period" onkeypress="return isNumberKey(event)" placeholder="Süre"
                                    type="text" inputmode="numeric" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="4">
                         @else
                             <select class="form-select" aria-label="IP"
                                     style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="4">
                                 <option value="ip">IP</option>
-                                <option value="2">Cidr</option>
-                                <option value="3">{{__('theme2-dashboard-global.ip-range')}}</option>
+                                <option value="cidr">Cidr</option>
+                                <option value="ip-range">{{__('theme2-dashboard-global.ip-range')}}</option>
                             </select>
                         @endif
                         <span
@@ -986,19 +986,19 @@
                             <select class="form-select" aria-label="IP"
                                     style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="4">
                                 <option value="ip">IP</option>
-                                <option value="2">Cidr</option>
-                                <option value="3">{{__('theme2-dashboard-global.ip-range')}}</option>
+                                <option value="cidr">Cidr</option>
+                                <option value="ip-range">{{__('theme2-dashboard-global.ip-range')}}</option>
                             </select>
                             <span class="ms-2 fs-14">engelle</span>
                         @else
-                            <input id="textInputExample" placeholder="Period" type="text" class="form-control"
+                            <input id="period" placeholder="Period" type="text" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;" data-target="4">
                             <span class="ms-2 fs-14">seconds</span>
                         @endif
                     </div>
                     {{--Satır Bitiş--}}
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
+                        <a href="#" id="save-event-rules" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1019,8 +1019,8 @@
                         <label class="form-check-label fs-12"
                                for="flexRadioDefault2"> {{__('theme2-dashboard-global.country-rules-2-radio')}}</label>
                     </div>
-                    <select style="width: 100%;" class="js-example-basic-multiple" name="states[]"
-                            {{--TODO: input ve selectlerin namelerini veya değiştirelim--}} multiple="multiple">
+                    <select style="width: 100%;" class="js-example-basic-multiple" name="countries[]"
+                            {{--TODO: input ve selectlerin namelerini değiştirelim--}} multiple="multiple">
                         {{--TODO: Veritabanından hangi ülke seçili olduğu verisi gelecek--}}
                         @foreach($arrCountrys as $key => $value)
                             {{--TODO: Static olarak Türkiye'yi seçtim ama veritabanı kontrolüne göre seçim yapılmalı--}}
@@ -1028,7 +1028,7 @@
                         @endforeach
                     </select>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
+                        <a href="#" id="save-contry-rules" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1271,10 +1271,10 @@
                 let inputTarget = document.querySelector(`input:not([type="checkbox"])[data-target="${dataTarget}"]`);
                 if (this.checked) {
                     selectbox.removeAttribute('disabled');
-                    typeof (inputTarget) !== null ? inputTarget.removeAttribute('disabled') : null;
+                    inputTarget !== null && inputTarget.removeAttribute('disabled');
                 } else {
                     selectbox.setAttribute('disabled', 'disabled');
-                    typeof (inputTarget) !== null ? inputTarget.setAttribute('disabled', 'disabled') : null;
+                    inputTarget !== null && inputTarget.setAttribute('disabled', 'disabled');
                 }
             });
         });
@@ -1604,7 +1604,7 @@
         });
 
         $(document).on('click', '#delete-rules-line', function (){
-            $(this).parent().remove();
+            $(this).parent().parent().remove();
         });
 
         function controleIpRules() {
@@ -1631,8 +1631,35 @@
             console.log(ipRules);
             return ipRules;
         }
+
+
         $('#save-ip-rules').click(function (){
             controleIpRules();
+        });
+
+        $('#save-event-rules').click(function (){
+            if($('input#checkbox-4')[0].checked){
+                four = $('select[data-target=4]')[0].value;
+            }
+            let eventObj = {
+                checkbox_js_close: $('input#checkbox-1')[0].checked,
+                select_js_close: $('select[data-target=1]')[0].value,
+                checkbox_no_scroll: $('input#checkbox-2')[0].checked,
+                select_no_scroll: $('select[data-target=2]')[0].value,
+                checkbox_no_click: $('input#checkbox-3')[0].checked,
+                select_no_click: $('select[data-target=3]')[0].value,
+                chechbox_less_second: $('input#checkbox-4')[0].checked,
+                select_less_second: $('select[data-target=4]')[0].value,
+                input_less_second: $('input#period')[0].value,
+            };
+            console.log(eventObj);
+        });
+
+        $('#save-contry-rules').click(function (){
+            let countryObj = {
+                countries: $('select[name="countries[]"]').val(),
+            };
+            console.log(countryObj);
         });
     </script>
 @endpush
