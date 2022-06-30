@@ -1365,7 +1365,6 @@
 {{--Satır bitişi--}}
                 `);
             }
-            controleIpRules();
         }
 
         function addPauseCampaignRule() {
@@ -1606,7 +1605,6 @@
 
         $(document).on('click', '#delete-rules-line', function (){
             $(this).parent().remove();
-            controleIpRules();
         });
 
         function controleIpRules() {
@@ -1634,9 +1632,6 @@
             return ipRules;
         }
         $('#save-ip-rules').click(function (){
-            controleIpRules();
-        });
-        $(document).ready(function () {
             controleIpRules();
         });
     </script>
