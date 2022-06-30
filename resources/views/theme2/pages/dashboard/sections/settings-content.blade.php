@@ -821,16 +821,16 @@
                             <div class="row p-0 p-md-2">
                                 <div class="line-box check-rules-line">
                                     <label class="mx-1 fs-14">Aynı</label>
-                                    <select class="form-select" aria-label="IP"
+                                    <select id="rule" class="form-select" aria-label="IP"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                         <option value="ip">IP</option>
                                         <option value="2">Cidr</option>
                                         <option value="3">IP Aralığı</option>
                                     </select>
-                                    <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
+                                    <input id="time" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <select class="form-select" aria-label="Gün"
+                                    <select id="time-type" class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                         <option value="day">Gün</option>
                                         <option value="hour">Saat</option>
@@ -838,43 +838,12 @@
                                     </select>
                                     <label class="mx-1 fs-14">içinde</label>
                                     <div class="d-flex align-items-center">
-                                        <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
+                                        <input id="click" onkeypress="return isNumberKey(event)" value="1"
                                                type="text" inputmode="numeric" class="form-control"
                                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     </div>
                                     <label class="mx-1 fs-14">defa tıklayabilir.</label>
-                                    <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
-                                            class="uil uil-trash-alt"></i></a>
-                                </div>
-                            </div>
-                            {{--Satır bitişi--}}
-                            {{--Satır başlangıcı--}}
-                            <div class="row p-0 p-md-2">
-                                <div class="line-box check-rules-line">
-                                    <label class="mx-1 fs-14">Aynı</label>
-                                    <select class="form-select" aria-label="IP"
-                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                        <option value="ip">IP</option>
-                                        <option value="2">Cidr</option>
-                                        <option value="3">IP Aralığı</option>
-                                    </select>
-                                    <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="text" inputmode="numeric" class="form-control"
-                                           style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <select class="form-select" aria-label="Gün"
-                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                        <option value="day">Gün</option>
-                                        <option value="hour">Saat</option>
-                                        <option value="minute">Dakika</option>
-                                    </select>
-                                    <label class="mx-1 fs-14">içinde</label>
-                                    <div class="d-flex align-items-center">
-                                        <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                               type="text" inputmode="numeric" class="form-control"
-                                               style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    </div>
-                                    <label class="mx-1 fs-14">defa tıklayabilir.</label>
-                                    <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
+                                    <a href="#" id="delete-rules-line" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
                                             class="uil uil-trash-alt"></i></a>
                                 </div>
                             </div>
@@ -885,57 +854,27 @@
                             {{--Satır başlangıcı--}}
                             <div class="row p-0 p-md-2">
                                 <div class="line-box check-rules-line">
-                                    {{-- The same IP can click 1 time in 1 day. --}}
                                     <label class="mx-1 fs-14">The same</label>
-                                    <select class="form-select" aria-label="IP"
+                                    <select id="rule" class="form-select" aria-label="IP"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                         <option value="ip">IP</option>
                                         <option value="2">Cidr</option>
                                         <option value="3">IP Range</option>
                                     </select>
                                     <label class="mx-1 fs-14">can click</label>
-                                    <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
+                                    <input id="click" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                     <label class="mx-1 fs-14">time in</label>
-                                    <input id="textInputExample" value="1" type="text" class="form-control"
+                                    <input id="time" value="1" type="text" class="form-control"
                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <select class="form-select" aria-label="Gün"
+                                    <select id="time-type" class="form-select" aria-label="Gün"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                         <option value="day">Day</option>
                                         <option value="hour">Hour</option>
                                         <option value="minute">Minute</option>
                                     </select>
-                                    <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
-                                            class="uil uil-trash-alt"></i></a>
-                                </div>
-                            </div>
-                            {{--Satır bitişi--}}
-                            {{--Satır başlangıcı--}}
-                            <div class="row p-0 p-md-2">
-                                <div class="line-box check-rules-line">
-                                    {{-- The same IP can click 1 time in 1 day. --}}
-                                    <label class="mx-1 fs-14">The same</label>
-                                    <select class="form-select" aria-label="IP"
-                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                        <option value="ip">IP</option>
-                                        <option value="2">Cidr</option>
-                                        <option value="3">IP Range</option>
-                                    </select>
-                                    <label class="mx-1 fs-14">can click</label>
-                                    <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                                           type="text" inputmode="numeric" class="form-control"
-                                           style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <label class="mx-1 fs-14">time in</label>
-                                    <input id="textInputExample" value="1" type="text" class="form-control"
-                                           style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                    <select class="form-select" aria-label="Gün"
-                                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                                        <option value="day">Day</option>
-                                        <option value="hour">Hour</option>
-                                        <option value="minute">Minute</option>
-                                    </select>
-                                    <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
+                                    <a href="#" id="delete-rules-line" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
                                             class="uil uil-trash-alt"></i></a>
                                 </div>
                             </div>
@@ -964,7 +903,6 @@
                     <div class="line-box check-rules-line">
                         <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="checkbox-1">
-                                {{--TODO: Her bir satırdaki checkboxun id ve data-target değerini bir önceki sayının değerinin bir fazlası yapalım ve aynı değeri selectboxtaki data-target değeri içerisine verelim.--}}
                                 <input type="checkbox" id="checkbox-1" data-target="1">
                                 <div class="slider round"></div>
                             </label>
@@ -985,7 +923,6 @@
                     <div class="line-box check-rules-line">
                         <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="checkbox-2">
-                                {{--TODO: Her bir satırın data-target değerini random bir sayı ile türetelim ve aynı değeri selectboxtaki data-target değeri içerisine verelim.--}}
                                 <input type="checkbox" id="checkbox-2" data-target="2">
                                 <div class="slider round"></div>
                             </label>
@@ -1006,7 +943,6 @@
                     <div class="line-box check-rules-line">
                         <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="checkbox-3">
-                                {{--TODO: Her bir satırın data-target değerini random bir sayı ile türetelim ve aynı değeri selectboxtaki data-target değeri içerisine verelim.--}}
                                 <input type="checkbox" id="checkbox-3" data-target="3">
                                 <div class="slider round"></div>
                             </label>
@@ -1027,7 +963,6 @@
                     <div class="line-box check-rules-line">
                         <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="checkbox-4">
-                                {{--TODO: Her bir satırın data-target değerini random bir sayı ile türetelim ve aynı değeri selectboxtaki data-target değeri içerisine verelim.--}}
                                 <input type="checkbox" id="checkbox-4" data-target="4">
                                 <div class="slider round"></div>
                             </label>
@@ -1088,7 +1023,6 @@
                             {{--TODO: input ve selectlerin namelerini veya değiştirelim--}} multiple="multiple">
                         {{--TODO: Veritabanından hangi ülke seçili olduğu verisi gelecek--}}
                         @foreach($arrCountrys as $key => $value)
-                            <script>console.log({{$key}})</script>
                             {{--TODO: Static olarak Türkiye'yi seçtim ama veritabanı kontrolüne göre seçim yapılmalı--}}
                             <option {{$key === 'TR' ? 'selected' : null}} value="{{$key}}">{{$value}}</option>
                         @endforeach
@@ -1299,7 +1233,9 @@
                                 class="orange">'script'</span>);</span>{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}muypilTag.<span
                             class="green">setAttribute</span>(<span class="orange">'type'</span>,<span class="orange">'text/javascript'</span>);{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}muypilTag.<span
                             class="green">setAttribute</span>(<span class="orange">'src'</span>,<span class="orange">'https://muypil.com/js/tracker.js'</span>);{{"\n"}}{!! '&nbsp;&nbsp;&nbsp;&nbsp;' !!}document.head.<span
-                            class="green">append</span>(muypilTag);{{"\n"}}<span class="purple">{{'</script>'}}{{"\n"}}<span class="grey">{{'<!-- End Muypil.com Tracking -->'}}</span></span><a
+                            class="green">append</span>(muypilTag);{{"\n"}}<span
+                            class="purple">{{'</script>'}}{{"\n"}}<span
+                                class="grey">{{'<!-- End Muypil.com Tracking -->'}}</span></span><a
                             id="copy-code-btn" style="position:absolute;right:1rem;top:1rem;" href="#"
                             class="btn btn-circle btn-primary btn-sm"><i class="uil uil-copy"></i></a></pre>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
@@ -1318,9 +1254,8 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/go.min.js"></script>
     <script>
-        console.clear();
+
         let checkboxs = document.querySelectorAll('input[type="checkbox"][data-target]');
         let selects = document.querySelectorAll('select[data-target]');
         let inputTarget = document.querySelectorAll('input:not([type="checkbox"])[data-target]');
@@ -1371,16 +1306,16 @@
                 <div class="row p-0 p-md-2">
                     <div class="line-box check-rules-line">
                         <label class="mx-1 fs-14">Aynı</label>
-                        <select class="form-select" aria-label="IP"
+                        <select id="rule" class="form-select" aria-label="IP"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                             <option value="ip">IP</option>
                             <option value="2">Cidr</option>
                             <option value="3">IP Aralığı</option>
                         </select>
-                        <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
+                        <input id="time" onkeypress="return isNumberKey(event)" value="1"
                                type="text" inputmode="numeric" class="form-control"
                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                        <select class="form-select" aria-label="Gün"
+                        <select id="time-type" class="form-select" aria-label="Gün"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                             <option value="day">Gün</option>
                             <option value="hour">Saat</option>
@@ -1388,12 +1323,12 @@
                         </select>
                         <label class="mx-1 fs-14">içinde</label>
                         <div class="d-flex align-items-center">
-                            <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
+                            <input id="click" onkeypress="return isNumberKey(event)" value="1"
                                    type="text" inputmode="numeric" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         </div>
                         <label class="mx-1 fs-14">defa tıklayabilir.</label>
-                        <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
+                        <a href="#" id="delete-rules-line" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
                                 class="uil uil-trash-alt"></i></a>
                     </div>
                 </div>
@@ -1404,29 +1339,27 @@
                 {{--Satır başlangıcı--}}
                 <div class="row p-0 p-md-2">
                     <div class="line-box check-rules-line">
-                        <label class="mx-1 fs-14">Allow up to</label>
-                        <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
-                               type="text" inputmode="numeric" class="form-control"
-                               style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                        <label class="mx-1 fs-14">ads clicks within</label>
-                        <input id="textInputExample" value="1" type="text" class="form-control"
-                               style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                        <select class="form-select" aria-label="Gün"
-                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                            <option value="day">Day</option>
-                            <option value="hour">Hour</option>
-                            <option value="minute">Minute</option>
-                        </select>
-@if(config('app.locale') === 'tr')
-                <label class="mx-1 fs-14">defa tıklayabilir.</label>
-@endif
-                <select class="form-select" aria-label="IP"
+                        <label class="mx-1 fs-14">The same</label>
+                        <select id="rule" class="form-select" aria-label="IP"
                         style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <option value="ip">IP</option>
                     <option value="2">Cidr</option>
                     <option value="3">IP Range</option>
                 </select>
-                <a href="#" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
+                <label class="mx-1 fs-14">can click</label>
+                        <input id="click" onkeypress="return isNumberKey(event)" value="1"
+                               type="text" inputmode="numeric" class="form-control"
+                               style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
+                        <label class="mx-1 fs-14">time in</label>
+                        <input id="time" value="1" type="text" class="form-control"
+                               style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
+                        <select id="time-type" class="form-select" aria-label="Gün"
+                                style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
+                            <option value="day">Day</option>
+                            <option value="hour">Hour</option>
+                            <option value="minute">Minute</option>
+                        </select>
+                <a href="#" id="delete-rules-line" class="btn btn-circle btn-soft-primary btn-sm ms-4"><i
                         class="uil uil-trash-alt"></i></a>
             </div>
         </div>
@@ -1669,6 +1602,38 @@
             }, function (err) {
                 /*is->Err*/
             });
+        });
+
+        $(document).on('click', '#delete-rules-line', function (){
+            console.log($(this).parent());
+        });
+
+        function controleIpRules() {
+            let lang;
+            if (document.documentElement.lang) {
+                lang = document.documentElement.lang;
+            } else {
+                lang = $('html').attr('lang');
+            }
+            let ipRules = [];
+            let lines = document.querySelectorAll(`#detection-rule-${lang}-lines .check-rules-line`);
+            lines.forEach(function (line) {
+                let rule = line.querySelector('#rule').value;
+                let time = line.querySelector('#time').value;
+                let click = line.querySelector('#click').value;
+                let timeType = line.querySelector('#time-type').value;
+                ipRules.push({
+                    rule: rule,
+                    time: time,
+                    click: click,
+                    timeType: timeType,
+                });
+            });
+            return ipRules;
+        }
+
+        $(document).ready(function () {
+            console.log(controleIpRules());
         });
     </script>
 @endpush

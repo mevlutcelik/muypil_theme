@@ -11,7 +11,7 @@
             width: 100%;
             overflow-x: auto;
             overflow-y: auto;
-            scrollbar-color: rgba(0,0,0,0.15) transparent;
+            scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
             height: calc((var(--vh, 1vh) * 100) - 380px);
             position: relative;
         }
@@ -49,14 +49,14 @@
             overflow-x: auto;
         }
 
-        .muypil-responsive-table.table thead{
+        .muypil-responsive-table.table thead {
             position: sticky;
             top: 0;
             z-index: 1;
         }
 
-        .muypil-responsive-table.table thead tr{
-            background: rgba(255,255,255,0.15);
+        .muypil-responsive-table.table thead tr {
+            background: rgba(255, 255, 255, 0.15);
             color: #fff;
             backdrop-filter: blur(0.5rem);
         }
@@ -257,7 +257,6 @@
             /*table.muypil-responsive-table tr:not(.muypil-table-header) {
                 pointer-events: initial !important;
             }*/
-
             table.muypil-responsive-table-mobile {
                 border: 0;
             }
@@ -323,29 +322,34 @@
                 border-bottom: 0;
             }
         }
-        .swal2-popup.swal2-toast{
+
+        .swal2-popup.swal2-toast {
             font-size: 0.875rem;
             padding: 0.5rem;
         }
-        a.page-link{
-            background-color: rgba(255,255,255,0.05);
-            color: rgba(255,255,255,0.5);
+
+        a.page-link {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.5);
             font-weight: bold;
-            border-color: rgba(255,255,255,0.035);
+            border-color: rgba(255, 255, 255, 0.035);
         }
-        .pagination .page-link{
+
+        .pagination .page-link {
             width: 2rem;
             height: 2rem;
         }
-        .page-item.active .page-link,.page-item .page-link:hover{
+
+        .page-item.active .page-link, .page-item .page-link:hover {
             color: #fff !important;
-            background-color: rgba(255,255,255,0.32);
-            border-color: rgba(255,255,255,0.035);
+            background-color: rgba(255, 255, 255, 0.32);
+            border-color: rgba(255, 255, 255, 0.035);
         }
-        .page-item.disabled .page-link{
-            background-color: rgba(255,255,255,0.05);
-            color: rgba(255,255,255,0.5);
-            border-color: rgba(255,255,255,0.035);
+
+        .page-item.disabled .page-link {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.035);
         }
     </style>
 @endpush
@@ -362,18 +366,20 @@
         let stopDraggingTableBox = function (event) {
             mouseDownTableBox = false;
         };
-        sliderTableBox.addEventListener('mousemove', (e) => {
-            e.preventDefault();
-            if (!mouseDownTableBox) {
-                return;
-            }
-            const xTableBox = e.pageX - sliderTableBox.offsetLeft;
-            const scrollTableBox = xTableBox - startXTableBox;
-            sliderTableBox.scrollLeft = scrollLeftTableBox - scrollTableBox;
-        });
-        // Add the event listeners
-        sliderTableBox.addEventListener('mousedown', startDraggingTableBox, false);
-        sliderTableBox.addEventListener('mouseup', stopDraggingTableBox, false);
-        sliderTableBox.addEventListener('mouseleave', stopDraggingTableBox, false);
+        if (sliderTableBox !== null) {
+            sliderTableBox.addEventListener('mousemove', (e) => {
+                e.preventDefault();
+                if (!mouseDownTableBox) {
+                    return;
+                }
+                const xTableBox = e.pageX - sliderTableBox.offsetLeft;
+                const scrollTableBox = xTableBox - startXTableBox;
+                sliderTableBox.scrollLeft = scrollLeftTableBox - scrollTableBox;
+            });
+            // Add the event listeners
+            sliderTableBox.addEventListener('mousedown', startDraggingTableBox, false);
+            sliderTableBox.addEventListener('mouseup', stopDraggingTableBox, false);
+            sliderTableBox.addEventListener('mouseleave', stopDraggingTableBox, false);
+        }
     </script>
 @endpush

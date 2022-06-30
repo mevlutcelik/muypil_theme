@@ -230,7 +230,7 @@
 </section>
 @push('scripts')
     <script>
-        console.clear();
+
         let checkboxPlan = document.querySelector('input[type="checkbox"]');
         checkboxPlan.addEventListener('change', function(e){
             if(checkboxPlan.checked){

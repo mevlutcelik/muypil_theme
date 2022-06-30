@@ -856,7 +856,7 @@
             let columns = row.querySelectorAll('td');
             columns.forEach(function (column) {
                 column.addEventListener('click', function () {
-                    console.clear();
+
                 });
                 column.addEventListener('dblclick', function () {
                     if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {

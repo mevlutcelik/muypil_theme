@@ -290,7 +290,7 @@
 @push('scripts')
     <script src="{{ asset('assets2/js/jquery/jquery.inputmask.min.js') }}"></script>
     <script>
-        console.clear();
+
         $(function () {
             $("#card_number").inputmask({"mask": "9999 9999 9999 9999"});
             $("#cvc").inputmask({"mask": "999"});
