@@ -824,8 +824,8 @@
                                     <select id="rule" class="form-select" aria-label="IP"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                         <option value="ip">IP</option>
-                                        <option value="2">Cidr</option>
-                                        <option value="3">IP Aralığı</option>
+                                        <option value="cidr">Cidr</option>
+                                        <option value="ip-range">IP Aralığı</option>
                                     </select>
                                     <input id="time" onkeypress="return isNumberKey(event)" value="1"
                                            type="text" inputmode="numeric" class="form-control"
@@ -858,8 +858,8 @@
                                     <select id="rule" class="form-select" aria-label="IP"
                                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                         <option value="ip">IP</option>
-                                        <option value="2">Cidr</option>
-                                        <option value="3">IP Range</option>
+                                        <option value="cidr">Cidr</option>
+                                        <option value="ip-range">IP Range</option>
                                     </select>
                                     <label class="mx-1 fs-14">can click</label>
                                     <input id="click" onkeypress="return isNumberKey(event)" value="1"
@@ -885,7 +885,7 @@
                         <a href="#" onclick="addDetectionRule('{{config('app.locale')}}')"
                            class="btn btn-navy btn-sm rounded me-2"><i
                                 class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.add-rule')}}</a>
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
+                        <a href="#" id="save-ip-rules" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                     {{--Input (Satır) Bitiş--}}
@@ -1255,7 +1255,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-
         let checkboxs = document.querySelectorAll('input[type="checkbox"][data-target]');
         let selects = document.querySelectorAll('select[data-target]');
         let inputTarget = document.querySelectorAll('input:not([type="checkbox"])[data-target]');
@@ -1309,8 +1308,8 @@
                         <select id="rule" class="form-select" aria-label="IP"
                                 style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                             <option value="ip">IP</option>
-                            <option value="2">Cidr</option>
-                            <option value="3">IP Aralığı</option>
+                            <option value="cidr">Cidr</option>
+                            <option value="ip-range">IP Aralığı</option>
                         </select>
                         <input id="time" onkeypress="return isNumberKey(event)" value="1"
                                type="text" inputmode="numeric" class="form-control"
@@ -1343,8 +1342,8 @@
                         <select id="rule" class="form-select" aria-label="IP"
                         style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <option value="ip">IP</option>
-                    <option value="2">Cidr</option>
-                    <option value="3">IP Range</option>
+                    <option value="cidr">Cidr</option>
+                    <option value="ip-range">IP Range</option>
                 </select>
                 <label class="mx-1 fs-14">can click</label>
                         <input id="click" onkeypress="return isNumberKey(event)" value="1"
@@ -1366,6 +1365,7 @@
 {{--Satır bitişi--}}
                 `);
             }
+            controleIpRules();
         }
 
         function addPauseCampaignRule() {
@@ -1605,7 +1605,8 @@
         });
 
         $(document).on('click', '#delete-rules-line', function (){
-            console.log($(this).parent());
+            $(this).parent().remove();
+            controleIpRules();
         });
 
         function controleIpRules() {
@@ -1629,11 +1630,14 @@
                     timeType: timeType,
                 });
             });
+            console.log(ipRules);
             return ipRules;
         }
-
+        $('#save-ip-rules').click(function (){
+            controleIpRules();
+        });
         $(document).ready(function () {
-            console.log(controleIpRules());
+            controleIpRules();
         });
     </script>
 @endpush
