@@ -1262,7 +1262,7 @@
                                 class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.sync-my-account')}}</a>
                         <a href="#"
                            class="btn btn-navy btn-sm rounded"><i
-                                class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.update-my-balance')}}</a>
+                                class="uil uil-wallet me-2"></i> {{__('theme2-dashboard-global.update-my-balance')}}</a>
                     </div>
                 </div>
             </div>
