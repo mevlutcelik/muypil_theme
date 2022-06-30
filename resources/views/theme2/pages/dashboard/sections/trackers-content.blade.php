@@ -62,14 +62,14 @@
                                  style="color: rgba(255,255,255,0.6);">{{__('theme2-dashboard-global.filter-message')}}
                             </div>
                             <div class="d-flex align-items-center">
-                                <div class="form-floating me-3">
+                                <div class="form-floating me-3 mb-4 mb-md-0">
                                     <input id="datepicker-start" name="datepicker-start" type="date"
                                            value="{{date('Y')}}-{{date('m')}}-01" min="2018-01-01"
                                            max="{{date("Y-m-d")}}" class="form-control">
                                     <label style="color: #fff;"
                                            for="datepicker-start">{{__('theme2-dashboard-global.started_at')}}</label>
                                 </div>
-                                <div class="form-floating">
+                                <div class="form-floating mb-4 mb-md-0">
                                     <input id="datepicker-finish" name="datepicker-finish" type="date"
                                            value="{{date("Y-m-d")}}" min="2018-01-01" max="{{date("Y-m-d")}}"
                                            class="form-control">
