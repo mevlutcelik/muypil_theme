@@ -804,6 +804,12 @@
                     <span>{{__('theme2-dashboard-global.tracking-code')}}</span>
                 </a>
             </li>
+            <li class="nav-item"> {{--TODO: Bu alanı sadece yönetici görüyor--}}
+                <a class="nav-link" data-bs-toggle="tab" href="#topbar-account-control-panel">
+                    <i class="uil uil-apps pe-1"></i>
+                    <span>{{__('theme2-dashboard-global.account-control-panel')}}</span>
+                </a>
+            </li>
         </ul>
         <!-- /.nav-tabs -->
         <div class="tab-content">
@@ -1129,7 +1135,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
+                        <a href="#" id="save-websites" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1209,11 +1215,9 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
-                        <a href="#"
-                           class="btn btn-navy btn-sm rounded me-2"><i
+                        <a href="#" class="btn btn-navy btn-sm rounded me-2"><i
                                 class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.load-more')}}</a>
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
+                        <a href="#" id="save-campaigns-manager" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1239,10 +1243,26 @@
                             id="copy-code-btn" style="position:absolute;right:1rem;top:1rem;" href="#"
                             class="btn btn-circle btn-primary btn-sm"><i class="uil uil-copy"></i></a></pre>
                     <div class="d-flex align-items-center justify-content-center justify-content-md-end mt-4">
-                        {{--TODO: Kaydet butonu tetiklendiğinde gelen javascript dizileri => arrActiveCampaign ve arrDisabledCampaign--}}
+                        <a href="#" class="btn btn-navy btn-sm rounded"><i
+                                class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.test-tracking-code')}}</a>
+                    </div>
+                </div>
+            </div>
+            <!--/.tab-pane -->
+            <div class="tab-pane fade" id="topbar-account-control-panel">
+                <div class="bg-blur p-6 mt-0">
+                    <h5 class="text-white">{{__('theme2-dashboard-global.account-control-panel')}}</h5>
+                    <div class="alert alert-info alert-icon" role="alert">
+                        <i class="uil uil-exclamation-circle"></i>
+                        {{__('theme2-dashboard-global.account-control-panel-desc')}}
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-4">
+                        <a href="#"
+                           class="btn btn-navy btn-sm rounded me-2"><i
+                                class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.sync-my-account')}}</a>
                         <a href="#"
                            class="btn btn-navy btn-sm rounded"><i
-                                class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.test-tracking-code')}}</a>
+                                class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.update-my-balance')}}</a>
                     </div>
                 </div>
             </div>
@@ -1254,7 +1274,11 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('assets2/js/jquery/jquery.inputmask.min.js') }}"></script>
     <script>
+        $(function () {
+            $("input[onkeypress]").inputmask({"mask": "9{1,}"});
+        });
         let checkboxs = document.querySelectorAll('input[type="checkbox"][data-target]');
         let selects = document.querySelectorAll('select[data-target]');
         let inputTarget = document.querySelectorAll('input:not([type="checkbox"])[data-target]');
@@ -1280,7 +1304,7 @@
         });
 
         function isNumberKey(evt) {
-            var charCode = (evt.which) ? evt.which : event.keyCode;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
             if (charCode > 31 && (charCode < 48 || charCode > 57))
                 return false;
             return true;
@@ -1682,6 +1706,23 @@
                 whiteListIp: whiteListIp,
             };
             console.log(ipBlockingObj);
+        });
+
+        $('#save-websites').click(function (){
+            let sites = [];
+            let lines = document.querySelectorAll('#topbar-websites #input-domain-tags span[data-ip]');
+            lines.forEach(function (line){
+                sites.push(line.getAttribute('data-ip'));
+            });
+            console.log(sites);
+        });
+
+        $('#save-campaigns-manager').click(function (){
+            let campaignObj = {
+                active: arrActiveCampaigns,
+                disabled: arrDisabledCampaigns,
+            };
+            console.log(campaignObj);
         });
     </script>
 @endpush
