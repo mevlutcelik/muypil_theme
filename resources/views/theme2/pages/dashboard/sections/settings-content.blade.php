@@ -1059,10 +1059,10 @@
                         </div>
                         <div
                             class="col-sm-12 col-lg-6 mb-4 mt-2 d-flex align-items-center justify-content-center justify-content-md-end">
-                            <input id="textInputExample" onkeypress="return isNumberKey(event)" value="7"
+                            <input id="time" onkeypress="return isNumberKey(event)" value="7"
                                    type="text" inputmode="numeric" class="form-control"
                                    style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                            <select class="form-select" aria-label="Gün"
+                            <select id="time-type" class="form-select" aria-label="Gün"
                                     style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                                 <option selected value="day">{{config('app.locale') === 'tr' ? 'Gün' : 'Day'}}</option>
                                 <option value="hour">{{config('app.locale') === 'tr' ? 'Saat' : 'Hour'}}</option>
@@ -1106,7 +1106,7 @@
                     </div>
                     <div
                         class="d-flex align-items-center justify-content-center justify-content-center justify-content-md-end mt-4">
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
+                        <a href="#" id="save-ip-blocking" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1663,6 +1663,25 @@
                 });
             });
             console.log(pauseCampaignRules);
+        });
+
+        $('#save-ip-blocking').click(function (){
+            let excludeIp = [], whiteListIp = [];
+            let lines = document.querySelectorAll('#topbar-ip-blocking #input-tags span[data-ip]');
+            lines.forEach(function (line){
+                excludeIp.push(line.getAttribute('data-ip'));
+            });
+            let linesWhite = document.querySelectorAll('#topbar-ip-blocking #input-tags-white span[data-ip]');
+            linesWhite.forEach(function (lineWhite){
+                whiteListIp.push(lineWhite.getAttribute('data-ip'));
+            });
+            let ipBlockingObj = {
+                time: $('#time').val(),
+                timeType: $('#time-type').val(),
+                excludeIp: excludeIp,
+                whiteListIp: whiteListIp,
+            };
+            console.log(ipBlockingObj);
         });
     </script>
 @endpush
