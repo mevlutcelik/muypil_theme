@@ -177,5 +177,9 @@ return [
     "track-message"                     => "<div>Aşağıdaki kodu web sitenizin __HEAD__ tagları arasına yerleştirerek reklamınıza tıklayan kullanıcılar hakkında daha detaylı bilgilere sahip olabilirsiniz.</div>",
     "rules"                             => "Kurallar",
     "go-tracking-code"                  => "Sadece <a href=\"#\" id=\"go-tracking-code\" class=\"alert-link hover\">izleme kodu</a> yüklenen hesaplarda çalışır.",
+    "account-control-panel"             => "Hesap Kontrol Paneli",
+    "account-control-panel-desc"        => "Dikkat: Bu alan sadece destek yetkililerinde gözükmektedir. Müşterileri yanlış yönlendirmeyiniz.",
+    "sync-my-account"                   => "Hesabımı Senkronize Et",
+    "update-my-balance"                 => "Bakiyemi Güncelle",
 ];
 ?>
