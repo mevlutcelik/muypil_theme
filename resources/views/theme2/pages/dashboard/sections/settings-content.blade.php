@@ -1256,9 +1256,9 @@
                         <i class="uil uil-exclamation-circle"></i>
                         {{__('theme2-dashboard-global.account-control-panel-desc')}}
                     </div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-4">
+                    <div class="d-flex align-items-start justify-content-center mt-4 flex-column flex-md-row">
                         <a href="#"
-                           class="btn btn-navy btn-sm rounded me-2"><i
+                           class="btn btn-navy btn-sm rounded me-2 mb-4 mb-md-0"><i
                                 class="uil uil-redo me-2"></i> {{__('theme2-dashboard-global.sync-my-account')}}</a>
                         <a href="#"
                            class="btn btn-navy btn-sm rounded"><i
