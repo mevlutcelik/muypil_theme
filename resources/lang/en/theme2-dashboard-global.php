@@ -176,5 +176,9 @@ return [
     "track-message"                     => "<div>By placing the code below between the __HEAD__ tags of your website, you can have more detailed information about the users who clicked on your ad.</div>",
     "rules"                             => "Rules",
     "go-tracking-code"                  => "It only works on accounts that have the <a href=\"#\" id=\"go-tracking-code\" class=\"alert-link hover\">tracking code</a> installed.",
+    "account-control-panel"             => "Account Control Panel",
+    "account-control-panel-desc"        => "Attention: This field is only visible to support officials. Do not mislead customers.",
+    "sync-my-account"                   => "Sync My Account",
+    "update-my-balance"                 => "Update My Balance",
 ];
 ?>
