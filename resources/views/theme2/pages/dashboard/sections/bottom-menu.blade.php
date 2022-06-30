@@ -73,7 +73,7 @@
     </a>--}}
     <a href="{{route('dashboard.settings')}}" {{Route::is('dashboard.settings') ? 'class=active' : null}}>
         <i class="uil uil-setting"></i>
-        <span>{{__('theme2-dashboard-global.settings')}}</span>
+        <span>{{__('theme2-dashboard-global.rules')}}</span>
     </a>
     <a href="{{route('dashboard.profile')}}" {{Route::is('dashboard.profile') ? 'class=active' : null}}>
         <i class="uil uil-user"></i>
