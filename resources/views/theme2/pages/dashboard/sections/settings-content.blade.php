@@ -1043,7 +1043,7 @@
                         <a href="#" onclick="addPauseCampaignRule()"
                            class="btn btn-navy btn-sm rounded me-2"><i
                                 class="uil uil-plus me-2"></i> {{__('theme2-dashboard-global.add-rule')}}</a>
-                        <a href="#" class="btn btn-light text-dark btn-sm rounded"><i
+                        <a href="#" id="save-pause-campaign-rules" class="btn btn-light text-dark btn-sm rounded"><i
                                 class="uil uil-save me-2"></i> {{__('theme2-dashboard-global.save-rule')}}</a>
                     </div>
                 </div>
@@ -1372,21 +1372,21 @@
             {{--Satır başlangıcı--}}
             <div class="row p-0 p-md-2">
                 <div class="line-box check-rules-line">
-                <input id="textInputExample" onkeypress="return isNumberKey(event)" value="1"
+                <input id="time" onkeypress="return isNumberKey(event)" value="1"
                            type="text" inputmode="numeric" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
-                           <select class="form-select" aria-label="Gün"
+                           <select id="time-type" class="form-select" aria-label="Gün"
                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                         <option value="day">{{config('app.locale') === 'tr' ? 'Gün' : 'Day'}}</option>
                         <option selected value="hour">{{config('app.locale') === 'tr' ? 'Saat' : 'Hour'}}</option>
                         <option value="minute">{{config('app.locale') === 'tr' ? 'Dakika' : 'Minute'}}</option>
                     </select>
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'içinde farklı ip adresinden' : 'from different ip addresses'}}</label>
-                    <input id="textInputExample" onkeypress="return isNumberKey(event)" value="20"
+                    <input id="click" onkeypress="return isNumberKey(event)" value="20"
                            type="text" inputmode="numeric" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'tıklama gelirse' : 'if it clicks'}}</label>
-                    <select class="form-select"
+                    <select id="campaign" class="form-select"
                             style="padding: 0.25rem 0.5rem;font-size: 13px;width: 7rem;">
                         {{--TODO: Kampanyaları veritabanından alıp listeleyelim.--}}
             <option value="1">Kampanya1</option>
@@ -1394,7 +1394,7 @@
             <option value="3">Kampanya3</option>
         </select>
         <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'kampanyasını' : 'campaign'}}</label>
-                    <input id="textInputExample" onkeypress="return isNumberKey(event)" value="5"
+                    <input id="minute" onkeypress="return isNumberKey(event)" value="5"
                            type="text" inputmode="numeric" class="form-control"
                            style="padding: 0.25rem 0.5rem;font-size: 13px;width: 4rem;">
                     <label class="mx-1 fs-14">{{config('app.locale') === 'tr' ? 'dakika durdur, sonra geri aç.' : 'stop for a minute, then turn it back on.'}}</label>
@@ -1607,7 +1607,8 @@
             $(this).parent().parent().remove();
         });
 
-        function controleIpRules() {
+
+        $('#save-ip-rules').click(function (){
             let lang;
             if (document.documentElement.lang) {
                 lang = document.documentElement.lang;
@@ -1617,30 +1618,17 @@
             let ipRules = [];
             let lines = document.querySelectorAll(`#detection-rule-${lang}-lines .check-rules-line`);
             lines.forEach(function (line) {
-                let rule = line.querySelector('#rule').value;
-                let time = line.querySelector('#time').value;
-                let click = line.querySelector('#click').value;
-                let timeType = line.querySelector('#time-type').value;
                 ipRules.push({
-                    rule: rule,
-                    time: time,
-                    click: click,
-                    timeType: timeType,
+                    rule: line.querySelector('#rule').value,
+                    time: line.querySelector('#time').value,
+                    click: line.querySelector('#click').value,
+                    timeType: line.querySelector('#time-type').value,
                 });
             });
             console.log(ipRules);
-            return ipRules;
-        }
-
-
-        $('#save-ip-rules').click(function (){
-            controleIpRules();
         });
 
         $('#save-event-rules').click(function (){
-            if($('input#checkbox-4')[0].checked){
-                four = $('select[data-target=4]')[0].value;
-            }
             let eventObj = {
                 checkbox_js_close: $('input#checkbox-1')[0].checked,
                 select_js_close: $('select[data-target=1]')[0].value,
@@ -1660,6 +1648,21 @@
                 countries: $('select[name="countries[]"]').val(),
             };
             console.log(countryObj);
+        });
+
+        $('#save-pause-campaign-rules').click(function (){
+            let pauseCampaignRules = [];
+            let lines = document.querySelectorAll(`#topbar-pause-campaign-rules .check-rules-line`);
+            lines.forEach(function (line) {
+                pauseCampaignRules.push({
+                    time: line.querySelector('#time').value,
+                    timeType: line.querySelector('#time-type').value,
+                    click: line.querySelector('#click').value,
+                    campaign: line.querySelector('#campaign').value,
+                    minute: line.querySelector('#minute').value,
+                });
+            });
+            console.log(pauseCampaignRules);
         });
     </script>
 @endpush
