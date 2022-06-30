@@ -1249,7 +1249,7 @@
                 </div>
             </div>
             <!--/.tab-pane -->
-            <div class="tab-pane fade" id="topbar-account-control-panel">
+            <div class="tab-pane fade" id="topbar-account-control-panel"> {{--TODO: Bu alan sadece yöneticilerde gözüküyor--}}
                 <div class="bg-blur p-6 mt-0">
                     <h5 class="text-white">{{__('theme2-dashboard-global.account-control-panel')}}</h5>
                     <div class="alert alert-info alert-icon" role="alert">
