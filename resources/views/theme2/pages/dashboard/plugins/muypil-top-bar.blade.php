@@ -75,3 +75,31 @@
         }
     </style>
 @endpush
+@push('scripts')
+    <script>
+        const sliderTabButtons = document.querySelector('.muypil-top-bar');
+        let mouseDownTabButtons = false;
+        let startXTabButtons, scrollLeftTabButtons;
+        let startDraggingTabButtons = function (e) {
+            mouseDownTabButtons = true;
+            startXTabButtons = e.pageX - sliderTabButtons.offsetLeft;
+            scrollLeftTabButtons = sliderTabButtons.scrollLeft;
+        };
+        let stopDraggingTabButtons = function (event) {
+            mouseDownTabButtons = false;
+        };
+        sliderTabButtons.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDownTabButtons) {
+                return;
+            }
+            const xTabButtons = e.pageX - sliderTabButtons.offsetLeft;
+            const scrollTabButtons = xTabButtons - startXTabButtons;
+            sliderTabButtons.scrollLeft = scrollLeftTabButtons - scrollTabButtons;
+        });
+        // Add the event listeners
+        sliderTabButtons.addEventListener('mousedown', startDraggingTabButtons, false);
+        sliderTabButtons.addEventListener('mouseup', stopDraggingTabButtons, false);
+        sliderTabButtons.addEventListener('mouseleave', stopDraggingTabButtons, false);
+    </script>
+@endpush
