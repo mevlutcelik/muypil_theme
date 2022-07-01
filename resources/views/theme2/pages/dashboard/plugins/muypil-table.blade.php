@@ -408,46 +408,23 @@
             sliderTableBox.addEventListener('mouseup', stopDraggingTableBox, false);
             sliderTableBox.addEventListener('mouseleave', stopDraggingTableBox, false);
         }
-        let allRows = document.querySelectorAll('tr[mx-modal="true"]:not(.muypil-table-header)');
-        allRows.forEach(function (row) {
-            if (window.innerWidth <= 768) {
-                row.addEventListener('click', function () {
-                    $('#mx-modal-table-content').html(null);
-                    $('#mx-modal').modal('show');
-                    //let mxModalTableContent = `<table class="table table-bordered muypil-responsive-table" style="border: 1px solid rgba(255,255,255,0.05)" id="muypil-responsive-table-mobile">`+this+`<table>`;
-                    let createTable = document.createElement('table');
-                    createTable.classList.add('table', 'table-bordered', 'muypil-responsive-table-mobile');
-                    createTable.style.border = '1px solid rgba(255,255,255,0.05)';
-                    createTable.innerHTML = this.outerHTML;
-                    $('#mx-modal-table-content').append(createTable);
-                    createTable.querySelectorAll('td').forEach(function (column) {
-                        column.classList = '';
-                        column.querySelectorAll('a').forEach(function (a) {
-                            a.classList.add('bg-navy', 'white-text');
-                        });
-                        column.addEventListener('dblclick', function () {
-                            if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
-                                navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
-                                    const Toast = Swal.mixin({
-                                        toast: true,
-                                        position: 'top-end',
-                                        showConfirmButton: false,
-                                        timer: 3000,
-                                        timerProgressBar: true,
-                                        didOpen: (toast) => {
-                                            toast.addEventListener('mouseenter', Swal.stopTimer)
-                                            toast.addEventListener('mouseleave', Swal.resumeTimer)
-                                        }
-                                    })
-
-                                    Toast.fire({
-                                        icon: 'success',
-                                        title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
-                                    })
-                                }, function (err) {
-                                    /*is->Err*/
-                                });
-                            } else {
+        $(document).on('click', 'tr[mx-modal="true"]:not(.muypil-table-header)', function (){
+            if(window.innerWidth <= 768){
+                $('#mx-modal-table-content').html(null);
+                $('#mx-modal').modal('show');
+                let createTable = document.createElement('table');
+                createTable.classList.add('table', 'table-bordered', 'muypil-responsive-table-mobile');
+                createTable.style.border = '1px solid rgba(255,255,255,0.05)';
+                createTable.innerHTML = this.outerHTML;
+                $('#mx-modal-table-content').append(createTable);
+                createTable.querySelectorAll('td').forEach(function (column) {
+                    column.classList = '';
+                    column.querySelectorAll('a').forEach(function (a) {
+                        a.classList.add('bg-navy', 'white-text');
+                    });
+                    column.addEventListener('dblclick', function () {
+                        if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
+                            navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
                                 const Toast = Swal.mixin({
                                     toast: true,
                                     position: 'top-end',
@@ -461,19 +438,13 @@
                                 })
 
                                 Toast.fire({
-                                    icon: 'warning',
-                                    title: '{{__('theme2-dashboard-global.copied-null')}}'
+                                    icon: 'success',
+                                    title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
                                 })
-                            }
-                        });
-                    });
-                });
-            }
-            let columns = row.querySelectorAll('td');
-            columns.forEach(function (column) {
-                column.addEventListener('dblclick', function () {
-                    if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
-                        navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
+                            }, function (err) {
+                                /*is->Err*/
+                            });
+                        } else {
                             const Toast = Swal.mixin({
                                 toast: true,
                                 position: 'top-end',
@@ -487,32 +458,13 @@
                             })
 
                             Toast.fire({
-                                icon: 'success',
-                                title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                                icon: 'warning',
+                                title: '{{__('theme2-dashboard-global.copied-null')}}'
                             })
-                        }, function (err) {
-                            /*is->Err*/
-                        });
-                    } else {
-                        const Toast = Swal.mixin({
-                            toast: true,
-                            position: 'top-end',
-                            showConfirmButton: false,
-                            timer: 3000,
-                            timerProgressBar: true,
-                            didOpen: (toast) => {
-                                toast.addEventListener('mouseenter', Swal.stopTimer)
-                                toast.addEventListener('mouseleave', Swal.resumeTimer)
-                            }
-                        })
-
-                        Toast.fire({
-                            icon: 'warning',
-                            title: '{{__('theme2-dashboard-global.copied-null')}}'
-                        })
-                    }
+                        }
+                    });
                 });
-            });
+            }
         });
     </script>
 @endpush
