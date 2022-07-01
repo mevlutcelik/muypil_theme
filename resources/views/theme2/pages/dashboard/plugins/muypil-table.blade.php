@@ -110,6 +110,7 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            letter-spacing: 1px;
             /*min-width: 10rem;*/
             /*max-width: 10rem;*/
             overflow: hidden;
