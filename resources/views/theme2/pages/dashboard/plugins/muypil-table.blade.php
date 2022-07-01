@@ -382,34 +382,41 @@
 
 @push('scripts')
     <script>
-        const sliderTableBox = document.querySelector('.table-responsive');
-        let mouseDownTableBox = false;
-        let startXTableBox, scrollLeftTableBox;
-        let startDraggingTableBox = function (e) {
-            mouseDownTableBox = true;
-            startXTableBox = e.pageX - sliderTableBox.offsetLeft;
-            scrollLeftTableBox = sliderTableBox.scrollLeft;
-        };
-        let stopDraggingTableBox = function (event) {
-            mouseDownTableBox = false;
-        };
-        if (sliderTableBox !== null) {
-            sliderTableBox.addEventListener('mousemove', (e) => {
+        function sliderBox(selector) {
+            let mouseDown = false, startX, startY, scrollLeft, scrollTop;
+
+            function startDragging(e) {
+                mouseDown = true;
+                startX = e.pageX - $(selector).offset().left;
+                startY = e.pageY - $(selector).offset().top;
+                scrollLeft = $(selector).scrollLeft();
+                scrollTop = $(selector).scrollTop();
+            }
+
+            function stopDragging() {
+                mouseDown = false;
+            }
+
+            $(document).on('mousemove', selector, function (e) {
                 e.preventDefault();
-                if (!mouseDownTableBox) {
+                if (!mouseDown) {
                     return;
                 }
-                const xTableBox = e.pageX - sliderTableBox.offsetLeft;
-                const scrollTableBox = xTableBox - startXTableBox;
-                sliderTableBox.scrollLeft = scrollLeftTableBox - scrollTableBox;
+                const x = e.pageX - $(selector).offset().left;
+                const y = e.pageY - $(selector).offset().top;
+                const scrollX = x - startX;
+                const scrollY = y - startY;
+                $(selector).scrollLeft(scrollLeft - scrollX);
+                $(selector).scrollTop(scrollTop - scrollY);
             });
-            // Add the event listeners
-            sliderTableBox.addEventListener('mousedown', startDraggingTableBox, false);
-            sliderTableBox.addEventListener('mouseup', stopDraggingTableBox, false);
-            sliderTableBox.addEventListener('mouseleave', stopDraggingTableBox, false);
+            $(document).on('mousedown', selector, startDragging);
+            $(document).on('mouseup', selector, stopDragging);
+            $(document).on('mouseleave', selector, startDragging);
         }
-        $(document).on('click', 'tr[mx-modal="true"]:not(.muypil-table-header)', function (){
-            if(window.innerWidth <= 768){
+        sliderBox('.table-responsive');
+        sliderBox('.muypil-top-bar');
+        $(document).on('click', 'tr[mx-modal="true"]:not(.muypil-table-header)', function () {
+            if (window.innerWidth <= 768) {
                 $('#mx-modal-table-content').html(null);
                 $('#mx-modal').modal('show');
                 let createTable = document.createElement('table');
