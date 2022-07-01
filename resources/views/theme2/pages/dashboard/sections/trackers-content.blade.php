@@ -660,16 +660,16 @@
         allRows.forEach(function (row) {
             if (window.innerWidth <= 768) {
                 row.addEventListener('click', function () {
+                    $('#mx-modal-table-content').html(null);
                     $('#mx-modal').modal('show');
                     //let mxModalTableContent = `<table class="table table-bordered muypil-responsive-table" style="border: 1px solid rgba(255,255,255,0.05)" id="muypil-responsive-table-mobile">`+this+`<table>`;
                     let createTable = document.createElement('table');
                     createTable.classList.add('table', 'table-bordered', 'muypil-responsive-table-mobile');
                     createTable.style.border = '1px solid rgba(255,255,255,0.05)';
-                    let columns = $(this).children('td');
-                    columns.removeClass();
                     createTable.innerHTML = this.outerHTML;
                     $('#mx-modal-table-content').append(createTable);
                     createTable.querySelectorAll('td').forEach(function (column){
+                        column.classList = '';
                         column.addEventListener('dblclick', function () {
                             if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
                                 navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
