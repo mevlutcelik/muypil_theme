@@ -1,3 +1,10 @@
+@push('styles')
+    <style>
+        .table-responsive{
+            height: calc((var(--vh, 1vh) * 100) - 440px);
+        }
+    </style>
+@endpush
 <section class="wrapper">
     <div class="py-13 py-md-16">
         <div class="row text-center">
@@ -98,7 +105,7 @@
                             <table class="table table-bordered muypil-responsive-table"
                                    style="border: 1px solid rgba(255,255,255,0.05)">
                                 <thead>
-                                <tr class="muypil-table-header" style="background: rgba(255,255,255,0.15);color: #fff;">
+                                <tr class="muypil-table-header" style="rgba(255,255,255,0.15);color: #fff;backdrop-filter: blur(0.5rem)">
                                     <th scope="col"
                                         class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.action')}}</th>
                                     <th scope="col" class="d-none d-md-initial">
