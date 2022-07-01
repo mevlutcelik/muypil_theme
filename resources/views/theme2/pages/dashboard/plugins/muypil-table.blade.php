@@ -361,6 +361,25 @@
         }
     </style>
 @endpush
+{{--Modal Start--}}
+<div class="modal fade" id="mx-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content text-center">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                <h2 class="mb-3 text-start">{{__('theme2-dashboard-global.detail')}}</h2>
+                <div id="mx-modal-table-content"></div>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+<!--/.modal -->
+{{--Modal Finish--}}
+
 @push('scripts')
     <script>
         const sliderTableBox = document.querySelector('.table-responsive');
@@ -389,5 +408,111 @@
             sliderTableBox.addEventListener('mouseup', stopDraggingTableBox, false);
             sliderTableBox.addEventListener('mouseleave', stopDraggingTableBox, false);
         }
+        let allRows = document.querySelectorAll('tr[mx-modal="true"]:not(.muypil-table-header)');
+        allRows.forEach(function (row) {
+            if (window.innerWidth <= 768) {
+                row.addEventListener('click', function () {
+                    $('#mx-modal-table-content').html(null);
+                    $('#mx-modal').modal('show');
+                    //let mxModalTableContent = `<table class="table table-bordered muypil-responsive-table" style="border: 1px solid rgba(255,255,255,0.05)" id="muypil-responsive-table-mobile">`+this+`<table>`;
+                    let createTable = document.createElement('table');
+                    createTable.classList.add('table', 'table-bordered', 'muypil-responsive-table-mobile');
+                    createTable.style.border = '1px solid rgba(255,255,255,0.05)';
+                    createTable.innerHTML = this.outerHTML;
+                    $('#mx-modal-table-content').append(createTable);
+                    createTable.querySelectorAll('td').forEach(function (column) {
+                        column.classList = '';
+                        column.querySelectorAll('a').forEach(function (a) {
+                            a.classList.add('bg-navy', 'white-text');
+                        });
+                        column.addEventListener('dblclick', function () {
+                            if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
+                                navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
+                                    const Toast = Swal.mixin({
+                                        toast: true,
+                                        position: 'top-end',
+                                        showConfirmButton: false,
+                                        timer: 3000,
+                                        timerProgressBar: true,
+                                        didOpen: (toast) => {
+                                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                        }
+                                    })
+
+                                    Toast.fire({
+                                        icon: 'success',
+                                        title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                                    })
+                                }, function (err) {
+                                    /*is->Err*/
+                                });
+                            } else {
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: 'top-end',
+                                    showConfirmButton: false,
+                                    timer: 3000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                })
+
+                                Toast.fire({
+                                    icon: 'warning',
+                                    title: '{{__('theme2-dashboard-global.copied-null')}}'
+                                })
+                            }
+                        });
+                    });
+                });
+            }
+            let columns = row.querySelectorAll('td');
+            columns.forEach(function (column) {
+                column.addEventListener('dblclick', function () {
+                    if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
+                        navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
+                            const Toast = Swal.mixin({
+                                toast: true,
+                                position: 'top-end',
+                                showConfirmButton: false,
+                                timer: 3000,
+                                timerProgressBar: true,
+                                didOpen: (toast) => {
+                                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                }
+                            })
+
+                            Toast.fire({
+                                icon: 'success',
+                                title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                            })
+                        }, function (err) {
+                            /*is->Err*/
+                        });
+                    } else {
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
+
+                        Toast.fire({
+                            icon: 'warning',
+                            title: '{{__('theme2-dashboard-global.copied-null')}}'
+                        })
+                    }
+                });
+            });
+        });
     </script>
 @endpush
