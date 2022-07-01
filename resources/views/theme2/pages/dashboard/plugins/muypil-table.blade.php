@@ -12,7 +12,7 @@
             overflow-x: auto;
             overflow-y: auto;
             scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
-            height: calc((var(--vh, 1vh) * 100) - 380px);
+            max-height: calc((var(--vh, 1vh) * 100) - 380px);
             position: relative;
         }
 
