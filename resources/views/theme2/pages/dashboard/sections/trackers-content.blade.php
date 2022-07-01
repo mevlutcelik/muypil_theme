@@ -1,6 +1,6 @@
 @push('styles')
     <style>
-        .table-responsive{
+        .table-responsive {
             max-height: calc((var(--vh, 1vh) * 100) - 500px);
         }
     </style>
@@ -105,7 +105,8 @@
                             <table class="table table-bordered muypil-responsive-table"
                                    style="border: 1px solid rgba(255,255,255,0.05)">
                                 <thead>
-                                <tr class="muypil-table-header" style="rgba(255,255,255,0.15);color: #fff;backdrop-filter: blur(0.5rem)">
+                                <tr class="muypil-table-header"
+                                    style="rgba(255,255,255,0.15);color: #fff;backdrop-filter: blur(0.5rem)">
                                     <th scope="col"
                                         class="no-filter d-none d-md-initial">{{__('theme2-dashboard-global.action')}}</th>
                                     <th scope="col" class="d-none d-md-initial">
@@ -376,8 +377,7 @@
                                 <tbody>
                                 {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.
                                 Todo: Foreach ile gelen verileri listele--}}
-                                <tr data-bs-toggle="modal"
-                                    data-bs-target="#modal-01">
+                                <tr mx-modal="true">
                                     <td class="d-none d-md-initial" data-label="&nbsp;"><a href="#"
                                                                                            class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a>
                                     </td>
@@ -594,229 +594,14 @@
                             <!-- /nav -->
                         </div>
                         {{--Modal Start--}}
-                        {{--TODO: Modal'i dinamik hale getirelim--}}
-                        <div class="modal fade" id="modal-01" tabindex="-1">
+                        <div class="modal fade" id="mx-modal" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered modal-sm">
                                 <div class="modal-content text-center">
                                     <div class="modal-body">
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         <h2 class="mb-3 text-start">{{__('theme2-dashboard-global.detail')}}</h2>
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered muypil-responsive-table-mobile"
-                                                   style="border: 1px solid rgba(255,255,255,0.05)">
-                                                <tbody>
-                                                {{--Todo: Tabloda gelen veri eğer boş ise "&nbsp;" koymak zorundayız. Aksi halde tasarım kayıyor.--}}
-                                                <tr>
-                                                    <td class="d-initial d-md-none"
-                                                        data-label="{{__('theme2-dashboard-global.action')}}"
-                                                        title="&nbsp;"><a href="#"
-                                                                          class="btn btn-sm btn-soft-red block-btn">{{__('theme2-dashboard-global.block')}}</a>
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.account')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
-                                                        359-318-6843
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.campaing')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
-                                                        47-Kızıltepe-12
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.keyword')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">beyaz eşya
-                                                        servisleri
-                                                    </td>
-                                                    <td data-label="IP"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
-                                                        5.229.30.102
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.ip-range')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
-                                                        <div>5.229.0.0/16<sup
-                                                                class="fs-14 d-inline-flex align-items-center justify-content-center"><span
-                                                                    class="badge bg-blue rounded">15.897</span></sup>
-                                                        </div>
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.as-org')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Vodafone
-                                                        Telekomunikasyon A.S.
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.ip-country')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Turkey
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.ip-city')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep
-                                                    </td>
-                                                    <td class="d-none d-md-initial" data-label="Platform"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">AndroidOS
-                                                        10
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.browser')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Chrome
-                                                        87.0.4280.101
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.device')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Mobil
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.clicks-count')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">1
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.time-spent')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.click-status')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.scroll-status')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.network')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Google
-                                                        Search
-                                                    </td>
-                                                    <td class="d-none d-md-initial" data-label="Gclid"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
-                                                        Cj0KCQjwzLCVBhD3ARIsAPKYTcTd-Wdd9vtWoHsLPGbDyrLEJWN6QjBSfAPEcaFVEq5R8dqTdCI1urYaAji5EALw_wcB
-                                                    </td>
-                                                    <td class="d-none d-md-initial" data-label="Redirect URL"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial" data-label="User Agent"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
-                                                        Mozilla/5.0 (Linux; Android 10; M2006C3LG)
-                                                        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101
-                                                        Mobile Safari/537.36
-                                                    </td>
-                                                    <td class="d-none d-md-initial" data-label="Host"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">
-                                                        176.33.90.255
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.as-number')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">34984
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.ip-region')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Gaziantep
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.ip-postal-code')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">27090
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.first-click')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17
-                                                        16:08:44
-                                                    </td>
-                                                    <td data-label="{{__('theme2-dashboard-global.last-click')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">2022-06-17
-                                                        16:08:44
-                                                    </td>
-                                                    <td class="d-none d-md-initial" data-label="Javascript"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Bilinmeyen
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.software-version')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.color-depth')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.fonts')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.local-storage')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.session-storage')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                    <td class="d-none d-md-initial" data-label="Cookie">Hayır</td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.time-zone')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.app-code-name')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.app-name')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.app-version')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.cookie-enabled')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.device-memory')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.do-not-track')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.hardware-concurrency')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.language')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.languages')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.on-line')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.product')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.product-sub')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.vendor')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.vendor-sub')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">&nbsp;
-                                                    </td>
-                                                    <td class="d-none d-md-initial"
-                                                        data-label="{{__('theme2-dashboard-global.web-driver')}}"
-                                                        title="{{__('theme2-dashboard-global.copy-column')}}">Hayır
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        <div id="mx-modal-table-content"></div>
                                     </div>
                                     <!--/.modal-content -->
                                 </div>
@@ -871,21 +656,66 @@
     {{--Todo: Canvasların (Chart.js) script kodlarını buraya koyabiliriz.--}}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        let allRows = document.querySelectorAll('tr:not(.muypil-table-header)');
+        let allRows = document.querySelectorAll('tr[mx-modal="true"]:not(.muypil-table-header)');
         allRows.forEach(function (row) {
-            window.addEventListener('resize', function (event) {
-                if (window.innerWidth >= 768) {
-                    row.removeAttribute('data-bs-target');
-                }
-            });
-            if (screen.width >= 768) {
-                row.removeAttribute('data-bs-target');
+            if (window.innerWidth <= 768) {
+                row.addEventListener('click', function () {
+                    $('#mx-modal').modal('show');
+                    //let mxModalTableContent = `<table class="table table-bordered muypil-responsive-table" style="border: 1px solid rgba(255,255,255,0.05)" id="muypil-responsive-table-mobile">`+this+`<table>`;
+                    let createTable = document.createElement('table');
+                    createTable.classList.add('table', 'table-bordered', 'muypil-responsive-table-mobile');
+                    createTable.style.border = '1px solid rgba(255,255,255,0.05)';
+                    let columns = $(this).children('td');
+                    columns.removeClass();
+                    createTable.innerHTML = this.outerHTML;
+                    $('#mx-modal-table-content').append(createTable);
+                    createTable.querySelectorAll('td').forEach(function (column){
+                        column.addEventListener('dblclick', function () {
+                            if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
+                                navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
+                                    const Toast = Swal.mixin({
+                                        toast: true,
+                                        position: 'top-end',
+                                        showConfirmButton: false,
+                                        timer: 3000,
+                                        timerProgressBar: true,
+                                        didOpen: (toast) => {
+                                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                        }
+                                    })
+
+                                    Toast.fire({
+                                        icon: 'success',
+                                        title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                                    })
+                                }, function (err) {
+                                    /*is->Err*/
+                                });
+                            } else {
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: 'top-end',
+                                    showConfirmButton: false,
+                                    timer: 3000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                })
+
+                                Toast.fire({
+                                    icon: 'warning',
+                                    title: '{{__('theme2-dashboard-global.copied-null')}}'
+                                })
+                            }
+                        });
+                    });
+                });
             }
             let columns = row.querySelectorAll('td');
             columns.forEach(function (column) {
-                column.addEventListener('click', function () {
-
-                });
                 column.addEventListener('dblclick', function () {
                     if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
                         navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {

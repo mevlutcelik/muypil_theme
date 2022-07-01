@@ -306,6 +306,11 @@
                 -ms-flex-align: center;
                 align-items: center;
                 word-break: break-all;
+                color: #1a202c !important;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
             }
 
             table.muypil-responsive-table-mobile td::before {
@@ -315,6 +320,9 @@
                 */
                 content: attr(data-label);
                 float: left;
+                min-width: 4rem;
+                text-align: left;
+                margin-right: 4px;
                 font-weight: bold;
             }
 
