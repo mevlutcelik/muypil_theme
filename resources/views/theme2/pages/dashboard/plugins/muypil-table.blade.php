@@ -382,30 +382,32 @@
 
 @push('scripts')
     <script>
-        function sliderBox(selector){
-            let mouseDown = false, startX, scrollLeft;
-            function startDragging(e){
-                mouseDown = true;
-                startX = e.pageX - $(selector).offset().left;
-                scrollLeft = $(selector).scrollLeft();
-            }
-            function stopDragging(){
-                mouseDown = false;
-            }
-            $(selector).mousemove(function (e){
+        const sliderTableBox = document.querySelector('.table-responsive');
+        let mouseDownTableBox = false;
+        let startXTableBox, scrollLeftTableBox;
+        let startDraggingTableBox = function (e) {
+            mouseDownTableBox = true;
+            startXTableBox = e.pageX - sliderTableBox.offsetLeft;
+            scrollLeftTableBox = sliderTableBox.scrollLeft;
+        };
+        let stopDraggingTableBox = function (event) {
+            mouseDownTableBox = false;
+        };
+        if (sliderTableBox !== null) {
+            sliderTableBox.addEventListener('mousemove', (e) => {
                 e.preventDefault();
-                if(!mouseDown){
+                if (!mouseDownTableBox) {
                     return;
                 }
-                const x = e.pageX - $(selector).offset().left;
-                const scroll = x - startX;
-                $(selector).scrollLeft(scrollLeft - scroll);
+                const xTableBox = e.pageX - sliderTableBox.offsetLeft;
+                const scrollTableBox = xTableBox - startXTableBox;
+                sliderTableBox.scrollLeft = scrollLeftTableBox - scrollTableBox;
             });
-            $(selector).mousedown(startDragging);
-            $(selector).mouseup(stopDragging);
-            $(selector).mouseleave(startDragging);
+            // Add the event listeners
+            sliderTableBox.addEventListener('mousedown', startDraggingTableBox, false);
+            sliderTableBox.addEventListener('mouseup', stopDraggingTableBox, false);
+            sliderTableBox.addEventListener('mouseleave', stopDraggingTableBox, false);
         }
-        sliderBox('.table-responsive');
         $(document).on('click', 'tr[mx-modal="true"]:not(.muypil-table-header)', function (){
             if(window.innerWidth <= 768){
                 $('#mx-modal-table-content').html(null);
