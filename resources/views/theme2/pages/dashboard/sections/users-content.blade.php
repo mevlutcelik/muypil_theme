@@ -53,12 +53,20 @@
                                         for="first-name">{{__('theme2-global.first-name')}}</label>
                                 </div>
                             </th>
-                            <th scope="col" class="d-none d-md-initial">
+                            <th scope="col" class="d-none d-md-flex align-items-center">
                                 <div class="form-floating">
                                     <input id="last-name" type="text" class="form-control mx-table-input"
                                            placeholder="{{__('theme2-global.last-name')}}">
                                     <label
                                         for="last-name">{{__('theme2-global.last-name')}}</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-circle btn-primary btn sm muypil-order-by">
+                                        <i class="uil uil-arrow-up fs-16"></i>
+                                    </a>
+                                    <a class="btn btn-circle btn-primary btn sm muypil-order-by">
+                                        <i class="uil uil-arrow-down fs-16"></i>
+                                    </a>
                                 </div>
                             </th>
                             <th scope="col" class="d-none d-md-initial">
