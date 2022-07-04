@@ -16,6 +16,10 @@
             position: relative;
         }
 
+        .muypil-responsive-table{
+            min-height: 7rem;
+        }
+
         /* width */
         .table-responsive::-webkit-scrollbar {
             width: 2px;
@@ -414,6 +418,47 @@
         }
         sliderBox('.table-responsive');
         sliderBox('.muypil-top-bar'); /*TODO: Resources -> app.js ekle*/
+        $(document).on('dblclick', 'tr[mx-modal="true"]:not(.muypil-table-header)', function (){
+            if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
+                navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+
+                    Toast.fire({
+                        icon: 'success',
+                        title: '{{__('theme2-dashboard-global.copied-successfuly')}}'
+                    })
+                }, function (err) {
+                    /*is->Err*/
+                });
+            } else {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'warning',
+                    title: '{{__('theme2-dashboard-global.copied-null')}}'
+                })
+            }
+        });
         $(document).on('click', 'tr[mx-modal="true"]:not(.muypil-table-header)', function () {
             if (window.innerWidth <= 768) {
                 $('#mx-modal-table-content').html(null);
@@ -428,7 +473,7 @@
                     column.querySelectorAll('a').forEach(function (a) {
                         a.classList.add('bg-navy', 'white-text');
                     });
-                    column.addEventListener('dblclick', function () {
+                    column.addEventListener('click', function () {
                         if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
                             navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
                                 const Toast = Swal.mixin({
