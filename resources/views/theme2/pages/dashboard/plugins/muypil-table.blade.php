@@ -16,6 +16,15 @@
             position: relative;
         }
 
+        .muypil-order-by{
+            width: 1.25rem !important;
+            height: 1.25rem !important;
+            margin-right: 3px;
+            background-color: rgba(255,255,255,0.2);
+            border-color: transparent;
+            backdrop-filter: blur(0.5rem);
+        }
+
         .muypil-responsive-table{
             min-height: 7rem;
         }
@@ -418,7 +427,7 @@
         }
         sliderBox('.table-responsive');
         sliderBox('.muypil-top-bar'); /*TODO: Resources -> app.js ekle*/
-        $(document).on('dblclick', 'tr[mx-modal="true"]:not(.muypil-table-header)', function (){
+        $(document).on('dblclick', 'tr[mx-modal="true"]:not(.muypil-table-header) td', function (){
             if (this.innerHTML.trim() !== '&nbsp;' && this.innerHTML.trim() !== '') {
                 navigator.clipboard.writeText(this.innerHTML.trim()).then(function () {
                     const Toast = Swal.mixin({
